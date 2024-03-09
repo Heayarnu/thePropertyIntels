@@ -17,8 +17,8 @@ function HeroComponent() {
         src={"/assets/images/hero/heroImage.jpg"}
         alt="hero"
       />
-      <div className="py-[50px] text-white rounded-md absolute text-center w-[90%] md:w-[60%] -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 bg-[#ffffff7a]">
-        <h2 className="text-[1.875rem] md:text-[3.75rem] leading-[2rem] md:leading-[3.75rem] tracking-[-0.075rem] font-[900] font-Geist">
+      <div className="max-lg:mt-[3.06rem] py-[50px] text-white rounded-md absolute text-center w-[90%]  -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 bg- [#ffffff7a]">
+        <h2 className="text-[1.875rem] w-full max-w-[44.9375rem] mx-auto md:text-[3.75rem] leading-[2rem] md:leading-[3.75rem] tracking-[-0.075rem] font-[900] font-Geist">
           Property Management Investment & Advice
         </h2>
 
@@ -26,14 +26,14 @@ function HeroComponent() {
           Let&#39;s manage your property needs and you enjoy a timely Real
           Estate advice with guaranteed peace of mind
         </h1>
-        <div className="lg:flex mt-5 gap-5 justify-center font-semibold font-Geist tracking-[-0.0225rem] text-[1.125rem] ">
-          <Link href="/?registrationType=agent">
+        <div className="md:flex mt-5 gap-[1rem] justify-center font-semibold font-Geist tracking-[-0.0225rem] text-[1.125rem] ">
+          <Link className="inline-block" href="/?registrationType=agent">
             <button className="max-lg:mb-[.62rem] text-[#DFEFFF] shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] px-8 py-2 rounded-[6.25rem] border-[1px_solid_rgba(255,255,255,0.11)] bg-primary ">
               Become an Agent
             </button>
           </Link>
           {/* backdrop-filter: blur(10px); */}
-          <Link href="/?registrationType=client">
+          <Link className="inline-block" href="/?registrationType=client">
             <button className=" text-primary shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] px-8 py-2 rounded-[6.25rem] border-[1px_solid_rgba(255,255,255,0.11)] bg-[#DFEFFF] ">
               Register your property
             </button>

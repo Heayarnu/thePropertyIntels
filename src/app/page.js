@@ -1,6 +1,5 @@
 "use client";
 import NavMain from "@/components/navigatonBar/navMain";
-
 import HeroComponent from "@/components/hero/heroComponent";
 import ProductsComponent from "@/components/explore/productComponent";
 import ServicesComponent from "@/components/services/servicesComponent";
@@ -10,21 +9,25 @@ import ContactsComponent from "@/components/contacts/contactsComponent";
 import "react-phone-number-input/style.css";
 import SocialMediaPopup from "@/components/socialMediaPopUp.js";
 import AgentSelectPopCom from "@/components/agentSelectPop/agentSelectPopCom";
+import { Suspense } from "react";
+
 export default function Home() {
   return (
     // remove relative before production
-    <main className=" relative">
-      {/* <SocialMediaPopup /> */}
-      <AgentSelectPopCom />
-      <HeroComponent />
+    <Suspense>
+      <main className=" relative">
+        {/* <SocialMediaPopup /> */}
+        <AgentSelectPopCom />
+        <HeroComponent />
 
-      <div className=" xl:px-[6.3rem] max-md:w-[90%] mx-auto">
-        <ProductsComponent />
-        <ServicesComponent />
-        <AboutComponent />
-        <ContactsComponent />
-        <FooterComponent />
-      </div>
-    </main>
+        <div className=" xl:px-[6.3rem] max-xl:w-[90%] mx-auto">
+          <ProductsComponent />
+          <ServicesComponent />
+          <AboutComponent />
+          <ContactsComponent />
+          <FooterComponent />
+        </div>
+      </main>
+    </Suspense>
   );
 }

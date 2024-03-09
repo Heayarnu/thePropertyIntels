@@ -75,9 +75,7 @@ function ContactsForm() {
     const { name, value } = e.target;
     formik.setValues((prev) => ({ ...prev, [name]: value }));
   }
-  // 2b449337-ebcf-46ad-9ad6-eda1b2122a16
-  // console.log(Refferral);
-  console.log("signup values", formik.values);
+  // console.log("signup values", formik.values);
   return (
     <form
       onSubmit={formik.handleSubmit}

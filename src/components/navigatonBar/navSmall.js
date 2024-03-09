@@ -6,7 +6,7 @@ import { UseMobileToggler } from "@/hooks/mobileViewQuery";
 function NavbarSmallScreen() {
   const { mobileView, router, pathname } = UseMobileToggler();
   return (
-    <nav className="lg:hidden absolute top-0 w-full bg-transparent justify-between px-[1rem] md:px-[2.31rem] pt-[1.25rem] pb-[1.13rem] flex items-center font-inter leading-[normal] text-[red]">
+    <nav className="md:hidden absolute top-0 w-full bg-transparent justify-between px-[1rem] md:px-[2.31rem] pt-[1.25rem] pb-[1.13rem] flex items-center font-inter leading-[normal] text-[red]">
       <div className="">{LogoLG}</div>
       <div
         className={`${
@@ -35,24 +35,6 @@ function NavbarSmallScreen() {
               </ol>
             </Link>
           ))}
-          {user?.token ? (
-            <div
-              className="hidden cursor-pointer whitespace-nowrap md:inline-block text-[0.90rem] font-semibold font-inter border border-default2  p-[0.19rem_0.5rem_0.44rem_0.69rem] rounded-[0.125rem]"
-              onClick={() => {
-                Cookies.remove("user");
-                router.push("/");
-              }}
-            >
-              Log Out
-            </div>
-          ) : (
-            <Link
-              href={"/auth/sign-up"}
-              className="hidden whitespace-nowrap md:inline-block text-[0.90rem] font-semibold font-inter border border-default2  p-[0.19rem_0.5rem_0.44rem_0.69rem] rounded-[0.125rem]"
-            >
-              Sign Up
-            </Link>
-          )}
         </div>
       </div>
       {mobileView == "true" ? (
