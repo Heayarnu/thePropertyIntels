@@ -25,14 +25,14 @@ function HeroComponent() {
           Estate advice with guaranteed peace of mind
         </h1>
         <div className="lg:flex mt-5 gap-5 justify-center font-semibold font-Geist tracking-[-0.0225rem] text-[1.125rem] ">
-          <Link href="#products">
+          <Link href="/?registrationType=agent">
             <button className="max-lg:mb-[.62rem] text-[#DFEFFF] shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] px-8 py-2 rounded-[6.25rem] border-[1px_solid_rgba(255,255,255,0.11)] bg-primary ">
               Become an Agent
             </button>
           </Link>
 
           {/* backdrop-filter: blur(10px); */}
-          <Link href="#products">
+          <Link href="/?registrationType=client">
             <button className=" text-primary shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] px-8 py-2 rounded-[6.25rem] border-[1px_solid_rgba(255,255,255,0.11)] bg-[#DFEFFF] ">
               Register your property
             </button>

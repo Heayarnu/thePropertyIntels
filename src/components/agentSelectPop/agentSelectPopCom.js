@@ -1,9 +1,26 @@
 import { IoCloseOutline } from "react-icons/io5";
 import { UseMobileToggler } from "../../hooks/mobileViewQuery";
 import AgentRegisterForm from "../registerAgentForm/registerAgentForm";
+import { useState } from "react";
+import SubmitSuccesful from "../successStatus/submitSuccesful";
+import CompanyAsAgentForm from "../registerAgentForm/companyAsAgent";
 function AgentSelectPopCom() {
-  const { toggleQuery, agent, agentType } = UseMobileToggler();
-  const registeragen = ["Select Agent type", "Enter details"];
+  const [submitStatus, setSubmitStatus] = useState(false);
+  const {
+    toggleQuery,
+    agent,
+    client,
+    agentType,
+    registrationType,
+    agencyFormType,
+    router,
+  } = UseMobileToggler();
+  const registeragent = ["Select Agent type", "Enter details"];
+  const registerClient = [
+    "Enter client details",
+    "Select Service type",
+    "Enter property details",
+  ];
 
   const agencyType = [
     [
@@ -92,97 +109,159 @@ function AgentSelectPopCom() {
     ],
   ];
   const picked = agent ?? "Select Agent type";
+  const ClientSelection = client ?? "Enter client details";
   return (
-    <section className="bg-[rgba(89,89,89,0.60)] absolute left-0 right-0 top-0 bottom-0">
-      <div className=" max-lg:w- [90%] max-w-[44rem] rounded-[0.9375rem] px-[.94rem] py-[2.5rem] bg-[white] absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2">
-        <div className="absolute top-[5.3rem] left-0 right-0 bg-[#E9E9E9] h-[1px] w-full"></div>
-        <IoCloseOutline className=" absolute top-[1.9rem] cursor-pointer right-[1.9rem]" />
-        <h3 className=" text-[1.25rem] font-bold tracking-[-0.0225rem] mb-[.9rem] text-main_heading">
-          Register as an agent
-        </h3>
-        {agent === "Select Agent type" ? (
-          <>
-            <div className=" mb-[.9rem] flex w-fit items-center bg-[#F8F9F9] divide-x rounded-[0rem_0rem_0.625rem_0.625rem] border-[#E9E9E9] border-[1px] border-solid">
-              {registeragen.map((item, index) => (
-                <button
-                  key={item}
-                  onClick={() => toggleQuery("agent", item)}
-                  className={` ${
-                    picked == item
-                      ? "text-primary bg-white"
-                      : "text-[#414356] bg-[#F8F9F9]"
-                  } text-[0.75rem] font-medium py-[.94rem] px-[.81rem] flex items-center tracking-[-0.03rem] border-r-[#E9E9E9] border-r`}
-                >
-                  <span
-                    className={`  ${
-                      picked == item
-                        ? "bg-primary text-white"
-                        : "bg-[#FFF] text-[#414356] "
-                    }  rounded-full grid place-items-center text-center w-[1.125rem] h-[1.125rem] mr-[.38rem]`}
-                  >
-                    {index + 1}
-                  </span>
-                  {item}
-                </button>
-              ))}
-            </div>
-            <div className="mt-[1.25rem] flex flex-col lg:flex-row gap-[.94rem]">
-              {agencyType.map(([icon, text]) => (
-                <div
-                  key={text}
-                  onClick={() => toggleQuery("agentType", text)}
-                  className={`${
-                    agentType === text
-                      ? "bg-[rgba(223,239,255,0.45)] border-primary"
-                      : "bg-[#FFF] border-[#EFEFEF]"
-                  } relative py-[1.99rem] px-[6.69rem] cursor-pointer rounded-[0.625rem] flex flex-col gap-[.94rem] items-center text-sub_heading border-solid border-[1px]`}
-                >
-                  <svg
-                    className={`${
-                      agentType !== text ? "hidden" : ""
-                    } top-[-.63rem] right-[-.37rem] absolute`}
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    viewBox="0 0 25 25"
-                    fill="none"
-                  >
-                    <g clipPath="url(#clip0_14_865)">
-                      <rect width="25" height="25" rx="12.5" fill="white" />
-                      <path
-                        d="M12.5 0C5.63428 0 0 5.63428 0 12.5C0 19.3657 5.63428 25 12.5 25C19.3657 25 25 19.3657 25 12.5C25 5.63428 19.3657 0 12.5 0ZM10.9873 18.1855L5.51338 12.7117L7.58477 10.6403L11.0831 14.1387L18.1062 7.7543L20.0774 9.92153L10.9873 18.1855Z"
-                        fill="#166BBF"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_14_865">
-                        <rect width="25" height="25" rx="12.5" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  {icon}
+    <>
+      {submitStatus !== "submitted" && registrationType && (
+        <section className="bg-[rgba(89,89,89,0.60)] absolute z-50 left-0 right-0 top-0 bottom-0">
+          {submitStatus === false && (
+            <div className=" max-lg:w-[90%] w-full max-w-[44rem] rounded-[0.9375rem] px-[.94rem] py-[2.5rem] bg-[white] absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2">
+              <div className="absolute top-[5.3rem] left-0 right-0 bg-[#E9E9E9] h-[1px] w-full"></div>
+              <IoCloseOutline
+                onClick={() => router.push("/")}
+                className=" absolute top-[1.9rem] cursor-pointer right-[1.9rem]"
+              />
+              <h3 className=" text-[1.25rem] font-bold tracking-[-0.0225rem] mb-[.9rem] text-main_heading">
+                Register as{" "}
+                {registrationType === "agent" ? "an agent" : "a client"}
+              </h3>
 
-                  <h3 className="tracking-[-0.04rem] text-base font-medium ">
-                    {text}
-                  </h3>
+              {registrationType == "agent" ? (
+                <div className=" mb-[.9rem] flex w-fit items-center bg-[#F8F9F9] divide-x rounded-[0rem_0rem_0.625rem_0.625rem] border-[#E9E9E9] border-[1px] border-solid">
+                  {registeragent.map((item, index) => (
+                    <button
+                      key={item}
+                      onClick={() => toggleQuery("agent", item)}
+                      className={` ${
+                        picked == item
+                          ? "text-primary bg-white"
+                          : "text-[#414356] bg-[#F8F9F9]"
+                      } text-[0.75rem] font-medium py-[.94rem] px-[.81rem] flex items-center tracking-[-0.03rem] border-r-[#E9E9E9] border-r`}
+                    >
+                      <span
+                        className={`  ${
+                          picked == item
+                            ? "bg-primary text-white"
+                            : "bg-[#FFF] text-[#414356] "
+                        }  rounded-full grid place-items-center text-center w-[1.125rem] h-[1.125rem] mr-[.38rem]`}
+                      >
+                        {index + 1}
+                      </span>
+                      {item}
+                    </button>
+                  ))}
                 </div>
-              ))}
+              ) : (
+                <div className=" mb-[.9rem] flex w-fit items-center bg-[#F8F9F9] divide-x rounded-[0rem_0rem_0.625rem_0.625rem] border-[#E9E9E9] border-[1px] border-solid">
+                  {registerClient.map((item, index) => (
+                    <button
+                      key={item}
+                      onClick={() => toggleQuery("client", item)}
+                      className={` ${
+                        ClientSelection == item
+                          ? "text-primary bg-white"
+                          : "text-[#414356] bg-[#F8F9F9]"
+                      } text-[0.75rem] font-medium py-[.94rem] px-[.81rem] flex items-center tracking-[-0.03rem] border-r-[#E9E9E9] border-r`}
+                    >
+                      <span
+                        className={`  ${
+                          ClientSelection == item
+                            ? "bg-primary text-white"
+                            : "bg-[#FFF] text-[#414356] "
+                        }  rounded-full grid place-items-center text-center w-[1.125rem] h-[1.125rem] mr-[.38rem]`}
+                      >
+                        {index + 1}
+                      </span>
+                      {item}
+                    </button>
+                  ))}
+                </div>
+              )}
+              {registrationType === "agent" && !agencyFormType && (
+                <>
+                  <div className="mt-[1.25rem] flex flex-col lg:flex-row gap-[.94rem]">
+                    {agencyType.map(([icon, text]) => (
+                      <div
+                        key={text}
+                        onClick={() => toggleQuery("agentType", text)}
+                        className={`${
+                          agentType === text
+                            ? "bg-[rgba(223,239,255,0.45)] border-primary"
+                            : "bg-[#FFF] border-[#EFEFEF]"
+                        } relative py-[1.99rem] px-[6.69rem] cursor-pointer rounded-[0.625rem] flex flex-col gap-[.94rem] items-center text-sub_heading border-solid border-[1px]`}
+                      >
+                        <svg
+                          className={`${
+                            agentType !== text ? "hidden" : ""
+                          } top-[-.63rem] right-[-.37rem] absolute`}
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                        >
+                          <g clipPath="url(#clip0_14_865)">
+                            <rect
+                              width="25"
+                              height="25"
+                              rx="12.5"
+                              fill="white"
+                            />
+                            <path
+                              d="M12.5 0C5.63428 0 0 5.63428 0 12.5C0 19.3657 5.63428 25 12.5 25C19.3657 25 25 19.3657 25 12.5C25 5.63428 19.3657 0 12.5 0ZM10.9873 18.1855L5.51338 12.7117L7.58477 10.6403L11.0831 14.1387L18.1062 7.7543L20.0774 9.92153L10.9873 18.1855Z"
+                              fill="#166BBF"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_14_865">
+                              <rect
+                                width="25"
+                                height="25"
+                                rx="12.5"
+                                fill="white"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        {icon}
+
+                        <h3 className="tracking-[-0.04rem] text-base font-medium ">
+                          {text}
+                        </h3>
+                      </div>
+                    ))}
+                  </div>
+                  <button
+                    onClick={() => {
+                      toggleQuery("agencyFormType", agentType);
+                      //   toggleQuery("agent", picked);
+                    }}
+                    className={` ${
+                      agentType
+                        ? "bg-primary text-white"
+                        : "bg-[rgba(222,222,222,0.35)] text-[#414356]"
+                    } rounded-[6.25rem] mt-[2.5rem] w-full h-[3.125rem]  text-base font-semibold tracking-[-0.02rem]`}
+                  >
+                    Continue
+                  </button>
+                </>
+              )}
+              {registrationType === "agent" &&
+                agencyFormType === "As an Individual" && (
+                  <AgentRegisterForm submitStatus={setSubmitStatus} />
+                )}
+              {registrationType === "agent" &&
+                agencyFormType === "As a Company" && (
+                  <CompanyAsAgentForm submitStatus={setSubmitStatus} />
+                )}
             </div>
-            <button
-              className={` ${
-                agentType
-                  ? "bg-primary text-white"
-                  : "bg-[rgba(222,222,222,0.35)] text-[#414356]"
-              } rounded-[6.25rem] mt-[2.5rem] w-full h-[3.125rem]  text-base font-semibold tracking-[-0.02rem]`}
-            >
-              Continue
-            </button>
-          </>
-        ) : (
-          <AgentRegisterForm />
-        )}
-      </div>
-    </section>
+          )}
+          {submitStatus === true && (
+            <SubmitSuccesful submitStatus={setSubmitStatus} />
+          )}
+        </section>
+      )}
+    </>
   );
 }
 

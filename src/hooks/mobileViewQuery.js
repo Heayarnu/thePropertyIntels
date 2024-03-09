@@ -28,6 +28,9 @@ export function UseMobileToggler() {
   const mobileView = searchParams.get("open");
   const id = searchParams.get("id");
   const agentType = searchParams.get("agentType");
+  const client = searchParams.get("client");
+  const registrationType = searchParams.get("registrationType");
+  const agencyFormType = searchParams.get("agencyFormType");
   const notifyid = searchParams.get("notifyid");
   const agent = searchParams.get("agent");
 
@@ -39,7 +42,10 @@ export function UseMobileToggler() {
     pathname,
     notifyid,
     agent,
+    client,
     agentType,
+    registrationType,
+    agencyFormType,
     toggleQuery,
     id,
   };

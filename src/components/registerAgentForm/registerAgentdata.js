@@ -110,6 +110,24 @@ export const registerFormField = [
   },
 ];
 
+export const registerCompanyAsAgentFields = [
+  {
+    type: "text",
+    name: "companyName",
+    placeholder: "Company Name",
+  },
+
+  {
+    type: "text",
+    name: "companyAddress",
+    placeholder: "Company Address",
+  },
+  {
+    type: "text",
+    name: "website",
+    placeholder: "Company Website (Optional)",
+  },
+];
 export const countriesOfProperties = {
   country: ["", "Nigeria", "America", "Inem-Island"],
   city: ["", "Victoria-Island", "Apapa", "Ikeja"],
