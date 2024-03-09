@@ -118,7 +118,7 @@ function AgentSelectPopCom() {
       {submitStatus !== "submitted" && registrationType && (
         <section className="bg-[rgba(89,89,89,0.60)] absolute z-50 left-0 right-0 top-0 bottom-0">
           {submitStatus === false && (
-            <div className=" max-lg:w-[90%] w-full max-w-[44rem] rounded-[0.9375rem] px-[.94rem] py-[2.5rem] bg-[white] absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2">
+            <div className=" max-lg:w-[90%] w-full max-w-[44rem] rounded-[0.9375rem] px-[.94rem] py-[2.5rem] bg-[white] absolute top-[7.94rem] -translate-x-1/2 left-1/2 ">
               <div className="absolute top-[5.3rem] left-0 right-0 bg-[#E9E9E9] h-[1px] w-full"></div>
               <IoCloseOutline
                 onClick={() => router.push("/")}

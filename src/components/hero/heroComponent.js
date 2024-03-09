@@ -2,11 +2,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import NavMain from "../navigatonBar/navMain";
+import NavbarSmallScreen from "../navigatonBar/navSmall";
 function HeroComponent() {
   return (
     <div className=" relative w-full h-full rounded-sm overflow-hidden">
-      <div className="bg-gradient-to-br from-[rgba(0,0,0,0.35)_25.27%] to-[] absolute top-0 left-0 right-0 bottom-0"></div>
-      {/* <NavMain /> */}
+      <div className="bg-gradient-to-br from-[rgba(0,0,0,0.35)_25.27%,rgba(0,0,0,0.35)] via-[rgba(0,0,0,0.35)_53.22%] to-[rgba(0,0,0,0.0)_69.08%] absolute top-0 left-0 right-0 bottom-0"></div>
+      <NavMain />
+      <NavbarSmallScreen />
       <Image
         className="h-[90vh] md:h-auto"
         width={3840}

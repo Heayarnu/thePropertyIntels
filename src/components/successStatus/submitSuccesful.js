@@ -1,14 +1,19 @@
+import { UseMobileToggler } from "@/hooks/mobileViewQuery";
 import React from "react";
 import { IoCloseOutline } from "react-icons/io5";
 
 function SubmitSuccesful({ submitStatus }) {
+  const { router } = UseMobileToggler();
   return (
     <div
       id="Formsuccess"
       className="rounded-[0.9375rem] relative p-[2.7rem] bg-white flex flex-col items-center max-lg:w-[90%] w-full max-w-[36.25rem] mx-auto mt-[7.94rem]"
     >
       <IoCloseOutline
-        onClick={() => submitStatus("submitted")}
+        onClick={() => {
+          submitStatus("submitted");
+          router.push("/");
+        }}
         className=" absolute top-[1.9rem] cursor-pointer right-[1.9rem]"
       />
 

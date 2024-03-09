@@ -3,7 +3,7 @@ import NavLarge from "./navlarge";
 
 function NavMain() {
   return (
-    <nav className=" absolute top-0 w-full px-[6.3rem] ">
+    <nav className="max-lg:hidden absolute top-0 w-full px-[6.3rem] ">
       <NavLarge />
     </nav>
   );

@@ -67,7 +67,8 @@ function AgentRegisterForm({ submitStatus }) {
       console.log("from signup try block");
       // if successfull set submitstatus
       submitStatus(true);
-      router.push("/#Formsuccess");
+
+      router.push("#Formsuccess");
       //   toast.success(res?.message, {});
 
       resetForm();
