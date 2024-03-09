@@ -4,6 +4,7 @@ import AgentRegisterForm from "../registerAgentForm/registerAgentForm";
 import { useState } from "react";
 import SubmitSuccesful from "../successStatus/submitSuccesful";
 import CompanyAsAgentForm from "../registerAgentForm/companyAsAgent";
+import { customEncodeURIComponent } from "@/hooks/customencoder";
 function AgentSelectPopCom() {
   const [submitStatus, setSubmitStatus] = useState(false);
   const {
@@ -14,7 +15,9 @@ function AgentSelectPopCom() {
     registrationType,
     agencyFormType,
     router,
+    createQueryString,
   } = UseMobileToggler();
+
   const registeragent = ["Select Agent type", "Enter details"];
   const registerClient = [
     "Enter client details",
@@ -130,8 +133,23 @@ function AgentSelectPopCom() {
                 <div className=" mb-[.9rem] flex w-fit items-center bg-[#F8F9F9] divide-x rounded-[0rem_0rem_0.625rem_0.625rem] border-[#E9E9E9] border-[1px] border-solid">
                   {registeragent.map((item, index) => (
                     <button
+                      type="button"
                       key={item}
-                      onClick={() => toggleQuery("agent", item)}
+                      onClick={
+                        () =>
+                          router.push(
+                            `/?registrationType=${registrationType}&agentType=${customEncodeURIComponent(
+                              agentType
+                            )}&agent=${customEncodeURIComponent(item)}
+                          
+                            `,
+                            { scroll: false }
+                          )
+                        //   &agencyFormType=${customEncodeURIComponent(
+                        //     agencyFormType
+                        //   )}
+                        // toggleQuery("agent", item)
+                      }
                       className={` ${
                         picked == item
                           ? "text-primary bg-white"
@@ -233,7 +251,12 @@ function AgentSelectPopCom() {
                   </div>
                   <button
                     onClick={() => {
-                      toggleQuery("agencyFormType", agentType);
+                      router.push(
+                        `/?registrationType=${registrationType}&agencyFormType=${customEncodeURIComponent(
+                          agentType
+                        )}&agent=Enter+details`
+                      );
+                      //   toggleQuery("agencyFormType", agentType);
                       //   toggleQuery("agent", picked);
                     }}
                     className={` ${
