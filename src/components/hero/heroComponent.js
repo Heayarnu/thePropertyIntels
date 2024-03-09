@@ -6,7 +6,7 @@ function HeroComponent() {
   return (
     <div className=" relative w-full h-full rounded-sm overflow-hidden">
       <div className="bg-gradient-to-br from-[rgba(0,0,0,0.35)_25.27%] to-[] absolute top-0 left-0 right-0 bottom-0"></div>
-      <NavMain />
+      {/* <NavMain /> */}
       <Image
         className="h-[90vh] md:h-auto"
         width={3840}
@@ -30,7 +30,6 @@ function HeroComponent() {
               Become an Agent
             </button>
           </Link>
-
           {/* backdrop-filter: blur(10px); */}
           <Link href="/?registrationType=client">
             <button className=" text-primary shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] px-8 py-2 rounded-[6.25rem] border-[1px_solid_rgba(255,255,255,0.11)] bg-[#DFEFFF] ">

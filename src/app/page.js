@@ -18,7 +18,7 @@ export default function Home() {
       <AgentSelectPopCom />
       <HeroComponent />
 
-      <div className="px-[6.3rem]">
+      <div className=" xl:px-[6.3rem] max-md:w-[90%] mx-auto">
         <ProductsComponent />
         <ServicesComponent />
         <AboutComponent />

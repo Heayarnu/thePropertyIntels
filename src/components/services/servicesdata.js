@@ -1,9 +1,10 @@
 export const servicesArray = [
   [
     <svg
+      className="w-[2.25rem] h-[2.25rem]"
       xmlns="http://www.w3.org/2000/svg"
-      width="45"
-      height="45"
+      // width="45"
+      // height="45"
       viewBox="0 0 45 45"
       fill="none"
     >
@@ -73,9 +74,10 @@ export const servicesArray = [
   ],
   [
     <svg
+      className="w-[2.25rem] h-[2.25rem]"
       xmlns="http://www.w3.org/2000/svg"
-      width="45"
-      height="45"
+      // width="45"
+      // height="45"
       viewBox="0 0 45 45"
       fill="none"
     >
@@ -260,9 +262,10 @@ export const servicesArray = [
   ],
   [
     <svg
+      className="w-[2.25rem] h-[2.25rem]"
       xmlns="http://www.w3.org/2000/svg"
-      width="45"
-      height="45"
+      // width="45"
+      // height="45"
       viewBox="0 0 45 45"
       fill="none"
     >
@@ -391,9 +394,10 @@ export const servicesArray = [
   ],
   [
     <svg
+      className="w-[2.25rem] h-[2.25rem]"
       xmlns="http://www.w3.org/2000/svg"
-      width="45"
-      height="45"
+      // width="45"
+      // height="45"
       viewBox="0 0 45 45"
       fill="none"
     >
@@ -438,9 +442,10 @@ export const servicesArray = [
   ],
   [
     <svg
+      className="w-[2.25rem] h-[2.25rem] md:w-[] md:h-[]"
       xmlns="http://www.w3.org/2000/svg"
-      width="45"
-      height="45"
+      // width="45"
+      // height="45"
       viewBox="0 0 45 45"
       fill="none"
     >
@@ -546,9 +551,10 @@ export const servicesArray = [
   ],
   [
     <svg
+      className="w-[2.25rem] h-[2.25rem] md:w-[47px] md:h-[45px]"
       xmlns="http://www.w3.org/2000/svg"
-      width="47"
-      height="45"
+      // width="47"
+      // height="45"
       viewBox="0 0 47 45"
       fill="none"
     >
