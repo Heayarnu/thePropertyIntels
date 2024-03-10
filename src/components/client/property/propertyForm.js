@@ -16,9 +16,10 @@ function PropertyRegisterForm({ submitStatus }) {
     city: "",
     location: "",
   };
-
+  //   formik.validateOnMount;
   const formik = useFormik({
     initialValues: InitiaState,
+    validateOnMount: true, // Enable validateOnMount
     validationSchema: Yup.object({
       noOfproperties: Yup.string().required("Required"),
       country: Yup.string().required("Required"),
@@ -29,39 +30,16 @@ function PropertyRegisterForm({ submitStatus }) {
     onSubmit: handleSubmit,
   });
   async function handleSubmit(values, { resetForm }) {
-    console.log("Attempting to signup");
-    // if (subPlan) {
-    //   router.push(
-    //     `/auth/email-verification?${subPlan && "plan=" + subPlan}&email=${
-    //       // res.user.email
-    //       "sopewenike"
-    //     }`,
-    //     {
-    //       scroll: false,
-    //     }
-    //   );
-    // }
-
-    const filteredObject = Object.keys(values)
-      .filter((key) => key !== "Confirm password")
-      // .filter((key) => key !== "dateOfBirth" && key !== "Confirm password")
-      .reduce((obj, key) => {
-        obj[key] = values[key];
-        return obj;
-      }, {});
-
-    // const lowercaseValues = {
-    //   ...filteredObject,
-    //   email: filteredObject?.email.toLowerCase(),
-    // };
-    console.log("this is filtered", filteredObject);
     try {
-      console.log("from signup try block");
+      console.log("from property try block");
       // if successfull set submitstatus
       //   submitStatus(true);
+      submitStatus(true);
 
-      //   router.push("?selectService=true#Formsuccess");
-      toggleQuery("selectService", true);
+      router.push("#Formsuccess");
+      // router.push("?selectService=true#Formsuccess");
+      //   toggleQuery("client", "Select Service type");
+      //   toggleQuery("selectService", true);
       //   toast.success(res?.message, {});
 
       resetForm();
@@ -78,7 +56,7 @@ function PropertyRegisterForm({ submitStatus }) {
     const { name, value } = e.target;
     formik.setValues((prev) => ({ ...prev, [name]: value }));
   }
-
+  //   console.log(formik.isValid);
   return (
     <div>
       <p className="text-main_heading text-base md:text-[1.125rem] font-medium tracking-[-0.0225rem] mt-[1.56rem] mb-[1.25rem]">

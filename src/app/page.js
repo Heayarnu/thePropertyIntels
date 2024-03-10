@@ -1,5 +1,4 @@
 "use client";
-import NavMain from "@/components/navigatonBar/navMain";
 import HeroComponent from "@/components/hero/heroComponent";
 import ProductsComponent from "@/components/explore/productComponent";
 import ServicesComponent from "@/components/services/servicesComponent";
@@ -10,8 +9,20 @@ import "react-phone-number-input/style.css";
 import SocialMediaPopup from "@/components/socialMediaPopUp.js";
 import AgentSelectPopCom from "@/components/agentSelectPop/agentSelectPopCom";
 import { Suspense } from "react";
+import { UseMobileToggler } from "@/hooks/mobileViewQuery";
 
 export default function Home() {
+  const {
+    toggleQuery,
+    selectService,
+    agent,
+    client,
+    agentType,
+    registrationType,
+    agencyFormType,
+    router,
+    createQueryString,
+  } = UseMobileToggler();
   return (
     // remove relative before production
     <Suspense>

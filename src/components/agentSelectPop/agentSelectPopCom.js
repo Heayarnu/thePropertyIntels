@@ -301,7 +301,9 @@ function AgentSelectPopCom() {
               {registrationType === "client" &&
                 client == "Select Service type" && <Selectservices />}
               {registrationType === "client" &&
-                client == "Enter property details" && <PropertyRegisterForm />}
+                client == "Enter property details" && (
+                  <PropertyRegisterForm submitStatus={setSubmitStatus} />
+                )}
             </div>
           )}
           {submitStatus === true && (

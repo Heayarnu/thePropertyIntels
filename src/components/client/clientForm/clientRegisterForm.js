@@ -27,6 +27,7 @@ function ClientRegisterForm({ submitStatus }) {
 
   const formik = useFormik({
     initialValues: InitiaState,
+    validateOnMount: true, // Enable validateOnMount
     validationSchema: Yup.object({
       fullName: Yup.string().required("Required"),
       phoneNumber: Yup.string().required("Required"),
@@ -61,10 +62,6 @@ function ClientRegisterForm({ submitStatus }) {
         return obj;
       }, {});
 
-    // const lowercaseValues = {
-    //   ...filteredObject,
-    //   email: filteredObject?.email.toLowerCase(),
-    // };
     console.log("this is filtered", filteredObject);
     try {
       console.log("from signup try block");
@@ -72,7 +69,7 @@ function ClientRegisterForm({ submitStatus }) {
       //   submitStatus(true);
 
       //   router.push("?selectService=true#Formsuccess");
-      toggleQuery("selectService", true);
+      toggleQuery("client", "Select Service type");
       //   toast.success(res?.message, {});
 
       resetForm();

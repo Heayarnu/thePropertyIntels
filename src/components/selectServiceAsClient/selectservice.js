@@ -4,7 +4,8 @@ import { UseMobileToggler } from "@/hooks/mobileViewQuery";
 import { useState } from "react";
 
 function Selectservices() {
-  const { serviceType, registrationType, router } = UseMobileToggler();
+  const { toggleQuery, serviceType, registrationType, router } =
+    UseMobileToggler();
 
   //   const initialState = {
   //     Property: "",
@@ -502,58 +503,56 @@ function Selectservices() {
     <div>
       <div>
         <h3>Kindly select the services you`re interested in</h3>
-        <>
-          <div className="mt-[1.25rem] grid lg:grid-cols-2 gap-[.94rem] ">
-            {selectServiceData.map(({ icon, desc, title }) => (
-              <div
-                key={title}
-                // onClick={() => toggleQuery("serviceType", desc)}
-                className={`${
-                  pickedServices[title] === true
-                    ? "bg-[rgba(223,239,255,0.45)] border-primary"
-                    : "bg-[#FFF] border-[#EFEFEF]"
-                } relative py-[1.99rem] px-[6.69rem] cursor-pointer rounded-[0.625rem] flex flex-col gap-[.94rem] items-center text-sub_heading border-solid border-[1px]`}
-              >
-                <input
-                  type="checkbox"
-                  name={title}
-                  //   checked={pickedServices[title]}
-                  onChange={handleChange}
-                  className={` top-[-.63rem] right-[-.37rem] absolute`}
-                />
-                {icon}
 
-                <h3
-                  className={`tracking-[-0.04rem] text-center text-[1.25rem] font-medium ${
-                    pickedServices[title] === true
-                      ? "text-primary"
-                      : "text-[#414356]"
-                  } `}
-                >
-                  {desc}
-                </h3>
-              </div>
-            ))}
-          </div>
-          <button
-            onClick={() => {
-              router.push(
-                `/?registrationType=${registrationType}&agencyFormType=${customEncodeURIComponent(
-                  serviceType
-                )}&agent=Enter+details`
-              );
-              //   toggleQuery("agencyFormType", serviceType);
-              //   toggleQuery("agent", picked);
-            }}
-            className={` ${
-              serviceType
-                ? "bg-primary text-white"
-                : "bg-[rgba(222,222,222,0.35)] text-[#414356]"
-            } rounded-[6.25rem] mt-[2.5rem] w-full h-[3.125rem]  text-base font-semibold tracking-[-0.02rem]`}
-          >
-            Continue
-          </button>
-        </>
+        <div className="mt-[1.25rem] grid lg:grid-cols-2 gap-[.94rem] ">
+          {selectServiceData.map(({ icon, desc, title }) => (
+            <div
+              key={title}
+              // onClick={() => toggleQuery("serviceType", desc)}
+              className={`${
+                pickedServices[title] === true
+                  ? "bg-[rgba(223,239,255,0.45)] border-primary"
+                  : "bg-[#FFF] border-[#EFEFEF]"
+              } relative py-[1.99rem] px-[6.69rem] cursor-pointer rounded-[0.625rem] flex flex-col gap-[.94rem] items-center text-sub_heading border-solid border-[1px]`}
+            >
+              <input
+                type="checkbox"
+                name={title}
+                //   checked={pickedServices[title]}
+                onChange={handleChange}
+                className={` top-[.88rem] right-[.88rem] absolute w-[1.5rem] h-[1.5rem]`}
+              />
+              {icon}
+
+              <h3
+                className={`tracking-[-0.04rem] text-center text-[1.25rem] font-medium ${
+                  pickedServices[title] === true
+                    ? "text-primary"
+                    : "text-[#414356]"
+                } `}
+              >
+                {desc}
+              </h3>
+            </div>
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={() => {
+            //   router.push(
+            //     `/?registrationType=${registrationType}&client=Enter+property+details`
+            //   );
+            toggleQuery("client", "Enter property details");
+            //   toggleQuery("agent", picked);
+          }}
+          className={` ${
+            Object.values(pickedServices).find((item) => item == true)
+              ? "bg-primary text-white"
+              : "bg-[rgba(222,222,222,0.35)] text-[#414356]"
+          } p-[0.625rem] mt-[2.19rem] w-full block lg:w-[11.3125rem] tracking-[-0.0225rem] font-semibold rounded-[6.25rem] text-[1.125rem] text-white ml-auto`}
+        >
+          Continue
+        </button>
       </div>
     </div>
   );

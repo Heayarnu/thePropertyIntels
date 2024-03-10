@@ -24,6 +24,7 @@ function AgentRegisterForm({ submitStatus }) {
 
   const formik = useFormik({
     initialValues: InitiaState,
+    validateOnMount: true, // Enable validateOnMount
     validationSchema: Yup.object({
       fullName: Yup.string().required("Required"),
       phoneNumber: Yup.string().required("Required"),
