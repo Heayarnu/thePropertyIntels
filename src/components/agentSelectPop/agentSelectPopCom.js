@@ -6,10 +6,14 @@ import { useState } from "react";
 import SubmitSuccesful from "../successStatus/submitSuccesful";
 import CompanyAsAgentForm from "../registerAgentForm/companyAsAgent";
 import { customEncodeURIComponent } from "@/hooks/customencoder";
+import ClientRegisterForm from "../client/clientForm/clientRegisterForm";
+import Selectservices from "../selectServiceAsClient/selectservice";
+import PropertyRegisterForm from "../client/property/propertyForm";
 function AgentSelectPopCom() {
   const [submitStatus, setSubmitStatus] = useState(false);
   const {
     toggleQuery,
+    selectService,
     agent,
     client,
     agentType,
@@ -175,16 +179,22 @@ function AgentSelectPopCom() {
                   ))}
                 </div>
               ) : (
-                <div className=" mb-[.9rem] flex w-fit items-center bg-[#F8F9F9] divide-x rounded-[0rem_0rem_0.625rem_0.625rem] border-[#E9E9E9] border-[1px] border-solid">
+                <div className=" mb-[.9rem] flex w-fit items-center flex-wrap bg-[#F8F9F9] divide-x rounded-[0rem_0rem_0.625rem_0.625rem] border-[#E9E9E9] border-[1px] border-solid">
                   {registerClient.map((item, index) => (
                     <button
                       key={index}
-                      onClick={() => toggleQuery("client", item)}
+                      onClick={() =>
+                        router.push(
+                          `?registrationType=client&client=${customEncodeURIComponent(
+                            item
+                          )}&selectService=false`
+                        )
+                      }
                       className={` ${
                         ClientSelection == item
                           ? "text-primary bg-white"
                           : "text-[#414356] bg-[#F8F9F9]"
-                      } text-[0.75rem] font-medium py-[.94rem] px-[.81rem] flex items-center tracking-[-0.03rem] border-r-[#E9E9E9] border-r`}
+                      } text-[0.75rem] max-md:basis-[49%] max-md:last:basis-[100%] font-medium py-[.94rem] px-[.81rem] flex items-center tracking-[-0.03rem] border-r-[#E9E9E9] border-r`}
                     >
                       <span
                         className={`  ${
@@ -282,6 +292,16 @@ function AgentSelectPopCom() {
                 agencyFormType === "As a Company" && (
                   <CompanyAsAgentForm submitStatus={setSubmitStatus} />
                 )}
+              {registrationType === "client" &&
+                client !== "Select Service type" &&
+                client !== "Enter property details" && (
+                  <ClientRegisterForm submitStatus={setSubmitStatus} />
+                )}
+
+              {registrationType === "client" &&
+                client == "Select Service type" && <Selectservices />}
+              {registrationType === "client" &&
+                client == "Enter property details" && <PropertyRegisterForm />}
             </div>
           )}
           {submitStatus === true && (
