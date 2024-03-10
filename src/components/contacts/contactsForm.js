@@ -20,6 +20,7 @@ function ContactsForm() {
 
   const formik = useFormik({
     initialValues: InitiaState,
+    validateOnMount: true, // Enable validateOnMount
     validationSchema: Yup.object({
       fName: Yup.string().required("Required"),
       lName: Yup.string().required("Required"),

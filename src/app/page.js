@@ -9,20 +9,12 @@ import "react-phone-number-input/style.css";
 import SocialMediaPopup from "@/components/socialMediaPopUp.js";
 import AgentSelectPopCom from "@/components/agentSelectPop/agentSelectPopCom";
 import { Suspense } from "react";
-import { UseMobileToggler } from "@/hooks/mobileViewQuery";
+
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Home() {
-  const {
-    toggleQuery,
-    selectService,
-    agent,
-    client,
-    agentType,
-    registrationType,
-    agencyFormType,
-    router,
-    createQueryString,
-  } = UseMobileToggler();
+  const pathname = usePathname();
+  const router = useRouter();
   return (
     // remove relative before production
     <Suspense>
