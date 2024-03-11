@@ -5,13 +5,16 @@ import { LogoLG } from "./NavData";
 
 function NavLarge() {
   return (
-    <div className="pt-[2.62rem] relative bg-transparent flex text-base font-medium tracking-[-0.02rem]  items-center justify-between">
+    <div className="pt-[2.62rem] relative z-50 bg-transparent flex text-base font-medium tracking-[-0.02rem]  items-center justify-between">
       <div className=" bg-transparent flex items-center gap-[3.5rem]">
         <div className="absolute bottom-[-50px] left-0 right-0 h-[0.0625rem] bg-[rgba(212,69,69,0.05)]"></div>
-        <Link href={"/"} className="text-white whitespace-nowrap ">
+        <Link
+          href={"/#about"}
+          className="text-white cursor-pointer whitespace-nowrap "
+        >
           About Us
         </Link>
-        <Link href={"/"} className="text-white whitespace-nowrap">
+        <Link href={"/#contact"} className="text-white whitespace-nowrap">
           Contact Us
         </Link>
       </div>
@@ -19,7 +22,10 @@ function NavLarge() {
         {LogoLG}
       </Link>
       <div className="flex gap-[3.5rem] items-center">
-        <Link href={"/"} className="text-white block whitespace-nowrap">
+        <Link
+          href={"/#services"}
+          className="text-white block whitespace-nowrap"
+        >
           Our Services
         </Link>
         <Link

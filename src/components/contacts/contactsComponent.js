@@ -5,7 +5,7 @@ import ContactsForm from "./contactsForm";
 
 function ContactsComponent() {
   return (
-    <section className="pb-[5.7rem] ">
+    <section id="contact" className="pb-[5.7rem] ">
       <div className="lg:flex justify-between">
         <div>
           <p className=" text-[0.75rem] md:text-[0.875rem] leading-[1.8125rem] tracking-[-0.0175rem] font-normal text-sub_heading">

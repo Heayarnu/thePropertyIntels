@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function AboutComponent() {
   return (
-    <section className="py-[6.44rem]">
+    <section id="about" className="py-[6.44rem]">
       <div className="lg:flex items-center gap-[3.31rem]">
         <div>
           <h2 className="text-[0.875rem] leading-[1.8125rem] tracking-[-0.0175rem] text-sub_heading">
