@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import NavMain from "../navigatonBar/navMain";
 import NavbarSmallScreen from "../navigatonBar/navSmall";
+// import video from "../../../assets/herovideo.mp4";
 function HeroComponent() {
   return (
     <div className=" relative w-full h-full rounded-sm overflow-hidden">
@@ -11,10 +12,11 @@ function HeroComponent() {
       <NavbarSmallScreen />
 
       <video
-        className="absolute h-screen w-screen"
+        className=" h-full w-full max-w -[1440px]"
+        // src={video}
         src="/assets/videos/herovideo.mp4"
-        width="320"
-        height="240"
+        width="1440"
+        height="500"
         loop
         autoPlay
         muted
