@@ -11,7 +11,8 @@ function SubmitSuccesful({ submitStatus }) {
     >
       <IoCloseOutline
         onClick={() => {
-          submitStatus("submitted");
+          submitStatus(false);
+          // submitStatus("submitted");
           router.push("/");
         }}
         className=" absolute top-[1.9rem] cursor-pointer right-[1.9rem]"
