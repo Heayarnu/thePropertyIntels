@@ -13,14 +13,13 @@ import { Suspense } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 export default function Home() {
-  const pathname = usePathname();
-  const router = useRouter();
   return (
     // remove relative before production
     <Suspense>
       <main className=" relative">
         {/* <SocialMediaPopup /> */}
         <AgentSelectPopCom />
+        <SocialMediaPopup />
         <HeroComponent />
 
         <div className=" xl:px-[6.3rem] max-xl:w-[90%] mx-auto">

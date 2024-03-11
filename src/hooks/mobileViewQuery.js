@@ -28,6 +28,7 @@ export function UseMobileToggler() {
 
   const mobileView = searchParams.get("open");
   const id = searchParams.get("id");
+  const image = searchParams.get("image");
   const selectService = searchParams.get("selectService");
   const serviceType = searchParams.get("serviceType");
   const agentType = searchParams.get("agentType");
@@ -51,6 +52,7 @@ export function UseMobileToggler() {
     agencyFormType,
     selectService,
     serviceType,
+    image,
     toggleQuery,
     id,
   };

@@ -2,6 +2,7 @@ import React from "react";
 import { productGrid } from "./productsdata";
 import { FaAngleRight } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
 function ProductsComponent() {
   return (
     <section className="w-full mt-[6.5rem]">
@@ -15,9 +16,10 @@ function ProductsComponent() {
         {/* <div className="flex justify-center"> */}
         <div className=" overflow-x-auto ">
           <div className="productContainer mt-[3.94rem] w-[81.36rem] ">
-            {productGrid.map(([name, img]) => (
-              <div
-                key={name}
+            {productGrid.map(([name, img, link], index) => (
+              <Link
+                href={`?image=${link}`}
+                key={name + index}
                 className={` whitespace-nowrap relative ${name} bg-red-500`}
               >
                 <Image
@@ -33,7 +35,7 @@ function ProductsComponent() {
                   <span>View homes</span>{" "}
                   <FaAngleRight className="inline-block" />
                 </button>
-              </div>
+              </Link>
             ))}
 
             {/* <div className="first bg-red-500"></div>

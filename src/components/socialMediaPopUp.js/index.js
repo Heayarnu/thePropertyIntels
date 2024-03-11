@@ -1,17 +1,19 @@
 // import React from "react";
 
+import { UseMobileToggler } from "@/hooks/mobileViewQuery";
 import Image from "next/image";
 import { useState } from "react";
 
 function SocialMediaPopup() {
-  const [pop, setPop] = useState(true);
+  const { image, router } = UseMobileToggler();
+  // const [pop, setPop] = useState(true);
   return (
     <>
-      {pop && (
-        <div className="bg-[rgba(89,89,89,0.60)] fixed left-0 right-0 top-0 bottom-0">
+      {image && (
+        <div className="bg-[rgba(89,89,89,0.60)] fixed left-0 right-0 top-0 bottom-0 z-[999]">
           <div className="w-full max-w-[32.375rem] rounded-[0.9375rem] py-[2.5rem] bg-[white] text-center absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2">
             <svg
-              onClick={() => setPop(false)}
+              onClick={() => router.push("/")}
               className=" absolute top-[1.9rem] cursor-pointer right-[1.9rem]"
               xmlns="http://www.w3.org/2000/svg"
               width="26"
@@ -39,7 +41,7 @@ function SocialMediaPopup() {
                     // width={500}
                     // height={500}
                     fill
-                    src={"/assets/images/popups/social1.png"}
+                    src={`/assets/images/mookimg/${image + ".png"}`}
                     alt="hero"
                   />
                 </div>
@@ -85,12 +87,20 @@ function SocialMediaPopup() {
               <h3 className="text-[1.5rem] text-main_heading tracking-[-0.03rem] font-semibold ">
                 Check these properties via Instagram
               </h3>
-              <h3 className="mt-[0.75rem] mb-[0.81rem] text-base font-normal tracking-[-0.02rem] leading-[1.8125rem] text-sub_heading">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                className="mt-[0.75rem] mb-[0.81rem] text-base font-normal tracking-[-0.02rem] leading-[1.8125rem] text-sub_heading"
+              >
                 @thepropertyintels
-              </h3>
-              <button className="bg-primary text-white p-[0.625rem] h-[3.125rem] w-[12.4375rem] rounded-[6.25rem] text-[1.125rem] font-semibold tracking-[-0.0225rem]">
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                className="bg-primary text-white p-[0.625rem] h-[3.125rem] w-[12.4375rem] rounded-[6.25rem] text-[1.125rem] font-semibold tracking-[-0.0225rem]"
+              >
                 Go to Instagram
-              </button>
+              </a>
             </div>
           </div>
         </div>

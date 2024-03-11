@@ -14,6 +14,7 @@ function AgentSelectPopCom() {
   const {
     toggleQuery,
     selectService,
+    image,
     agent,
     client,
     agentType,
@@ -124,7 +125,8 @@ function AgentSelectPopCom() {
   const ClientSelection = client ?? "Enter client details";
   return (
     <>
-      {submitStatus !== "submitted" && registrationType && (
+      {/* {submitStatus !== "submitted" && registrationType && ( */}
+      {registrationType && (
         <section className="bg-[rgba(89,89,89,0.60)] absolute z-50 left-0 right-0 top-0 bottom-0">
           {submitStatus === false && (
             <div className=" max-lg:w-[90%] w-full max-w-[44rem] rounded-[0.9375rem] px-[.94rem] py-[2.5rem] bg-[white] absolute top-[7.94rem] -translate-x-1/2 left-1/2 ">
@@ -309,6 +311,7 @@ function AgentSelectPopCom() {
           {submitStatus === true && (
             <SubmitSuccesful submitStatus={setSubmitStatus} />
           )}
+          {/* {image && <SocialMediaPopup />} */}
         </section>
       )}
     </>
