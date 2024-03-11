@@ -9,23 +9,26 @@ function HeroComponent() {
       <div className="bg-gradient-to-br from-[rgba(0,0,0,0.35)_25.27%,rgba(0,0,0,0.35)] via-[rgba(0,0,0,0.35)_53.22%] to-[rgba(0,0,0,0.0)_69.08%] absolute top-0 left-0 right-0 bottom-0"></div>
       <NavMain />
       <NavbarSmallScreen />
-      {/* <Image
-        className="h-[90vh] md:h-auto"
-        width={3840}
-        height={2160}
-        // fill
-        src={"/assets/images/hero/heroImage.jpg"}
-        alt="hero"
-      /> */}
 
-      <iframe
+      <video
+        className="absolute h-screen w-screen"
+        src="/assets/videos/herovideo.mp4"
+        width="320"
+        height="240"
+        loop
+        autoPlay
+        muted
+        // controls
+      />
+
+      {/* <iframe
         className="h-screen w-screen"
         src="https://www.youtube.com/embed/RlKiy9_vmLo?autoplay=1&loop=1&playlist=RlKiy9_vmLo&controls=0&modestbranding=1&showinfo=0&autohide=1&mute=1"
         // frameBorder="0"
         allow="autoplay; encrypted-media"
         allowFullScreen
         title="video"
-      />
+      /> */}
 
       <div className="max-lg:mt-[3.06rem] py-[50px] text-white rounded-md absolute text-center w-[90%]  -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 bg- [#ffffff7a]">
         <h2 className="text-[1.875rem] w-full max-w-[44.9375rem] mx-auto md:text-[3.75rem] leading-[2rem] md:leading-[3.75rem] tracking-[-0.075rem] font-[900] font-Geist">
