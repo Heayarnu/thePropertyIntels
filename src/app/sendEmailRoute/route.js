@@ -3,7 +3,7 @@
 import nodemailer from "nodemailer";
 
 export async function POST(req, res) {
-  console.log("this is receing");
+  console.log("this is receiving");
   if (req.method === "POST") {
     try {
       const data = req.body;
@@ -29,9 +29,9 @@ export async function POST(req, res) {
       // res.status(200).json({ message: "Data sent successfully" });
     } catch (error) {
       console.error(error);
-      res.status(500).json({ error: "Failed to send data" });
+      return Response.json({ error: "Failed to send data" });
     }
   } else {
-    res.status(405).json({ error: "Method Not Allowed" });
+    return Response.json({ error: "Method Not Allowed" });
   }
 }
