@@ -33,17 +33,12 @@ function ContactsForm() {
     onSubmit: handleSubmit,
   });
   async function handleSubmit(values, { resetForm }) {
-    postInformation(values);
-
-    console.log("this is filtered", filteredObject);
     try {
+      postInformation(values);
       console.log("from signup try block");
       //   toast.success(res?.message, {});
 
       resetForm();
-
-      // "User already registered."
-      // console.log("succesful signup!!", res);
     } catch (error) {
       // if (!error) return "No server response";
 

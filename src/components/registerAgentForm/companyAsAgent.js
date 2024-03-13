@@ -49,10 +49,8 @@ function CompanyAsAgentForm({ submitStatus }) {
     onSubmit: handleSubmit,
   });
   async function handleSubmit(values, { resetForm }) {
-    postInformation(values);
-    // };
-    console.log("this is filtered", filteredObject);
     try {
+      postInformation(values);
       console.log("from signup try block");
       // if successfull set submitstatus
       submitStatus(true);

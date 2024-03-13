@@ -39,14 +39,8 @@ function AgentRegisterForm({ submitStatus }) {
     onSubmit: handleSubmit,
   });
   async function handleSubmit(values, { resetForm }) {
-    postInformation(values);
-
-    // const lowercaseValues = {
-    //   ...filteredObject,
-    //   email: filteredObject?.email.toLowerCase(),
-    // };
-    console.log("this is filtered", filteredObject);
     try {
+      postInformation(values);
       console.log("from signup try block");
       // if successfull set submitstatus
       submitStatus(true);
