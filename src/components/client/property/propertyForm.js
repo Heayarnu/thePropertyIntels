@@ -36,7 +36,7 @@ function PropertyRegisterForm({ submitStatus }) {
       //   submitStatus(true);
       submitStatus(true);
 
-      router.push("#Formsuccess");
+      router.push("?registrationType=true#Formsuccess", { scroll: true });
       // router.push("?selectService=true#Formsuccess");
       //   toggleQuery("client", "Select Service type");
       //   toggleQuery("selectService", true);
@@ -72,7 +72,7 @@ function PropertyRegisterForm({ submitStatus }) {
             <div
               className={` shadow-[0px_2px_4px_0px_rgba(192,192,192,0.25)]  relative flex flex-row  px-[0.94rem] py-[0.5rem] rounded-[0.5rem] border border-solid border-[rgba(229,229,229,0.60)] focus-within:border-primary`}
             >
-              {item.name === "location" ? (
+              {item.name === "location" || item.name === "city" ? (
                 <input
                   type={item.type}
                   name={item.name}

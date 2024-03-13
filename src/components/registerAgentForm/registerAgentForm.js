@@ -69,7 +69,7 @@ function AgentRegisterForm({ submitStatus }) {
       // if successfull set submitstatus
       submitStatus(true);
 
-      router.push("#Formsuccess");
+      router.push("?registrationType=true#Formsuccess", { scroll: true });
       //   toast.success(res?.message, {});
 
       resetForm();
@@ -132,7 +132,8 @@ function AgentRegisterForm({ submitStatus }) {
                     }}
                   />
                 </div>
-              ) : item.name === "country" || item.name === "city" ? (
+              ) : item.name === "country" ? (
+                // ) : item.name === "country" || item.name === "city" ? (
                 <select
                   onChange={handleChange}
                   name={item.name}

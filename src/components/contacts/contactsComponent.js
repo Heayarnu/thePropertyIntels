@@ -43,8 +43,9 @@ function ContactsComponent() {
           </div>
           <div className="mt-[2.81rem] mb-[1rem] flex gap-[1.06rem]">
             {FooterSocials.map(({ icon, link }, key) => (
-              <div key={key}>{icon}</div>
-              //   <p></p>
+              <a href={`${link}`} target="_blank" key={key}>
+                {icon}
+              </a>
             ))}
           </div>
         </div>

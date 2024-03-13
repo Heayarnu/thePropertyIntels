@@ -42,7 +42,7 @@ function CompanyAsAgentForm({ submitStatus }) {
       address: Yup.string().required("Required").min(3),
       companyName: Yup.string().required("Required"),
       companyAddress: Yup.string().required("Required"),
-      website: Yup.string().required("Required"),
+      // website: Yup.string().required("Required"),
     }),
 
     onSubmit: handleSubmit,
@@ -78,7 +78,7 @@ function CompanyAsAgentForm({ submitStatus }) {
       console.log("from signup try block");
       // if successfull set submitstatus
       submitStatus(true);
-      router.push("#Formsuccess");
+      router.push("?registrationType=true#Formsuccess", { scroll: true });
       //   toast.success(res?.message, {});
 
       resetForm();
@@ -139,7 +139,8 @@ function CompanyAsAgentForm({ submitStatus }) {
                       }}
                     />
                   </div>
-                ) : item.name === "country" || item.name === "city" ? (
+                ) : item.name === "country" ? (
+                  // ) : item.name === "country" || item.name === "city" ? (
                   <select
                     onChange={handleChange}
                     name={item.name}

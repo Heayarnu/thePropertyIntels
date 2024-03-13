@@ -1,3 +1,5 @@
+import { countries } from "@/components/registerAgentForm/registerAgentdata";
+
 export const registerpropertFields = [
   {
     type: "text",
@@ -21,7 +23,8 @@ export const registerpropertFields = [
   },
 ];
 export const locationOfProperties = {
-  country: ["", "Nigeria", "America", "Inem-Island"],
+  country: countries,
+  //   country: ["", "Nigeria", "America", "Inem-Island"],
   city: ["", "Victoria-Island", "Apapa", "Ikeja"],
   noOfproperties: ["", 1, 2, 3, 4, 5, 6, 7, 8, 9],
 };

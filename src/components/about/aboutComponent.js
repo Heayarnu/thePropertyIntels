@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 function AboutComponent() {
   return (
@@ -22,9 +23,12 @@ function AboutComponent() {
             vitae. Ultrices in p
           </p>
 
-          <button className="w-[11.3125rem] rounded-[6.25rem] p-[0.625rem] border-[rgba(255,255,255,0.91)] text-base md:text-[1.125rem] tracking-[-0.0225rem] mt-[2.5rem] text-white font-semibold bg-primary border border-solid">
+          <Link
+            href="#properties"
+            className="w-[11.3125rem] block text-center rounded-[6.25rem] p-[0.625rem] border-[rgba(255,255,255,0.91)] text-base md:text-[1.125rem] tracking-[-0.0225rem] mt-[2.5rem] text-white font-semibold bg-primary border border-solid"
+          >
             Learn more
-          </button>
+          </Link>
         </div>
         <div className="mt-[3.44rem] relative h-[35.375rem] w-full">
           <Image

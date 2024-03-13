@@ -1,11 +1,12 @@
 export const FooterMenuList = [
   // ["Home", "/"],
-  ["About Us", "/about"],
-  ["Contact Us", "/contact"],
-  ["Our Services", "/services"],
-  ["Terms of Service", "/Terms"],
-  ["Register Now", "/auth/sign-up"],
+  ["About Us", "#about"],
+  ["Contact Us", "#contact"],
+  ["Our Services", "#services"],
+  ["Terms of Service", "#Terms"],
+  ["Register Now", "/"],
 ];
+
 export const FooterSocials = [
   // ["Home", "/"],
   {
@@ -23,7 +24,7 @@ export const FooterSocials = [
         />
       </svg>
     ),
-    link: "/about",
+    link: "https://web.facebook.com/",
   },
   {
     icon: (
@@ -47,7 +48,7 @@ export const FooterSocials = [
         </defs>
       </svg>
     ),
-    link: "/contact",
+    link: "https://www.instagram.com/#_=_",
   },
   {
     icon: (
@@ -64,7 +65,7 @@ export const FooterSocials = [
         />
       </svg>
     ),
-    link: "/services",
+    link: "https://twitter.com/home",
   },
 ];
 

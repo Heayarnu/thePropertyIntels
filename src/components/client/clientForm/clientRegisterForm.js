@@ -130,7 +130,8 @@ function ClientRegisterForm({ submitStatus }) {
                     }}
                   />
                 </div>
-              ) : item.name === "country" || item.name === "city" ? (
+              ) : item.name === "country" ? (
+                // ) : item.name === "country" || item.name === "city" ? (
                 <select
                   onChange={handleChange}
                   name={item.name}

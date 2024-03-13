@@ -147,15 +147,17 @@ function AgentSelectPopCom() {
                       type="button"
                       key={index}
                       onClick={
-                        () =>
-                          router.push(
-                            `/?registrationType=${registrationType}&agentType=${customEncodeURIComponent(
-                              agentType
-                            )}&agent=${customEncodeURIComponent(item)}
-                          
-                            `,
-                            { scroll: false }
-                          )
+                        () => {
+                          item === "Select Agent type" &&
+                            router.push(
+                              `/?registrationType=${registrationType}&agentType=${customEncodeURIComponent(
+                                agentType
+                              )}&agent=${customEncodeURIComponent(item)}
+                              
+                                `,
+                              { scroll: false }
+                            );
+                        }
                         //   &agencyFormType=${customEncodeURIComponent(
                         //     agencyFormType
                         //   )}
@@ -165,7 +167,7 @@ function AgentSelectPopCom() {
                         picked == item
                           ? "text-primary bg-white"
                           : "text-[#414356] bg-[#F8F9F9]"
-                      } text-[0.75rem] font-medium py-[.94rem] px-[.81rem] flex items-center tracking-[-0.03rem] border-r-[#E9E9E9] border-r`}
+                      } text-[0.75rem] last:cursor-not-allowed font-medium py-[.94rem] px-[.81rem] flex items-center tracking-[-0.03rem] border-r-[#E9E9E9] border-r`}
                     >
                       <span
                         className={`  ${

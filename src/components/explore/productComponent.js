@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 function ProductsComponent() {
   return (
-    <section className="w-full mt-[6.5rem]">
+    <section id="properties" className="w-full mt-[6.5rem]">
       <div className="text-center font-normal track-[-0.025rem] ">
         <h1 className="text-[1.5rem] md:text-[2.375rem] max-md:leading-[1.6875rem] tracking-[-0.03rem] font-bold text-main_heading">
           Explore Homes On ThePropertyIntels
@@ -15,7 +15,7 @@ function ProductsComponent() {
         </p>
         {/* <div className="flex justify-center"> */}
         <div className=" overflow-x-auto ">
-          <div className="productContainer mt-[3.94rem] w-[81.36rem] ">
+          <div className="productContainer mt-[3.94rem] w-[81.36rem] mx-auto ">
             {productGrid.map(([name, img, link], index) => (
               <Link
                 href={`?image=${link}`}

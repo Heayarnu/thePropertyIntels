@@ -2,6 +2,7 @@
 
 import { UseMobileToggler } from "@/hooks/mobileViewQuery";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 function SocialMediaPopup() {
@@ -12,27 +13,33 @@ function SocialMediaPopup() {
       {image && (
         <div className="bg-[rgba(89,89,89,0.60)] fixed left-0 right-0 top-0 bottom-0 z-[999]">
           <div className="w-full max-w-[32.375rem] rounded-[0.9375rem] py-[2.5rem] bg-[white] text-center absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2">
-            <svg
-              onClick={() => router.push("/")}
-              className=" absolute top-[1.9rem] cursor-pointer right-[1.9rem]"
-              xmlns="http://www.w3.org/2000/svg"
-              width="26"
-              height="26"
-              viewBox="0 0 26 26"
-              fill="none"
+            <Link
+              href="/"
+              className=" absolute z-[9999] top-[1.9rem] cursor-pointer right-[1.9rem]"
             >
-              <g opacity="0.8" clipPath="url(#clip0_38_7835)">
-                <path
-                  d="M14.4363 13.0003L25.7024 1.73408C26.0991 1.33743 26.0991 0.694334 25.7024 0.297733C25.3058 -0.098868 24.6627 -0.0989188 24.2661 0.297733L12.9999 11.5639L1.73374 0.297733C1.33709 -0.0989188 0.693998 -0.0989188 0.297397 0.297733C-0.0992037 0.694384 -0.0992545 1.33748 0.297397 1.73408L11.5636 13.0002L0.297397 24.2664C-0.0992545 24.6631 -0.0992545 25.3062 0.297397 25.7028C0.495698 25.9011 0.755646 26.0002 1.01559 26.0002C1.27554 26.0002 1.53544 25.9011 1.73379 25.7028L12.9999 14.4366L24.2661 25.7028C24.4643 25.9011 24.7243 26.0002 24.9842 26.0002C25.2442 26.0002 25.5041 25.9011 25.7024 25.7028C26.0991 25.3061 26.0991 24.663 25.7024 24.2664L14.4363 13.0003Z"
-                  fill="#151941"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_38_7835">
-                  <rect width="26" height="26" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
+              <svg
+                // onClick={() => router.push("/")}
+
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+              >
+                <g opacity="0.8" clipPath="url(#clip0_38_7835)">
+                  <path
+                    d="M14.4363 13.0003L25.7024 1.73408C26.0991 1.33743 26.0991 0.694334 25.7024 0.297733C25.3058 -0.098868 24.6627 -0.0989188 24.2661 0.297733L12.9999 11.5639L1.73374 0.297733C1.33709 -0.0989188 0.693998 -0.0989188 0.297397 0.297733C-0.0992037 0.694384 -0.0992545 1.33748 0.297397 1.73408L11.5636 13.0002L0.297397 24.2664C-0.0992545 24.6631 -0.0992545 25.3062 0.297397 25.7028C0.495698 25.9011 0.755646 26.0002 1.01559 26.0002C1.27554 26.0002 1.53544 25.9011 1.73379 25.7028L12.9999 14.4366L24.2661 25.7028C24.4643 25.9011 24.7243 26.0002 24.9842 26.0002C25.2442 26.0002 25.5041 25.9011 25.7024 25.7028C26.0991 25.3061 26.0991 24.663 25.7024 24.2664L14.4363 13.0003Z"
+                    fill="#151941"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_38_7835">
+                    <rect width="26" height="26" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </Link>
+
             <div className="relative flex flex-col items-center ">
               <div className="relative">
                 <div className="relative w-[12.6875rem] h-[15rem] rounded-[0.4375rem] overflow-hidden">

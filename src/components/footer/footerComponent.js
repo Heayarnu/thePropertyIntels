@@ -27,7 +27,9 @@ function FooterComponent() {
           </p>
           <div className="flex gap-[1.06rem] max-lg:absolute top-[215px] right-[20px]">
             {FooterSocials.map(({ icon, link }, key) => (
-              <div key={key}>{icon}</div>
+              <a href={`${link}`} target="_blank" key={key}>
+                {icon}
+              </a>
               //   <p></p>
             ))}
           </div>
