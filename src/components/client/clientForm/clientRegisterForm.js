@@ -13,6 +13,7 @@ import {
   countriesOfProperties,
   registerFormField,
 } from "@/components/registerAgentForm/registerAgentdata";
+import { postInformation } from "@/hooks/postRequest";
 function ClientRegisterForm({ submitStatus }) {
   const { toggleQuery, router } = UseMobileToggler();
   const InitiaState = {
@@ -69,8 +70,10 @@ function ClientRegisterForm({ submitStatus }) {
       //   submitStatus(true);
 
       //   router.push("?selectService=true#Formsuccess");
+      postInformation(values);
+      // console.log("api called", res);
+      // toast.success(, {});
       toggleQuery("client", "Select Service type");
-      //   toast.success(res?.message, {});
 
       resetForm();
 

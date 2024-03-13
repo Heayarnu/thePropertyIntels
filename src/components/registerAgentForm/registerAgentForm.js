@@ -10,6 +10,7 @@ import Input, {
 import { PhoneInput } from "react-international-phone";
 import ErrorMessageCtn from "../errorMessage";
 import { UseMobileToggler } from "@/hooks/mobileViewQuery";
+import { postInformation } from "@/hooks/postRequest";
 function AgentRegisterForm({ submitStatus }) {
   const { toggleQuery, router } = UseMobileToggler();
   const InitiaState = {
@@ -38,26 +39,7 @@ function AgentRegisterForm({ submitStatus }) {
     onSubmit: handleSubmit,
   });
   async function handleSubmit(values, { resetForm }) {
-    console.log("Attempting to signup");
-    // if (subPlan) {
-    //   router.push(
-    //     `/auth/email-verification?${subPlan && "plan=" + subPlan}&email=${
-    //       // res.user.email
-    //       "sopewenike"
-    //     }`,
-    //     {
-    //       scroll: false,
-    //     }
-    //   );
-    // }
-
-    const filteredObject = Object.keys(values)
-      .filter((key) => key !== "Confirm password")
-      // .filter((key) => key !== "dateOfBirth" && key !== "Confirm password")
-      .reduce((obj, key) => {
-        obj[key] = values[key];
-        return obj;
-      }, {});
+    postInformation(values);
 
     // const lowercaseValues = {
     //   ...filteredObject,

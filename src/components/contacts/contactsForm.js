@@ -9,6 +9,7 @@ import Input, {
 } from "react-phone-number-input/input";
 import { PhoneInput } from "react-international-phone";
 import ErrorMessageCtn from "../errorMessage";
+import { postInformation } from "@/hooks/postRequest";
 function ContactsForm() {
   const InitiaState = {
     fName: "",
@@ -32,31 +33,8 @@ function ContactsForm() {
     onSubmit: handleSubmit,
   });
   async function handleSubmit(values, { resetForm }) {
-    console.log("Attempting to signup");
-    // if (subPlan) {
-    //   router.push(
-    //     `/auth/email-verification?${subPlan && "plan=" + subPlan}&email=${
-    //       // res.user.email
-    //       "sopewenike"
-    //     }`,
-    //     {
-    //       scroll: false,
-    //     }
-    //   );
-    // }
+    postInformation(values);
 
-    const filteredObject = Object.keys(values)
-      .filter((key) => key !== "Confirm password")
-      // .filter((key) => key !== "dateOfBirth" && key !== "Confirm password")
-      .reduce((obj, key) => {
-        obj[key] = values[key];
-        return obj;
-      }, {});
-
-    // const lowercaseValues = {
-    //   ...filteredObject,
-    //   email: filteredObject?.email.toLowerCase(),
-    // };
     console.log("this is filtered", filteredObject);
     try {
       console.log("from signup try block");

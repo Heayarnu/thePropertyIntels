@@ -8,6 +8,7 @@ import {
   locationOfProperties,
   registerpropertFields,
 } from "./propertyFormFields";
+import { postInformation } from "@/hooks/postRequest";
 function PropertyRegisterForm({ submitStatus }) {
   const { toggleQuery, router } = UseMobileToggler();
   const InitiaState = {
@@ -31,9 +32,7 @@ function PropertyRegisterForm({ submitStatus }) {
   });
   async function handleSubmit(values, { resetForm }) {
     try {
-      console.log("from property try block");
-      // if successfull set submitstatus
-      //   submitStatus(true);
+      postInformation(values);
       submitStatus(true);
 
       router.push("?registrationType=true#Formsuccess", { scroll: true });
