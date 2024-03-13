@@ -12,7 +12,7 @@ function HeroComponent() {
       <NavbarSmallScreen />
 
       <video
-        className="h-screen md:h-full w-full max-w -[1440px]"
+        className="max-md:relative  top-[10px] h-[350px] md:h-full w-full max-w -[1440px]"
         // src={video}
         src="/assets/videos/herovideo.mp4"
         width="1440"
@@ -32,7 +32,7 @@ function HeroComponent() {
         title="video"
       /> */}
 
-      <div className="max-lg:mt-[3.06rem] py-[50px] text-white rounded-md absolute text-center w-[90%]  -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 bg- [#ffffff7a]">
+      <div className="max-lg:mt-[3.06rem] py-[50px] text-white rounded-md absolute text-center w-[90%]  -translate-x-1/2 lg:-translate-y-1/2 left-1/2 top-[-10] lg:top-1/2 1/2 bg- [#ffffff7a]">
         <h2 className="text-[1.875rem] w-full max-w-[44.9375rem] mx-auto md:text-[3.75rem] leading-[2rem] md:leading-[3.75rem] tracking-[-0.075rem] font-[900] font-Geist">
           Property Management Investment & Advice
         </h2>
