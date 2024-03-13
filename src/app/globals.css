@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 /* Remove chrome autofill color from inputs */
+@font-face {
+  font-family: Geist;
+  src: url(../geist-font-family/Geist-Light-BF6569491dc9c01.otf);
+  /* src: url(../geist-font-family/GeistVF-BF6569491f13184.ttf); */
+}
+* {
+  font-family: Geist;
+}
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

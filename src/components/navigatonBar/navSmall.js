@@ -6,7 +6,7 @@ import { UseMobileToggler } from "@/hooks/mobileViewQuery";
 function NavbarSmallScreen() {
   const { mobileView, router, pathname } = UseMobileToggler();
   return (
-    <nav className="md:hidden absolute top-0 w-full bg-transparent justify-between px-[1rem] md:px-[2.31rem] pt-[1.25rem] pb-[1.13rem] flex items-center font-inter leading-[normal] text-[red]">
+    <nav className="md:hidden absolute z-50 top-0 w-full bg-transparent justify-between px-[1rem] md:px-[2.31rem] pt-[1.25rem] pb-[1.13rem] flex items-center font-inter leading-[normal] text-[red]">
       <div className="">{LogoLG}</div>
       <div
         className={`${

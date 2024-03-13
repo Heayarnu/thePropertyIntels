@@ -6,17 +6,17 @@ import NavbarSmallScreen from "../navigatonBar/navSmall";
 // import video from "../../../assets/herovideo.mp4";
 function HeroComponent() {
   return (
-    <div className=" relative w-full h-[80vh] md:h-full rounded-sm overflow-hidden">
+    <div className=" relative w-full h-[45vh] md:h-full rounded-sm overflow-hidden">
       <div className="bg-gradient-to-br from-[rgba(0,0,0,0.45)_25.27%,rgba(0,0,0,0.45)] via-[rgba(0,0,0,0.35)_53.22%] to-[rgba(0,0,0,0.5)_69.08%] absolute top-0 left-0 right-0 bottom-0"></div>
       <NavMain />
       <NavbarSmallScreen />
 
       <video
-        className="max-md:relative  top-[10px] h-[350px] md:h-full w-full max-w -[1440px]"
+        className="max-md:relative z-0 top-[0px] h-full [350px] md:h-full w-full max-w -[1440px]"
         // src={video}
         src="/assets/videos/herovideo.mp4"
         width="1440"
-        height="500"
+        height="900"
         loop
         autoPlay
         muted
@@ -32,7 +32,7 @@ function HeroComponent() {
         title="video"
       /> */}
 
-      <div className="max-lg:mt-[3.06rem] py-[50px] text-white rounded-md absolute text-center w-[90%]  -translate-x-1/2 lg:-translate-y-1/2 left-1/2 top-[-10] lg:top-1/2 1/2 bg- [#ffffff7a]">
+      <div className="max-lg:mt-[3.06rem] md:py-[50px] text-white rounded-md absolute text-center w-[90%]  -translate-x-1/2 lg: -translate-y-1/2 left-1/2 top-[39%] 1/2  lg:top-1/2 bg- [#ffffff7a]">
         <h2 className="text-[1.875rem] w-full max-w-[44.9375rem] mx-auto md:text-[3.75rem] leading-[2rem] md:leading-[3.75rem] tracking-[-0.075rem] font-[900] font-Geist">
           Property Management Investment & Advice
         </h2>
