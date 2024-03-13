@@ -12,7 +12,7 @@ function HeroComponent() {
       <NavbarSmallScreen />
 
       <video
-        className="max-md:relative z-0 top-[0px] h-full [350px] md:h-full w-full max-w -[1440px]"
+        className="max-md:relative z-0 top-[-20px] max-w-[1400px] md:max-w-[100%] h-[600px] [350px] md:h-full max-md:w-[1000px] w-full max-w -[1440px]"
         // src={video}
         src="/assets/videos/herovideo.mp4"
         width="1440"
