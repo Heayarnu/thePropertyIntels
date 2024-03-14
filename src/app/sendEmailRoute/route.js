@@ -2,11 +2,11 @@
 
 import nodemailer from "nodemailer";
 
-export async function POST(req, res) {
-  console.log("this is receiving");
-  if (req.method === "POST") {
+export async function POST(request) {
+  if (request.method === "POST") {
     try {
-      const data = req.body;
+      const data = await request.json();
+      console.log("this is receiving", data);
       const transporter = nodemailer.createTransport({
         service: "Gmail",
         auth: {

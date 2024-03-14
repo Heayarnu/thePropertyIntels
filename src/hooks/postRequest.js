@@ -4,15 +4,15 @@ const url = "/sendEmailRoute";
 // const url = "../app/sendEmailRoute/";
 
 export function postInformation(data) {
-  console.log("this is posting");
+  console.log("this is posting", data);
   fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       // Add any other headers if needed
     },
-    body: data,
-    // body: JSON.stringify(data),
+    // body: data,
+    body: JSON.stringify(data),
   })
     .then((response) => {
       if (!response.ok) {

@@ -125,7 +125,10 @@ function ContactsForm() {
           </ErrorMessageCtn>
         </div>
       ))}
-      <button className="bg-[#166BBF] p-[0.625rem] w-full lg:w-[11.3125rem] tracking-[-0.0225rem] font-semibold rounded-[6.25rem] text-[1.125rem] text-white ml-auto">
+      <button
+        type="button"
+        className="bg-[#166BBF] p-[0.625rem] w-full lg:w-[11.3125rem] tracking-[-0.0225rem] font-semibold rounded-[6.25rem] text-[1.125rem] text-white ml-auto"
+      >
         Send
       </button>
     </form>
