@@ -6,14 +6,18 @@ import NavbarSmallScreen from "../navigatonBar/navSmall";
 // import video from "../../../assets/herovideo.mp4";
 function HeroComponent() {
   return (
-    <div className=" relative w-full h-[45vh] md:h-full rounded-sm overflow-hidden">
+    <div className=" relative w-full h-[65vh] md:h-full rounded-sm overflow-hidden">
       <div className="bg-gradient-to-br from-[rgba(0,0,0,0.45)_25.27%,rgba(0,0,0,0.45)] via-[rgba(0,0,0,0.35)_53.22%] to-[rgba(0,0,0,0.5)_69.08%] absolute top-0 left-0 right-0 bottom-0"></div>
       <NavMain />
       <NavbarSmallScreen />
+      {/* <div class="video-container">
+        <video src="/assets/videos/herovideo.mp4" type="video/mp4" />
+      </div> */}
 
       <video
         className="max-md:relative z-0 top-[-20px] max-w-[1400px] md:max-w-[100%] h-[600px] [350px] md:h-full max-md:w-[1000px] w-full max-w -[1440px]"
         // src={video}
+        style={{ objectFit: "cover" }}
         src="/assets/videos/herovideo.mp4"
         width="1440"
         height="900"
