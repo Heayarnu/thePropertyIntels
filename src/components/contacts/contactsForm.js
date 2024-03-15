@@ -68,13 +68,13 @@ function ContactsForm() {
           >
             {item.name === "phoneNumber" ? (
               <div className="flex divide-x">
-                <select>
+                {/* <select>
                   {getCountries().map((country) => (
                     <option key={country} value={country}>
                       {getCountryCallingCode(country)}
                     </option>
                   ))}
-                </select>
+                </select> */}
                 <Input
                   //   international
                   className="focus:outline-0 pl-[.39rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem] leading-[1.41713rem] text-secondary placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem]"
