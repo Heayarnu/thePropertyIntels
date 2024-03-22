@@ -23,7 +23,8 @@ function FooterComponent() {
         <div className="mb-[1.75rem] mt-[2.19rem] h-[0.0625rem] bg-[rgba(191,191,191,0.25)]"></div>
         <div className="lg:flex justify-between items-center ">
           <p className="text-footer text-base leading-[1.25rem] font-normal max-lg:text-center ">
-            © 2023. ThePropertyIntel. All Rights Reserved.
+            © 2024 ThePropertyintel. All Rights Reserved. Powered by Philip Edge
+            Africa
           </p>
           <div className="flex gap-[1.06rem] max-lg:absolute top-[215px] right-[20px]">
             {FooterSocials.map(({ icon, link }, key) => (

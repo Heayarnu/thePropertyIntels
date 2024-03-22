@@ -71,7 +71,8 @@ export const servicesArray = [
         </defs>
       </svg>
     ),
-    title: "Register your property with us",
+    title: "Register your property for site visitations and reports",
+    // title: "Register your property with us",
     subtile:
       "Adipiscing elementum iaculis faucibus ut neque fusce. Ridiculus donec sed eget id elit vulputate mi egestas. Magna pharetra metus vel eu. Temp",
   },
@@ -262,7 +263,8 @@ export const servicesArray = [
         </defs>
       </svg>
     ),
-    title: "Request for a property investment advice",
+    title: "Request for a property investment advice and Intelligence",
+    // title: "Request for a property investment advice",
     subtile:
       "Adipiscing elementum iaculis faucibus ut neque fusce. Ridiculus donec sed eget id elit vulputate mi egestas. Magna pharetra metus vel eu. Temp",
   },
@@ -448,7 +450,8 @@ export const servicesArray = [
         </defs>
       </svg>
     ),
-    title: "Know your property Intelligence forecast",
+    title: "Build a Property",
+    // title: "Know your property Intelligence forecast",
     subtile:
       "Adipiscing elementum iaculis faucibus ut neque fusce. Ridiculus donec sed eget id elit vulputate mi egestas. Magna pharetra metus vel eu. Temp",
   },

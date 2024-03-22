@@ -8,7 +8,7 @@ function ProductsComponent() {
     <section id="properties" className="w-full mt-[6.5rem]">
       <div className="text-center font-normal track-[-0.025rem] ">
         <h1 className="text-[1.5rem] md:text-[2.375rem] max-md:leading-[1.6875rem] tracking-[-0.03rem] font-bold text-main_heading">
-          Explore Homes On ThePropertyIntels
+          Explore with US {/* Explore Homes On ThePropertyIntels */}
         </h1>
         <p className="text-[0.875rem] md:text-[1.25rem] text-sub_heading">
           Elit nulla vel tempus congue ac ultricies sed in ornare

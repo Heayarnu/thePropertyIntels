@@ -4,7 +4,7 @@ export const NavMenuList = [
   ["Contact Us", "/#contact"],
   ["Our Services", "/#services"],
   // ["Sign in", "/auth/login"],
-  ["Register Now", "/auth/sign-up"],
+  ["Register your Property", "/auth/sign-up"],
 ];
 
 export const LogoLG = (

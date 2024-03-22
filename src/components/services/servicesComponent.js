@@ -6,7 +6,8 @@ function ServicesComponent() {
     <section id="services" className="w-full pt-[7.19rem]">
       <div className=" font-normal track-[-0.025rem] ">
         <h1 className=" text-center text-[1.5rem] md:text-[2.375rem] text-main_heading">
-          See How ThePropertyIntels Helps
+          {/* See How ThePropertyIntels Helps */}
+          Our Services{" "}
         </h1>
         {/* <p className="text-[1.25rem] text-sub_heading">
           Elit nulla vel tempus congue ac ultricies sed in ornare

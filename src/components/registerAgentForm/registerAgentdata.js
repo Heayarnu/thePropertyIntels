@@ -105,11 +105,53 @@ export const registerFormField = [
 
   {
     type: "text",
+    // name: "describeProperty",
+    // placeholder: "Describe Property",
     name: "address",
     placeholder: "Address",
   },
 ];
+export const registerFormFieldCompany = [
+  {
+    type: "text",
+    name: "fullName",
+    placeholder: "Full Name",
+  },
+  {
+    type: "text",
+    name: "phoneNumber",
+    placeholder: "Telephone Number",
+  },
+  {
+    type: "text",
+    name: "phoneNumberWork",
+    placeholder: "Work Phone Number",
+  },
+  {
+    type: "email",
+    name: "email",
+    placeholder: "Email Address",
+  },
 
+  {
+    type: "text",
+    name: "country",
+    placeholder: "Country",
+  },
+  {
+    type: "text",
+    name: "city",
+    placeholder: "City",
+  },
+
+  {
+    type: "text",
+    name: "describeProperty",
+    placeholder: "Describe Property",
+    // name: "address",
+    // placeholder: "Address",
+  },
+];
 export const registerCompanyAsAgentFields = [
   {
     type: "text",

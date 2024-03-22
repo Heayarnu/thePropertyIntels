@@ -30,9 +30,10 @@ function NavLarge() {
         </Link>
         <Link
           href={"/"}
-          className="text-primary w-[9.25rem] text-center p-[0.625rem] font-semibold font-base  tracking-[-0.02rem] rounded-[6.25rem] bg-[rgba(255,255,255,0.25)] shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] whitespace-nowrap"
+          className="text-primary w -[9.25rem] text-center py-[0.625rem] px-[0.925rem] font-semibold font-base  tracking-[-0.02rem] rounded-[6.25rem] bg-[rgba(255,255,255,0.25)] shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] whitespace-nowrap"
         >
-          Register Now
+          {/* Register Now */}
+          Register your Property
         </Link>
       </div>
     </div>

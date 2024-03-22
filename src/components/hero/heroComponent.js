@@ -42,19 +42,21 @@ function HeroComponent() {
         </h2>
 
         <h1 className="text-[0.875rem] md:text-[1.25rem] font-normal tracking-[-0.025rem] ">
-          Let&#39;s manage your property needs and you enjoy a timely Real
+          {/* Let&#39;s manage your property needs and you enjoy a timely Real
           Estate advice with guaranteed peace of mind
+         */}
+          Solving property needs for Expats and Investors around the world
         </h1>
         <div className="md:flex mt-5 gap-[1rem] justify-center font-semibold font-Geist tracking-[-0.0225rem] text-[1.125rem] ">
-          <Link className="inline-block" href="/?registrationType=agent">
-            <button className="max-lg:mb-[.62rem] text-[#DFEFFF] shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] px-8 py-2 rounded-[6.25rem] border-[1px_solid_rgba(255,255,255,0.11)] bg-primary ">
-              Become an Agent
-            </button>
-          </Link>
           {/* backdrop-filter: blur(10px); */}
           <Link className="inline-block" href="/?registrationType=client">
-            <button className=" text-primary shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] px-8 py-2 rounded-[6.25rem] border-[1px_solid_rgba(255,255,255,0.11)] bg-[#DFEFFF] ">
+            <button className="max-lg:mb-[.62rem] text-primary shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] px-8 py-2 rounded-[6.25rem] border-[1px_solid_rgba(255,255,255,0.11)] bg-[#DFEFFF] ">
               Register your property
+            </button>
+          </Link>
+          <Link className="inline-block" href="/?registrationType=agent">
+            <button className=" text-[#DFEFFF] shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] px-8 py-2 rounded-[6.25rem] border-[1px_solid_rgba(255,255,255,0.11)] bg-primary ">
+              Become an Agent
             </button>
           </Link>
         </div>

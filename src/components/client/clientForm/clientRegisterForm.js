@@ -11,7 +11,7 @@ import { UseMobileToggler } from "@/hooks/mobileViewQuery";
 import ErrorMessageCtn from "@/components/errorMessage";
 import {
   countriesOfProperties,
-  registerFormField,
+  registerFormFieldCompany,
 } from "@/components/registerAgentForm/registerAgentdata";
 import { postInformation } from "@/hooks/postRequest";
 function ClientRegisterForm({ submitStatus }) {
@@ -23,7 +23,8 @@ function ClientRegisterForm({ submitStatus }) {
     email: "",
     country: "",
     city: "",
-    address: "",
+    // address: "",
+    describeProperty: "",
   };
 
   const formik = useFormik({
@@ -36,7 +37,8 @@ function ClientRegisterForm({ submitStatus }) {
       email: Yup.string().email().required("Required"),
       country: Yup.string().required("Required"),
       city: Yup.string().required("Required"),
-      address: Yup.string().required("Required").min(3),
+      describeProperty: Yup.string().required("Required").min(3),
+      // address: Yup.string().required("Required").min(3),
     }),
 
     onSubmit: handleSubmit,
@@ -99,7 +101,7 @@ function ClientRegisterForm({ submitStatus }) {
         onSubmit={formik.handleSubmit}
         className=" flex flex-col items-center p-[1.88rem] shadow- [0px_0px_13px_0px_rgba(163,163,163,0.20)] gap-[.91rem] w-full max-w-[44.625rem] mx-auto"
       >
-        {registerFormField.map((item, index) => (
+        {registerFormFieldCompany.map((item, index) => (
           <div key={item.name} className={` mb-[1.31rem] relative w-full`}>
             <span className="mb-[.5rem] inline-block">{item.placeholder}</span>
             <div
