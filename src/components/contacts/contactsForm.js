@@ -67,29 +67,59 @@ function ContactsForm() {
             className={` shadow-[0px_2px_4px_0px_rgba(192,192,192,0.25)]  relative flex items-center px-[0.94rem] py-[0.5rem] rounded-[0.5rem] border border-solid border-[rgba(229,229,229,0.60)] focus-within:border-primary`}
           >
             {item.name === "phoneNumber" ? (
-              <div className="flex divide-x">
+              <div className="flex divide -x">
                 {/* <select>
-                  {getCountries().map((country) => (
-                    <option key={country} value={country}>
-                      {getCountryCallingCode(country)}
-                    </option>
-                  ))}
-                </select> */}
-                <Input
+                 {getCountries().map((country) => (
+                   <option key={country} value={country}>
+                     {getCountryCallingCode(country)}
+                   </option>
+                 ))}
+               </select> */}
+                <input
+                  // <Input
+                  type="tel"
+                  name={item.name}
                   //   international
-                  className="focus:outline-0 pl-[.39rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem] leading-[1.41713rem] text-secondary placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem]"
+                  className="basis-[100%] focus:outline-0 pl-[5px] ml-[0.19rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem] leading-[1.41713rem] text-secondary placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem]"
                   // className="w-full"import PhoneInput from "react-phone-number-input";
-                  placeholder="Enter phone number"
-                  value={item.name}
-                  onChange={(number) => {
-                    formik.setValues((prev) => ({
-                      ...prev,
-                      phoneNumber: number,
-                    }));
+                  placeholder="+234 901 xxx xxxx"
+                  value={formik?.values[item.name]}
+                  // onChange={(number) => {
+                  //   formik.setValues((prev) => ({
+                  //     ...prev,
+                  //     [item.name]: number,
+                  //   }));
+                  // }}
+                  onChange={handleChange}
+                  onBlur={() => {
+                    formik.setTouched({ [item.name]: true });
+                    // console.log("clicked", item.name);
                   }}
                 />
               </div>
-            ) : item.name === "message" ? (
+            ) : // <div className="flex divide-x">
+            //   {/* <select>
+            //     {getCountries().map((country) => (
+            //       <option key={country} value={country}>
+            //         {getCountryCallingCode(country)}
+            //       </option>
+            //     ))}
+            //   </select> */}
+            //   <Input
+            //     //   international
+            //     className="focus:outline-0 pl-[.39rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem] leading-[1.41713rem] text-secondary placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem]"
+            //     // className="w-full"import PhoneInput from "react-phone-number-input";
+            //     placeholder="Enter phone number"
+            //     value={item.name}
+            //     onChange={(number) => {
+            //       formik.setValues((prev) => ({
+            //         ...prev,
+            //         phoneNumber: number,
+            //       }));
+            //     }}
+            //   />
+            // </div>
+            item.name === "message" ? (
               <textarea
                 // type={item.type}
                 name={item.name}

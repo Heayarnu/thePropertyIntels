@@ -451,3 +451,46 @@ export const selectServiceData = [
     title: "Investment",
   },
 ];
+
+export const typeOfproperties = [
+  {
+    type: "checkbox",
+    name: "bungalow",
+    placeholder: "Bungalow",
+  },
+  {
+    type: "checkbox",
+    name: "commercialProperty",
+    placeholder: "Commercial Property",
+  },
+  {
+    type: "checkbox",
+    name: "duplex",
+    placeholder: "Duplex",
+  },
+  {
+    type: "checkbox",
+    name: "land",
+    placeholder: "Land",
+  },
+  {
+    type: "checkbox",
+    name: "realEstate",
+    placeholder: "Real Estate",
+  },
+  {
+    type: "checkbox",
+    name: "flat",
+    placeholder: "Flat",
+  },
+  {
+    type: "checkbox",
+    name: "apartment",
+    placeholder: "Apartment",
+  },
+  {
+    type: "checkbox",
+    name: "officeBuilding",
+    placeholder: "Office Building",
+  },
+];

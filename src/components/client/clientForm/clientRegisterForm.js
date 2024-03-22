@@ -14,6 +14,7 @@ import {
   registerFormFieldCompany,
 } from "@/components/registerAgentForm/registerAgentdata";
 import { postInformation } from "@/hooks/postRequest";
+import { typeOfproperties } from "./clientData";
 function ClientRegisterForm({ submitStatus }) {
   const { toggleQuery, router } = UseMobileToggler();
   const InitiaState = {
@@ -25,6 +26,14 @@ function ClientRegisterForm({ submitStatus }) {
     city: "",
     // address: "",
     describeProperty: "",
+    bungalow: false,
+    commercialProperty: false,
+    duplex: false,
+    land: false,
+    realEstate: false,
+    flat: false,
+    apartment: false,
+    officeBuilding: false,
   };
 
   const formik = useFormik({
@@ -91,7 +100,13 @@ function ClientRegisterForm({ submitStatus }) {
     const { name, value } = e.target;
     formik.setValues((prev) => ({ ...prev, [name]: value }));
   }
+  function handleChangePicker(e) {
+    // console.log("elemente", e);
+    // e.stopPropagation();
+    const { name } = e.target;
 
+    formik.setValues((prev) => ({ ...prev, [name]: !prev[name] }));
+  }
   return (
     <div>
       <p className="text-main_heading text-base md:text-[1.125rem] font-medium tracking-[-0.0225rem] mt-[1.56rem] mb-[1.25rem]">
@@ -109,7 +124,7 @@ function ClientRegisterForm({ submitStatus }) {
             >
               {item.name === "phoneNumber" ||
               item.name === "phoneNumberWork" ? (
-                <div className="flex divide-x">
+                <div className="flex divide -x">
                   {/* <select>
                     {getCountries().map((country) => (
                       <option key={country} value={country}>
@@ -117,18 +132,22 @@ function ClientRegisterForm({ submitStatus }) {
                       </option>
                     ))}
                   </select> */}
-                  <Input
+                  <input
+                    // <Input
+                    type="tel"
+                    name={item.name}
                     //   international
-                    className="focus:outline-0 pl-[5px] ml-[0.19rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem] leading-[1.41713rem] text-secondary placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem]"
+                    className="basis-[100%] focus:outline-0 pl-[5px] ml-[0.19rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem] leading-[1.41713rem] text-secondary placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem]"
                     // className="w-full"import PhoneInput from "react-phone-number-input";
-                    placeholder="Enter phone number"
-                    value={item.name}
-                    onChange={(number) => {
-                      formik.setValues((prev) => ({
-                        ...prev,
-                        [item.name]: number,
-                      }));
-                    }}
+                    placeholder="+234 901 xxx xxxx"
+                    value={formik?.values[item.name]}
+                    // onChange={(number) => {
+                    //   formik.setValues((prev) => ({
+                    //     ...prev,
+                    //     [item.name]: number,
+                    //   }));
+                    // }}
+                    onChange={handleChange}
                     onBlur={() => {
                       formik.setTouched({ [item.name]: true });
                       // console.log("clicked", item.name);
@@ -176,6 +195,32 @@ function ClientRegisterForm({ submitStatus }) {
             </ErrorMessageCtn>
           </div>
         ))}
+        <div className="md:flex gap-2 flex-wrap w-full">
+          {typeOfproperties.map((item, index) => (
+            <div
+              key={item.name}
+              className={`basis-[48%]  mb-[1.31rem] flex justify-between   px-[0.94rem] py-[0.5rem] rounded-[0.5rem] border border-solid border-[rgba(229,229,229,0.60)]`}
+            >
+              <h3
+                className={`tracking-[-0.04rem] text-center text-[1.25rem] font-medium  `}
+              >
+                {item.placeholder}
+              </h3>
+              <input
+                type="checkbox"
+                name={item.name}
+                onBlur={() => {
+                  formik.setTouched({ [item.name]: true });
+                  // console.log("clicked", item.name);
+                }}
+                value={formik?.values[item.name]}
+                //   checked={pickedServices[title]}
+                onChange={handleChangePicker}
+                className={` block w-[1.5rem] h-[1.5rem]`}
+              />
+            </div>
+          ))}
+        </div>
         <button
           type="submit"
           className={`${
