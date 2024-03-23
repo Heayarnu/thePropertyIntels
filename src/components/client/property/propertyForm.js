@@ -35,9 +35,9 @@ function PropertyRegisterForm({ submitStatus }) {
 
     onSubmit: handleSubmit,
   });
+  const clientinfo = useGetCookieData("clientinfo");
+  const clientService = useGetCookieData("clientService");
   async function handleSubmit(values, { resetForm }) {
-    const clientinfo = useGetCookieData("clientinfo");
-    const clientService = useGetCookieData("clientService");
     console.log({ clientService, clientinfo, propertyInfovalues: values });
     try {
       setloading(true);
@@ -50,9 +50,10 @@ function PropertyRegisterForm({ submitStatus }) {
         },
         // body: data,
         body: JSON.stringify({
-          clientService,
-          clientinfo,
-          propertyInfovalues: values,
+          ...clientService,
+          ...clientinfo,
+          // propertyInfovalues: values,
+          ...values,
         }),
       })
         .then((response) => {
