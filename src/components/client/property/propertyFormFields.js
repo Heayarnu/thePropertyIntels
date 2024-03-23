@@ -3,28 +3,28 @@ import { countries } from "@/components/registerAgentForm/registerAgentdata";
 export const registerpropertFields = [
   {
     type: "text",
-    name: "country",
+    name: "property_country",
     placeholder: "Country",
   },
   {
     type: "text",
-    name: "city",
+    name: "property_city",
     placeholder: "City",
   },
   {
     type: "text",
-    name: "location",
+    name: "property_location",
     placeholder: "Location",
   },
   {
     type: "text",
-    name: "noOfproperties",
+    name: "no_of_properties",
     placeholder: "No of Property/Assets",
   },
 ];
 export const locationOfProperties = {
-  country: countries,
+  property_country: countries,
   //   country: ["", "Nigeria", "America", "Inem-Island"],
-  city: ["", "Victoria-Island", "Apapa", "Ikeja"],
-  noOfproperties: ["", 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  property_city: ["", "Victoria-Island", "Apapa", "Ikeja"],
+  no_of_properties: ["", 1, 2, 3, 4, 5, 6, 7, 8, 9],
 };

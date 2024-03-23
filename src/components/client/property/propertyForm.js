@@ -17,20 +17,20 @@ function PropertyRegisterForm({ submitStatus }) {
   const { toggleQuery, router } = UseMobileToggler();
   const [isLoading, setloading] = useState(false);
   const InitiaState = {
-    noOfproperties: "",
-    country: "",
-    city: "",
-    location: "",
+    no_of_properties: "",
+    property_country: "",
+    property_city: "",
+    property_location: "",
   };
   //   formik.validateOnMount;
   const formik = useFormik({
     initialValues: InitiaState,
     validateOnMount: true, // Enable validateOnMount
     validationSchema: Yup.object({
-      noOfproperties: Yup.string().required("Required"),
-      country: Yup.string().required("Required"),
-      city: Yup.string().required("Required"),
-      location: Yup.string().required("Required").min(3),
+      no_of_properties: Yup.string().required("Required"),
+      property_country: Yup.string().required("Required"),
+      property_city: Yup.string().required("Required"),
+      property_location: Yup.string().required("Required").min(3),
     }),
 
     onSubmit: handleSubmit,
@@ -127,7 +127,8 @@ function PropertyRegisterForm({ submitStatus }) {
             <div
               className={` shadow-[0px_2px_4px_0px_rgba(192,192,192,0.25)]  relative flex flex-row  px-[0.94rem] py-[0.5rem] rounded-[0.5rem] border border-solid border-[rgba(229,229,229,0.60)] focus-within:border-primary`}
             >
-              {item.name === "location" || item.name === "city" ? (
+              {item.name === "property_location" ||
+              item.name === "property_city" ? (
                 <input
                   type={item.type}
                   name={item.name}
