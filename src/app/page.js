@@ -5,6 +5,7 @@ import ServicesComponent from "@/components/services/servicesComponent";
 import AboutComponent from "@/components/about/aboutComponent";
 import FooterComponent from "@/components/footer/footerComponent";
 import ContactsComponent from "@/components/contacts/contactsComponent";
+import TeamsComponent from "@/components/teams/teamsComponent";
 import "react-phone-number-input/style.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
@@ -30,6 +31,7 @@ export default function Home() {
           <ProductsComponent />
           <ServicesComponent />
           <AboutComponent />
+          <TeamsComponent/>
           <ContactsComponent />
           <FooterComponent />
         </div>
