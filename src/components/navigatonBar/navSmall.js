@@ -25,7 +25,7 @@ function NavbarSmallScreen() {
           {NavMenuList.map(([name, url], index) => (
             <Link
               key={name}
-              href={`${url}?open=false`}
+              href={`/?open=false${url}`}
               className={`block ${index == 5 && "md:hidden"}
               
               `}

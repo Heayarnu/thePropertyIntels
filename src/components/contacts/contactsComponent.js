@@ -2,7 +2,7 @@ import React from "react";
 import { contacsInfo } from "./contactsdata";
 import { FooterSocials } from "../footer/footerData";
 import ContactsForm from "./contactsForm";
-
+import { GrLocation } from "react-icons/gr";
 function ContactsComponent() {
   return (
     <section id="contact" className="pb-[5.7rem] ">
@@ -18,13 +18,24 @@ function ContactsComponent() {
           <div>
             <div className="">
               <div className="flex mb-[2.5rem] gap-[.31rem] md:gap-[.94rem] items-center">
+                <GrLocation className="text-[#151941] " size={42} />
+                <div>
+                  <h3 className="text-base md:text-[1.25rem] font-medium tracking-[-0.05rem] text-main_heading">
+                    Visit Our Office at:
+                  </h3>
+                  <h4 className="text-sub_heading  text-[0.875rem] md:text-[1.125rem] md:leading-[2rem] tracking-[-0.0225rem]">
+                    23 Ojulari Crescent, Lekki, Lagos
+                  </h4>{" "}
+                </div>
+              </div>
+              <div className="flex mb-[2.5rem] gap-[.31rem] md:gap-[.94rem] items-center">
                 {contacsInfo.email}
                 <div>
                   <h3 className="text-base md:text-[1.25rem] font-medium tracking-[-0.05rem] text-main_heading">
                     Send us a mail
                   </h3>
                   <h4 className="text-sub_heading  text-[0.875rem] md:text-[1.125rem] md:leading-[2rem] tracking-[-0.0225rem]">
-                    via support@thepropertyintels.com
+                    via support@thepropertyintel.com
                   </h4>{" "}
                 </div>
               </div>
@@ -35,7 +46,7 @@ function ContactsComponent() {
                     Call us
                   </h3>
                   <h4 className="text-sub_heading text-[0.875rem] md:text-[1.125rem] md:leading-[2rem] tracking-[-0.0225rem]">
-                    via +234 8000000000
+                    via +234 8099415237
                   </h4>{" "}
                 </div>
               </div>

@@ -72,8 +72,6 @@ export const contacsInfo = {
   ),
 };
 
-import Image from "next/image";
-
 export const contactFormField = [
   {
     type: "text",

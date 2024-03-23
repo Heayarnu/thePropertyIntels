@@ -74,7 +74,7 @@ export const servicesArray = [
     title: "Register your property for site visitations and reports",
     // title: "Register your property with us",
     subtile:
-      "Adipiscing elementum iaculis faucibus ut neque fusce. Ridiculus donec sed eget id elit vulputate mi egestas. Magna pharetra metus vel eu. Temp",
+      "Welcome to The Property Intel   - your premier destination for property management solutions. Register your property with the Property Intel today and gain access to our quarterly onsite property assessments, visitations and reports; providing you with valuable insights and updates on your property conditions and performance. Trust us to handle your property with professionalism and care, ensuring your peace of mind every step of the way.",
   },
   {
     icon: (
@@ -266,7 +266,7 @@ export const servicesArray = [
     title: "Request for a property investment advice and Intelligence",
     // title: "Request for a property investment advice",
     subtile:
-      "Adipiscing elementum iaculis faucibus ut neque fusce. Ridiculus donec sed eget id elit vulputate mi egestas. Magna pharetra metus vel eu. Temp",
+      "Welcome to The Property Intel  , where your property investment goals become our top priority. Whether you're a seasoned property investor or just starting out, our team is here to provide expert advice and intelligence tailored to your real estate needs. Request a consultation today and unlock the investment insights you need to make informed decisions and maximize your property returns and potentials",
   },
   {
     icon: (
@@ -399,9 +399,9 @@ export const servicesArray = [
         </defs>
       </svg>
     ),
-    title: "Request for a facility management Service",
+    title: "Request for a facility management Service            ",
     subtile:
-      "Adipiscing elementum iaculis faucibus ut neque fusce. Ridiculus donec sed eget id elit vulputate mi egestas. Magna pharetra metus vel eu. Temp",
+      "Welcome to The Property Intel  , your trusted partner in facility management solutions. From maintenance to operations, our team is dedicated to ensuring your facilities run smoothly and efficiently. Request our comprehensive facility management service today and experience the difference of professional care and attention to detail",
   },
   {
     icon: (
@@ -453,7 +453,7 @@ export const servicesArray = [
     title: "Build a Property",
     // title: "Know your property Intelligence forecast",
     subtile:
-      "Adipiscing elementum iaculis faucibus ut neque fusce. Ridiculus donec sed eget id elit vulputate mi egestas. Magna pharetra metus vel eu. Temp",
+      "Welcome to The Property Intel, where your property dreams take shape. Whether it's a residential oasis or a commercial masterpiece, we're here to bring your vision to life. With our expert team and dedication to quality, building your property has never been easier. Let's embark on this journey together and create something extraordinary.",
   },
   {
     icon: (
@@ -565,7 +565,7 @@ export const servicesArray = [
     ),
     title: "Buy a Property",
     subtile:
-      "Adipiscing elementum iaculis faucibus ut neque fusce. Ridiculus donec sed eget id elit vulputate mi egestas. Magna pharetra metus vel eu. Temp",
+      "Welcome to The Property Intel, your gateway to finding the perfect property. Whether you're searching for your dream home or a lucrative investment opportunity, we're here to guide you every step of the way. With our extensive listings, expert advice, and personalized service, buying your ideal property has never been more seamless. Let's find your next great investment together",
   },
   {
     icon: (
@@ -607,6 +607,6 @@ export const servicesArray = [
     ),
     title: "Rent a Property",
     subtile:
-      "Adipiscing elementum iaculis faucibus ut neque fusce. Ridiculus donec sed eget id elit vulputate mi egestas. Magna pharetra metus vel eu. Temp",
+      "Welcome to The Property Intel, your premier destination for hassle-free property rentals. Whether you're seeking a cozy apartment, a spacious house, or a commercial space for your business, we've got you covered. With a wide range of properties and dedicated support, finding your perfect rental has never been easier. Let us help you find the ideal space to call home or establish your business.",
   },
 ];
