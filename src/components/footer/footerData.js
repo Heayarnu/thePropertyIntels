@@ -53,14 +53,14 @@ export const TERMS_OF_SERVICE_CONTENT = (
         <p className="py-3">
           All content included on the Service, such as text, graphics, logos,
           images, audio clips, digital downloads, data compilations, and
-          software, is the property of [CompanyName] or its content suppliers
+          software, is the property of CompanyName or its content suppliers
           and protected by international copyright laws.
         </p>
       </li>
       <li>
         <strong>Disclaimer</strong>
         <p className="py-3">
-          The Service is provided on an "as is" and "as available" basis,
+          The Service is provided on an as is and as available basis,
           without any warranties of any kind, whether express or implied. We
           do not warrant that the Service will be uninterrupted, timely,
           secure, or error-free.
@@ -113,7 +113,7 @@ export const PRIVACY_POLICY_CONTENT = (
     <div className="privacy-policy">
     <p className="py-3">
        Thepropertyintels operates the The Property Intel
-      website (the "Service"). This page informs you of our policies regarding
+      website the Service. This page informs you of our policies regarding
       the collection, use, and disclosure of personal data when you use our
       Service and the choices you have associated with that data.
     </p>
@@ -136,7 +136,7 @@ export const PRIVACY_POLICY_CONTENT = (
           <li>
             Personal Data: While using our Service, we may ask you to provide
             us with certain personally identifiable information that can be
-            used to contact or identify you ("Personal Data"). Personally
+            used to contact or identify you Personal Data. Personally
             identifiable information may include, but is not limited to:
             <ul>
               <li>Email address</li>
@@ -245,9 +245,9 @@ export const PRIVACY_POLICY_CONTENT = (
 export const COOKIES_POLICY_CONTENT = (
   <div>
      <p className="py-3">
-      This Cookies Policy explains what cookies are, how [CompanyName] us,
-      we, or our uses them on the The Property Intel website (the
-      "Service"), and your choices regarding cookies.
+      This Cookies Policy explains what cookies are, how CompanyName us,
+      we, or our uses them on the The Property Intel website the
+      Service, and your choices regarding cookies.
     </p>
     <ol>
       <li>
