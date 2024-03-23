@@ -89,7 +89,7 @@ export const TERMS_OF_SERVICE_CONTENT = (
         <p className="py-3">
           We reserve the right, at our sole discretion, to modify or replace
           these Terms at any time. If a revision is material, we will try to
-          provide at least 30 days' notice prior to any new terms taking
+          provide at least 30 days notice prior to any new terms taking
           effect. What constitutes a material change will be determined at
           our sole discretion.
         </p>
@@ -176,7 +176,7 @@ export const PRIVACY_POLICY_CONTENT = (
     <p className="py-3">
       <strong >8. Third-Party Service Providers:</strong> We may engage
       third-party companies and individuals to facilitate our Service
-      ("Service Providers"), to provide the Service on our behalf, to perform
+      Service Providers, to provide the Service on our behalf, to perform
       Service-related services, or to assist us in analyzing how our Service
       is used. These third parties have access to your Personal Data only to
       perform these tasks on our behalf and are obligated not to disclose or
@@ -195,7 +195,7 @@ export const PRIVACY_POLICY_CONTENT = (
       Data in the good faith belief that such action is necessary to:
       <ul>
         <li>Comply with a legal obligation</li>
-        <li>Protect and defend the rights or property of [CompanyName]</li>
+        <li>Protect and defend the rights or property of CompanyName</li>
         <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
         <li>Protect the personal safety of users of the Service or the public</li>
         <li>Protect against legal liability</li>
@@ -221,7 +221,7 @@ export const PRIVACY_POLICY_CONTENT = (
       outlined in this Privacy Policy. By using our Service, you acknowledge
       and agree to the sharing of your personal data as described above. If
       you have any questions or concerns about our data sharing practices,
-      please contact us at [ContactEmail].
+      please contact us at ContactEmail.
     </p>
     <p className="py-3">
       <strong>14. Data Retention:</strong> At The Property Intel, we believe
@@ -234,8 +234,8 @@ export const PRIVACY_POLICY_CONTENT = (
       outlined in our Privacy Policy. Once your data is no longer needed, we
       will securely delete or anonymize it to protect your privacy. If you
       have any questions about our data retention practices or wish to
-      request the deletion of your data, please contact us at [ContactEmail].
-      Your privacy and trust are paramount to us, and we're committed to
+      request the deletion of your data, please contact us at ContactEmail.
+      Your privacy and trust are paramount to us, and we&apos;re committed to
       transparent and responsible data management.
     </p>
   </div>
@@ -287,7 +287,7 @@ export const COOKIES_POLICY_CONTENT = (
       <li>
         <strong>What are Your Choices Regarding Cookies</strong>
         <p className="py-3">
-          If you'd like to delete cookies or instruct your web browser to
+          If you&apos;d like to delete cookies or instruct your web browser to
           delete or refuse cookies, please visit the help pages of your web
           browser. Please note, however, that if you delete cookies or refuse
           to accept them, you might not be able to use all of the features we
@@ -323,7 +323,7 @@ export const COOKIES_POLICY_CONTENT = (
           If you have any questions about this Cookies Policy, please contact us:
         </p>
         <p className="py-3">
-          [CompanyName] [Address] [City, State, Zip Code] [Email Address]
+          CompanyName Address City, State, Zip Code Email Address
         </p>
         <p>
           By using the Service, you consent to the use of cookies in accordance with this Cookies Policy.
