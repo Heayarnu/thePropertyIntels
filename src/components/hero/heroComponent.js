@@ -18,7 +18,7 @@ function HeroComponent() {
         className="max-md:relative z-0 top-[0px] max-w-[1400px] md:max-w-[100%] h-[100%] [350px] md:h-full max-md:w-[1000px] w-full max-w -[1440px]"
         // src={video}
         style={{ objectFit: "cover" }}
-        src="/assets/videos/herovideo.mp4"
+        src="/assets/videos/herovideo2.mp4"
         width="1440"
         height="900"
         loop
