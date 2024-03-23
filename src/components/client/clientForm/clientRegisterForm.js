@@ -160,6 +160,19 @@ function ClientRegisterForm({ submitStatus }) {
                     </option>
                   ))}
                 </select>
+              ) : item.name === "describeProperty" ? (
+                <textarea
+                  // type={item.type}
+                  name={item.name}
+                  onBlur={() => {
+                    formik.setTouched({ [item.name]: true });
+                    console.log("clicked", item.name);
+                  }}
+                  value={formik?.values[item.name]}
+                  placeholder={item.placeholder}
+                  onChange={handleChange}
+                  className={` h-[10.375rem] focus:outline-0 ml-[0.19rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem] leading-[1.41713rem] text-secondary placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem]`}
+                />
               ) : (
                 <input
                   type={item.type}
