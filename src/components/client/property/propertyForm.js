@@ -9,8 +9,13 @@ import {
   registerpropertFields,
 } from "./propertyFormFields";
 import { postInformation } from "@/hooks/postRequest";
+import Cookies from "js-cookie";
+import { useGetCookieData } from "@/hooks/cookieParser";
+import SmallLoadingSpinner from "@/components/smLoadingSpinner";
+import { toast } from "react-toastify";
 function PropertyRegisterForm({ submitStatus }) {
   const { toggleQuery, router } = UseMobileToggler();
+  const [isLoading, setloading] = useState(false);
   const InitiaState = {
     noOfproperties: "",
     country: "",
@@ -31,25 +36,75 @@ function PropertyRegisterForm({ submitStatus }) {
     onSubmit: handleSubmit,
   });
   async function handleSubmit(values, { resetForm }) {
+    const clientinfo = useGetCookieData("clientinfo");
+    const clientService = useGetCookieData("clientService");
+    console.log({ clientService, clientinfo, propertyInfovalues: values });
     try {
-      postInformation(values);
-      submitStatus(true);
-
-      router.push("?registrationType=true#Formsuccess", { scroll: true });
-      // router.push("?selectService=true#Formsuccess");
-      //   toggleQuery("client", "Select Service type");
-      //   toggleQuery("selectService", true);
-      //   toast.success(res?.message, {});
+      setloading(true);
+      // const hi =  postInformation(values);
+      fetch("/sendEmailRoute", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // Add any other headers if needed
+        },
+        // body: data,
+        body: JSON.stringify({
+          clientService,
+          clientinfo,
+          propertyInfovalues: values,
+        }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setloading(false);
+          // toast.success(data?.message);
+          Cookies.remove("clientinfo");
+          Cookies.remove("clientService");
+          // if successfull set submitstatus
+          submitStatus(true);
+          router.push("?registrationType=true#Formsuccess", { scroll: true });
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
 
       resetForm();
 
       // "User already registered."
       // console.log("succesful signup!!", res);
     } catch (error) {
+      toast.error("Failed to send information");
       // if (!error) return "No server response";
 
       console.log("error from contact form", error);
     }
+
+    // try {
+    //   // postInformation(values);
+    //   // submitStatus(true);
+
+    //   // router.push("?registrationType=true#Formsuccess", { scroll: true });
+
+    //   // router.push("?selectService=true#Formsuccess");
+    //   //   toggleQuery("client", "Select Service type");
+    //   //   toggleQuery("selectService", true);
+    //   //   toast.success(res?.message, {});
+
+    //   resetForm();
+
+    //   // "User already registered."
+    //   // console.log("succesful signup!!", res);
+    // } catch (error) {
+    //   // if (!error) return "No server response";
+
+    //   console.log("error from contact form", error);
+    // }
   }
   function handleChange(e) {
     const { name, value } = e.target;
@@ -115,9 +170,9 @@ function PropertyRegisterForm({ submitStatus }) {
           type="submit"
           className={`${
             formik.isValid ? "bg-[#166BBF]" : "bg-[rgba(222,222,222,0.35)]"
-          } p-[0.625rem] w-full lg:w-[11.3125rem] tracking-[-0.0225rem] font-semibold rounded-[6.25rem] text-[1.125rem] text-white ml-auto`}
+          } p-[0.625rem] relative h-[50px] w-full lg:w-[11.3125rem] tracking-[-0.0225rem] font-semibold rounded-[6.25rem] text-[1.125rem] text-white ml-auto`}
         >
-          Continue
+          {isLoading ? <SmallLoadingSpinner /> : "Continue"}
         </button>
       </form>{" "}
     </div>

@@ -15,8 +15,11 @@ import { PhoneInput } from "react-international-phone";
 import ErrorMessageCtn from "../errorMessage";
 import { UseMobileToggler } from "@/hooks/mobileViewQuery";
 import { postInformation } from "@/hooks/postRequest";
+import SmallLoadingSpinner from "../smLoadingSpinner";
+import { toast } from "react-toastify";
 function CompanyAsAgentForm({ submitStatus }) {
   const { toggleQuery, router } = UseMobileToggler();
+  const [isLoading, setloading] = useState(false);
   const InitiaState = {
     fullName: "",
     phoneNumber: "",
@@ -50,11 +53,36 @@ function CompanyAsAgentForm({ submitStatus }) {
   });
   async function handleSubmit(values, { resetForm }) {
     try {
-      postInformation(values);
-      console.log("from signup try block");
-      // if successfull set submitstatus
-      submitStatus(true);
-      router.push("?registrationType=true#Formsuccess", { scroll: true });
+      setloading(true);
+      // const hi =  postInformation(values);
+      fetch("/sendEmailRoute", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // Add any other headers if needed
+        },
+        // body: data,
+        body: JSON.stringify(values),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setloading(false);
+
+          console.log("from signup try block");
+          // if successfull set submitstatus
+          toast.success(data?.message);
+          submitStatus(true);
+          router.push("?registrationType=true#Formsuccess", { scroll: true });
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+
       //   toast.success(res?.message, {});
 
       resetForm();
@@ -200,9 +228,9 @@ function CompanyAsAgentForm({ submitStatus }) {
           type="submit"
           className={`${
             formik.isValid ? "bg-[#166BBF]" : "bg-[rgba(222,222,222,0.35)]"
-          } p-[0.625rem] block w-full lg:w-[11.3125rem] lg:ml-auto tracking-[-0.0225rem] font-semibold rounded-[6.25rem] text-[1.125rem] text-white`}
+          } p-[0.625rem] relative block w-full h-[50px] lg:w-[11.3125rem] lg:ml-auto tracking-[-0.0225rem] font-semibold rounded-[6.25rem] text-[1.125rem] text-white`}
         >
-          Continue
+          {isLoading ? <SmallLoadingSpinner /> : "Continue"}
         </button>
       </form>
     </div>

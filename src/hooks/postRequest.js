@@ -3,9 +3,9 @@ import { toast } from "react-toastify";
 const url = "/sendEmailRoute";
 // const url = "../app/sendEmailRoute/";
 
-export function postInformation(data) {
+export async function postInformation(data) {
   console.log("this is posting", data);
-  fetch(url, {
+  fetch("/sendEmailRoute", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -21,10 +21,9 @@ export function postInformation(data) {
       return response.json();
     })
     .then((data) => {
-      toast.success(data?.message);
-      //   console.log("Success:", data);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
+      // toast.success(data?.message);
     });
+  // .catch((error) => {
+  //   console.error("Error:", error);
+  // });
 }

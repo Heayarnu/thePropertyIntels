@@ -186,6 +186,7 @@ function AgentSelectPopCom() {
                 <div className=" mb-[.9rem] flex w-fit items-center flex-wrap bg-[#F8F9F9] divide-x rounded-[0rem_0rem_0.625rem_0.625rem] border-[#E9E9E9] border-[1px] border-solid">
                   {registerClient.map((item, index) => (
                     <button
+                      type="button"
                       key={index}
                       onClick={() =>
                         router.push(
@@ -269,6 +270,7 @@ function AgentSelectPopCom() {
                     ))}
                   </div>
                   <button
+                    type="button"
                     onClick={() => {
                       router.push(
                         `/?registrationType=${registrationType}&agencyFormType=${customEncodeURIComponent(

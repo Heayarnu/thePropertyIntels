@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { contactFormField } from "./contactsdata";
@@ -10,7 +10,10 @@ import Input, {
 import { PhoneInput } from "react-international-phone";
 import ErrorMessageCtn from "../errorMessage";
 import { postInformation } from "@/hooks/postRequest";
+import { toast } from "react-toastify";
+import SmallLoadingSpinner from "../smLoadingSpinner";
 function ContactsForm() {
+  const [isLoading, setloading] = useState(false);
   const InitiaState = {
     fName: "",
     lName: "",
@@ -34,11 +37,38 @@ function ContactsForm() {
   });
   async function handleSubmit(values, { resetForm }) {
     try {
-      postInformation(values);
-      console.log("from signup try block");
-      //   toast.success(res?.message, {});
+      setloading(true);
+      // const hi =  postInformation(values);
+      fetch("/sendEmailRoute", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // Add any other headers if needed
+        },
+        // body: data,
+        body: JSON.stringify(values),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setloading(false);
+          toast.success(data?.message);
+          // if successfull set submitstatus
+          // submitStatus(true);
+          // router.push("?registrationType=true#Formsuccess", { scroll: true });
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
 
       resetForm();
+
+      // "User already registered."
+      // console.log("succesful signup!!", res);
     } catch (error) {
       // if (!error) return "No server response";
 
@@ -156,10 +186,10 @@ function ContactsForm() {
         </div>
       ))}
       <button
-        type="button"
-        className="bg-[#166BBF] p-[0.625rem] w-full lg:w-[11.3125rem] tracking-[-0.0225rem] font-semibold rounded-[6.25rem] text-[1.125rem] text-white ml-auto"
+        type="submit"
+        className="bg-[#166BBF] p-[0.625rem] relative h-[50px] w-full lg:w-[11.3125rem] tracking-[-0.0225rem] font-semibold rounded-[6.25rem] text-[1.125rem] text-white ml-auto"
       >
-        Send
+        {isLoading ? <SmallLoadingSpinner /> : "Send"}
       </button>
     </form>
   );

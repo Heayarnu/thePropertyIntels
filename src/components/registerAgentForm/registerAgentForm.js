@@ -11,8 +11,12 @@ import { PhoneInput } from "react-international-phone";
 import ErrorMessageCtn from "../errorMessage";
 import { UseMobileToggler } from "@/hooks/mobileViewQuery";
 import { postInformation } from "@/hooks/postRequest";
+import SmallLoadingSpinner from "../smLoadingSpinner";
+import { toast } from "react-toastify";
 function AgentRegisterForm({ submitStatus }) {
   const { toggleQuery, router } = UseMobileToggler();
+  const [isLoading, setloading] = useState(false);
+
   const InitiaState = {
     fullName: "",
     phoneNumber: "",
@@ -40,12 +44,34 @@ function AgentRegisterForm({ submitStatus }) {
   });
   async function handleSubmit(values, { resetForm }) {
     try {
-      postInformation(values);
-      console.log("from signup try block");
-      // if successfull set submitstatus
-      submitStatus(true);
+      setloading(true);
+      // const hi =  postInformation(values);
+      fetch("/sendEmailRoute", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // Add any other headers if needed
+        },
+        // body: data,
+        body: JSON.stringify(values),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setloading(false);
+          toast.success(data?.message);
+          // if successfull set submitstatus
+          submitStatus(true);
+          router.push("?registrationType=true#Formsuccess", { scroll: true });
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
 
-      router.push("?registrationType=true#Formsuccess", { scroll: true });
       //   toast.success(res?.message, {});
 
       resetForm();
@@ -157,9 +183,9 @@ function AgentRegisterForm({ submitStatus }) {
           type="submit"
           className={`${
             formik.isValid ? "bg-[#166BBF]" : "bg-[rgba(222,222,222,0.35)]"
-          } p-[0.625rem] w-full lg:w-[11.3125rem] tracking-[-0.0225rem] font-semibold rounded-[6.25rem] text-[1.125rem] text-white ml-auto`}
+          } p-[0.625rem] relative h-[50px] w-full lg:w-[11.3125rem] tracking-[-0.0225rem] font-semibold rounded-[6.25rem] text-[1.125rem] text-white ml-auto`}
         >
-          Continue
+          {isLoading ? <SmallLoadingSpinner /> : "Continue"}
         </button>
       </form>{" "}
     </div>

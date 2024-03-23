@@ -1,6 +1,7 @@
 "use client";
 // import { selectServiceData } from "../client/clientForm/clientData";
 import { UseMobileToggler } from "@/hooks/mobileViewQuery";
+import Cookies from "js-cookie";
 import { useState } from "react";
 
 function Selectservices() {
@@ -542,6 +543,7 @@ function Selectservices() {
             //   router.push(
             //     `/?registrationType=${registrationType}&client=Enter+property+details`
             //   );
+            Cookies.set("clientService", JSON.stringify({ ...pickedServices }));
             toggleQuery("client", "Enter property details");
             //   toggleQuery("agent", picked);
           }}

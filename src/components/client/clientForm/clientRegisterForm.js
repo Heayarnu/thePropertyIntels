@@ -15,6 +15,7 @@ import {
 } from "@/components/registerAgentForm/registerAgentdata";
 import { postInformation } from "@/hooks/postRequest";
 import { typeOfproperties } from "./clientData";
+import Cookies from "js-cookie";
 function ClientRegisterForm({ submitStatus }) {
   const { toggleQuery, router } = UseMobileToggler();
   const InitiaState = {
@@ -53,37 +54,24 @@ function ClientRegisterForm({ submitStatus }) {
     onSubmit: handleSubmit,
   });
   async function handleSubmit(values, { resetForm }) {
-    console.log("Attempting to signup");
-    // if (subPlan) {
-    //   router.push(
-    //     `/auth/email-verification?${subPlan && "plan=" + subPlan}&email=${
-    //       // res.user.email
-    //       "sopewenike"
-    //     }`,
-    //     {
-    //       scroll: false,
-    //     }
-    //   );
-    // }
+    // const filteredObject = Object.keys(values)
+    //   .filter((key) => key !== "Confirm password")
+    //   // .filter((key) => key !== "dateOfBirth" && key !== "Confirm password")
+    //   .reduce((obj, key) => {
+    //     obj[key] = values[key];
+    //     return obj;
+    //   }, {});
 
-    const filteredObject = Object.keys(values)
-      .filter((key) => key !== "Confirm password")
-      // .filter((key) => key !== "dateOfBirth" && key !== "Confirm password")
-      .reduce((obj, key) => {
-        obj[key] = values[key];
-        return obj;
-      }, {});
-
-    console.log("this is filtered", filteredObject);
+    // console.log("this is filtered", filteredObject);
     try {
       console.log("from signup try block");
       // if successfull set submitstatus
       //   submitStatus(true);
 
       //   router.push("?selectService=true#Formsuccess");
-      postInformation(values);
-      // console.log("api called", res);
-      // toast.success(, {});
+      Cookies.set("clientinfo", JSON.stringify({ ...values }));
+      // postInformation(values);
+
       toggleQuery("client", "Select Service type");
 
       resetForm();
