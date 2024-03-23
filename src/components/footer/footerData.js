@@ -3,9 +3,9 @@
 export const TERMS_OF_SERVICE_CONTENT = (
   <div>
      <p className="py-3">
-      <strong>These Terms of Service ("Terms")</strong> govern your access to
-      and use of The Property Intel website (the "Service") operated by
-      Philip Edge Africa ("us", "we", or "our").
+      <strong>These Terms of Service Terms</strong> govern your access to
+      and use of The Property Intel website the Service operated by
+      Philip Edge Africa us, we, or our.
     </p>
     <p className="py-3">
       <strong>Please read these Terms carefully before using our Service.</strong>
@@ -245,8 +245,8 @@ export const PRIVACY_POLICY_CONTENT = (
 export const COOKIES_POLICY_CONTENT = (
   <div>
      <p className="py-3">
-      This Cookies Policy explains what cookies are, how [CompanyName] ("us",
-      "we", or "our") uses them on the The Property Intel website (the
+      This Cookies Policy explains what cookies are, how [CompanyName] us,
+      we, or our uses them on the The Property Intel website (the
       "Service"), and your choices regarding cookies.
     </p>
     <ol>
