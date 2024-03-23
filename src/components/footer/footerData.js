@@ -1,12 +1,337 @@
-export const FooterMenuList = [
-  // ["Home", "/"],
-  ["About Us", "#about"],
-  ["Contact Us", "#contact"],
-  ["Our Services", "#services"],
-  ["Terms of Service", "#Terms"],
-  ["Register Now", "/"],
-];
 
+
+export const TERMS_OF_SERVICE_CONTENT = (
+  <div>
+     <p className="py-3">
+      <strong>These Terms of Service Terms</strong> govern your access to
+      and use of The Property Intel website the Service operated by
+      Philip Edge Africa us, we, or our.
+    </p>
+    <p className="py-3">
+      <strong>Please read these Terms carefully before using our Service.</strong>
+    </p>
+    <ol>
+      <li>
+        <strong>Acceptance of Terms</strong>
+        <p>
+          By accessing or using the Service, you agree to be bound by these
+          Terms. If you disagree with any part of the Terms, then you may not
+          access the Service.
+        </p>
+      </li>
+      <li>
+        <strong>Use License</strong>
+        <p className="py-3">
+          Permission is granted to temporarily access the Service for
+          personal, non-commercial transitory viewing only. This is the grant
+          of a license, not a transfer of title.
+        </p>
+      </li>
+      <li>
+        <strong>User Content</strong>
+        <p className="py-3">
+          By submitting, posting, or displaying any content on the Service,
+          you grant us a worldwide, non-exclusive, royalty-free license to
+          use, copy, reproduce, process, adapt, modify, publish, transmit,
+          display, and distribute such content.
+        </p>
+      </li>
+      <li>
+        <strong>Prohibited Conduct</strong>
+        <p className="py-3">
+          You agree not to:
+          <ul>
+            <li>Use the Service in any unlawful manner or for any unlawful purpose.</li>
+            <li>Attempt to gain unauthorized access to any part of the Service.</li>
+            <li>Interfere with or disrupt the Service or servers or networks connected to the Service.</li>
+            <li>Use the Service to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability.</li>
+          </ul>
+        </p>
+      </li>
+      <li>
+        <strong>Intellectual Property</strong>
+        <p className="py-3">
+          All content included on the Service, such as text, graphics, logos,
+          images, audio clips, digital downloads, data compilations, and
+          software, is the property of CompanyName or its content suppliers
+          and protected by international copyright laws.
+        </p>
+      </li>
+      <li>
+        <strong>Disclaimer</strong>
+        <p className="py-3">
+          The Service is provided on an as is and as available basis,
+          without any warranties of any kind, whether express or implied. We
+          do not warrant that the Service will be uninterrupted, timely,
+          secure, or error-free.
+        </p>
+      </li>
+      <li>
+        <strong>Limitation of Liability</strong>
+        <p className="py-3">
+          In no event shall Philip Edge Africa, nor its directors, employees,
+          partners, agents, suppliers, or affiliates, be liable for any
+          indirect, incidental, special, consequential, or punitive damages,
+          including without limitation, loss of profits, data, use, goodwill,
+          or other intangible losses, resulting from your access to or use of
+          or inability to access or use the Service.
+        </p>
+      </li>
+      <li>
+        <strong>Governing Law</strong>
+        <p className="py-3">
+          These Terms shall be governed and construed in accordance with the
+          laws of Nigeria, without regard to its conflict of law provisions.
+        </p>
+      </li>
+      <li>
+        <strong>Changes</strong>
+        <p className="py-3">
+          We reserve the right, at our sole discretion, to modify or replace
+          these Terms at any time. If a revision is material, we will try to
+          provide at least 30 days notice prior to any new terms taking
+          effect. What constitutes a material change will be determined at
+          our sole discretion.
+        </p>
+      </li>
+      <li>
+        <strong>Contact Us</strong>
+        <p className="py-3">
+          If you have any questions about these Terms, please contact us at
+          <a href="mailto:support@thepropertyintels.com">support@thepropertyintels.com</a>.
+        </p>
+      </li>
+      <li>
+        <strong>By accessing or using the Service, you agree to be bound by these Terms. If you do not agree to these Terms, please refrain from using the Service.</strong>
+      </li>
+    </ol>
+  </div>
+);
+
+export const PRIVACY_POLICY_CONTENT = (
+  <div>
+    <div className="privacy-policy">
+    <p className="py-3">
+       Thepropertyintels operates the The Property Intel
+      website the Service. This page informs you of our policies regarding
+      the collection, use, and disclosure of personal data when you use our
+      Service and the choices you have associated with that data.
+    </p>
+    <p className="py-3">
+      We use your data to provide and improve the Service. By using the
+      Service, you agree to the collection and use of information in
+      accordance with this policy.
+    </p>
+    <ol>
+      <li>
+        <strong>Information Collection and Use</strong>
+        <p className="py-3">
+          We collect several different types of information for various
+          purposes to provide and improve our Service to you.
+        </p>
+      </li>
+      <li>
+        <strong>Types of Data Collected</strong>
+        <ul>
+          <li>
+            Personal Data: While using our Service, we may ask you to provide
+            us with certain personally identifiable information that can be
+            used to contact or identify you Personal Data. Personally
+            identifiable information may include, but is not limited to:
+            <ul>
+              <li>Email address</li>
+              <li>First name and last name</li>
+              <li>Phone number</li>
+              <li>Address, State, Province, ZIP/Postal code, City</li>
+              <li>Cookies and Usage Data</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Use of Data</strong>
+        <p className="py-3">
+          We use the collected data for various purposes, including but not
+          limited to:
+        </p>
+        <ul>
+          <li>To provide and maintain the Service</li>
+          <li>To notify you about changes to our Service</li>
+          <li>
+            To allow you to participate in interactive features of our Service
+            when you choose to do so
+          </li>
+          {/* Include other bullet points */}
+        </ul>
+      </li>
+      {/* Include other numbered sections */}
+    </ol>
+    <p className="py-3">
+      <strong>7. Data Sharing</strong>
+      <br />
+      At The Property Intel, we value your privacy and are committed to
+      protecting your personal information. This section of our Privacy Policy
+      outlines how and when we may share your data with third parties.
+    </p>
+    <p className="py-3">
+      <strong >8. Third-Party Service Providers:</strong> We may engage
+      third-party companies and individuals to facilitate our Service
+      Service Providers, to provide the Service on our behalf, to perform
+      Service-related services, or to assist us in analyzing how our Service
+      is used. These third parties have access to your Personal Data only to
+      perform these tasks on our behalf and are obligated not to disclose or
+      use it for any other purpose.
+    </p>
+    <p className="py-3">
+      <strong>9. Business Partners:</strong> We may share your personal
+      information with our business partners, affiliates, and other trusted
+      entities to provide you with services or products that you have
+      requested or may be of interest to you. These partners are required to
+      adhere to the same privacy standards as outlined in this Privacy
+      Policy.
+    </p>
+    <p className="py-3">
+      <strong>10. Legal Requirements:</strong> We may disclose your Personal
+      Data in the good faith belief that such action is necessary to:
+      <ul>
+        <li>Comply with a legal obligation</li>
+        <li>Protect and defend the rights or property of CompanyName</li>
+        <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
+        <li>Protect the personal safety of users of the Service or the public</li>
+        <li>Protect against legal liability</li>
+      </ul>
+    </p>
+    <p className="py-3">
+      <strong>11. Merger or Acquisition:</strong> In the event that The
+      Property Intel is involved in a merger, acquisition, or sale of assets,
+      your Personal Data may be transferred. We will provide notice before
+      your Personal Data is transferred and becomes subject to a different
+      Privacy Policy.
+    </p>
+    <p className="py-3">
+      <strong>12. Data Anonymization and Aggregation:</strong> We may
+      anonymize and aggregate data collected through our Service and share it
+      with third parties for various purposes, including research, analysis,
+      and marketing. This information does not personally identify
+      individuals.
+    </p>
+    <p className="py-3">
+      <strong>13. Your Consent:</strong> We will obtain your consent before
+      sharing your personal information with third parties for purposes not
+      outlined in this Privacy Policy. By using our Service, you acknowledge
+      and agree to the sharing of your personal data as described above. If
+      you have any questions or concerns about our data sharing practices,
+      please contact us at ContactEmail.
+    </p>
+    <p className="py-3">
+      <strong>14. Data Retention:</strong> At The Property Intel, we believe
+      in retaining your data only for as long as necessary to fulfill the
+      purposes outlined in our Privacy Policy. We adhere to strict guidelines
+      regarding the retention of personal information and regularly review our
+      data storage practices to ensure compliance with legal requirements.
+      Your personal data will be retained for the duration necessary to
+      provide you with the services you have requested and for the purposes
+      outlined in our Privacy Policy. Once your data is no longer needed, we
+      will securely delete or anonymize it to protect your privacy. If you
+      have any questions about our data retention practices or wish to
+      request the deletion of your data, please contact us at ContactEmail.
+      Your privacy and trust are paramount to us, and we&apos;re committed to
+      transparent and responsible data management.
+    </p>
+  </div>
+  </div>
+);
+
+export const COOKIES_POLICY_CONTENT = (
+  <div>
+     <p className="py-3">
+      This Cookies Policy explains what cookies are, how CompanyName us,
+      we, or our uses them on the The Property Intel website the
+      Service, and your choices regarding cookies.
+    </p>
+    <ol>
+      <li>
+        <strong>What are Cookies</strong>
+        <p className="py-3">
+          Cookies are small pieces of text sent by your web browser by a
+          website you visit. A cookie file is stored in your web browser and
+          allows the Service or a third-party to recognize you and make your
+          next visit easier and the Service more useful to you.
+        </p>
+      </li>
+      <li>
+        <strong>How The Property Intel Uses Cookies</strong>
+        <p className="py-3">
+          When you use and access the Service, we may place a number of
+          cookies files in your web browser. We use cookies for the following
+          purposes:
+        </p>
+        <ul>
+          <li>To enable certain functions of the Service</li>
+          <li>To provide analytics</li>
+          <li>To store your preferences</li>
+          <li>
+            To enable advertisements delivery, including behavioral
+            advertising
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Third-party Cookies</strong>
+        <p className="py-3">
+          In addition to our own cookies, we may also use various third-party
+          cookies to report usage statistics of the Service, deliver
+          advertisements on and through the Service, and so on.
+        </p>
+      </li>
+      <li>
+        <strong>What are Your Choices Regarding Cookies</strong>
+        <p className="py-3">
+          If you&apos;d like to delete cookies or instruct your web browser to
+          delete or refuse cookies, please visit the help pages of your web
+          browser. Please note, however, that if you delete cookies or refuse
+          to accept them, you might not be able to use all of the features we
+          offer, you may not be able to store your preferences, and some of
+          our pages might not display properly.
+        </p>
+      </li>
+      <li>
+        <strong>More Information About Cookies</strong>
+        <p className="py-3">
+          You can learn more about cookies and the following third-party
+          websites:
+        </p>
+        <ul>
+          <li>
+            <a href="" target="_blank">
+              AllAboutCookies
+            </a>
+          </li>
+          <li>
+            <a
+              href=""
+              target="_blank"
+            >
+              Network Advertising Initiative
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Contact Us</strong>
+        <p className="py-3">
+          If you have any questions about this Cookies Policy, please contact us:
+        </p>
+        <p className="py-3">
+          CompanyName Address City, State, Zip Code Email Address
+        </p>
+        <p>
+          By using the Service, you consent to the use of cookies in accordance with this Cookies Policy.
+        </p>
+      </li>
+    </ol>
+  </div>
+);
 export const FooterSocials = [
   // ["Home", "/"],
   {
