@@ -136,8 +136,8 @@ function AgentSelectPopCom() {
                 className=" absolute top-[1.9rem] cursor-pointer right-[1.9rem]"
               />
               <h3 className=" text-[1.25rem] font-bold tracking-[-0.0225rem] mb-[.9rem] text-main_heading">
-                Register{" "}
-                {registrationType === "as agent" ? "an agent" : "your property"}
+               
+                {registrationType === "agent" ? "Become an agent" : "Register your property"}
               </h3>
 
               {registrationType == "agent" ? (

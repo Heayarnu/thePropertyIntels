@@ -7,7 +7,8 @@ import NavbarSmallScreen from "../navigatonBar/navSmall";
 function HeroComponent() {
   return (
     <div className=" relative w-full h-[80vh] md:h-[80vh] lg:h-full rounded-sm overflow-hidden">
-      <div className="bg-gradient-to-br from-[rgba(0,0,0,0.45)_25.27%,rgba(0,0,0,0.45)] via-[rgba(0,0,0,0.35)_53.22%] to-[rgba(0,0,0,0.5)_69.08%] absolute top-0 left-0 right-0 bottom-0"></div>
+      {/* <div className="bg-gradient-to-br from-[rgba(0,0,0,0.45)_25.27%,rgba(0,0,0,0.45)] via-[rgba(0,0,0,0.35)_53.22%] to-[rgba(0,0,0,0.5)_69.08%] absolute top-0 left-0 right-0 bottom-0"></div> */}
+      <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
       <NavMain />
       <NavbarSmallScreen />
       {/* <div class="video-container">
@@ -36,7 +37,7 @@ function HeroComponent() {
         title="video"
       /> */}
 
-      <div className="max-lg:mt-[3.06rem] md:py-[50px] text-white rounded-md absolute text-center w-[90%]  -translate-x-1/2 lg: -translate-y-1/2 left-1/2 top-[39%] 1/2  lg:top-1/2 bg- [#ffffff7a]">
+      <div className="max-lg:mt-[3.06rem] md:py-[50px] text-white rounded-md absolute text-center w-[90%]  -translate-x-1/2 lg: -translate-y-1/2 left-1/2 top-[39%] 1/2  lg:top-1/2 bg- [#ffffff7a] z-[30]">
         <h2 className="text-[1.875rem] w-full max-w-[44.9375rem] mx-auto md:text-[3.75rem] leading-[2rem] md:leading-[3.75rem] tracking-[-0.075rem] font-[900] font-Geist">
           Property Management Investment & Advice
         </h2>

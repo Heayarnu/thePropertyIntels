@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 function AboutComponent() {
+  const [show,setShow] = useState(false);
   return (
     <section id="about" className="py-[6.44rem]">
       <div className="lg:flex items-center gap-[3.31rem]">
@@ -27,7 +28,8 @@ function AboutComponent() {
             unparalleled service. From the moment you step into our world,
             you&#39;ll be greeted by a team of seasoned professionals who are
             not just experts in the field but also passionate about what they
-            do. Whether you&#39;re a first-time homebuyer, an experienced
+            do. 
+             { show && <span >Whether you&#39;re a first-time homebuyer, an experienced
             investor, or looking to sell your property, we have the expertise
             and resources to cater to your every need. But beyond expertise,
             what truly defines us is our personalized approach. We believe that
@@ -44,15 +46,17 @@ function AboutComponent() {
             for the best possible price, look no further than The Property Intel
             . With us, your real estate goals are not just within reach;
             they&#39;re well within grasp. Welcome to a world of endless
-            possibilities. Welcome to The Property Intel
+            possibilities. Welcome to The Property Intel</span>}
           </p>
 
-          <Link
+
+          <div
             href="#properties"
-            className="w-[11.3125rem] block text-center rounded-[6.25rem] p-[0.625rem] border-[rgba(255,255,255,0.91)] text-base md:text-[1.125rem] tracking-[-0.0225rem] mt-[2.5rem] text-white font-semibold bg-primary border border-solid"
+            className="w-[11.3125rem] block text-center rounded-[6.25rem] p-[0.625rem] border-[rgba(255,255,255,0.91)] text-base md:text-[1.125rem] tracking-[-0.0225rem] mt-[2.5rem] text-white font-semibold bg-primary border border-solid cursor-pointer"
+            onClick={() => setShow(true)}
           >
             Learn more
-          </Link>
+          </div>
         </div>
         <div className="mt-[3.44rem] relative h-[35.375rem] w-full basis-[35%]">
           <Image

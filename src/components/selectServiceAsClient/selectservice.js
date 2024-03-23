@@ -496,7 +496,7 @@ function Selectservices() {
           </defs>
         </svg>
       ),
-      desc: "Property Investment Advice",
+      desc: "Build a Property",
       title: "Investment",
     },
   ];
