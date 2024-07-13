@@ -17,10 +17,9 @@ function ProductsComponent() {
         <div className=" overflow-x-auto ">
           <div className="flex flex-row md:flex-row  gap-5 mt-[3.94rem] w-[81.36rem] mx-auto ">
             {productGrid.map(([name, img, link], index) => (
-              <div> 
+              <div key={name + index}> 
               <Link
                 href={`?image=${link}`}
-                key={name + index}
                 className={` whitespace-nowrap relative ${name} bg-red-500`}
               >
                 <img
