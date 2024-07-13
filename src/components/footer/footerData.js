@@ -349,7 +349,7 @@ export const FooterSocials = [
         />
       </svg>
     ),
-    link: "https://web.facebook.com/",
+    link: "https://web.facebook.com/ThePropertyIntels",
   },
   {
     icon: (
@@ -373,7 +373,7 @@ export const FooterSocials = [
         </defs>
       </svg>
     ),
-    link: "https://www.instagram.com/#_=_",
+    link: "https://www.instagram.com/ThePropertyIntels",
   },
   {
     icon: (
@@ -390,7 +390,7 @@ export const FooterSocials = [
         />
       </svg>
     ),
-    link: "https://twitter.com/home",
+    link: "https://twitter.com/PropertyIntels",
   },
 ];
 

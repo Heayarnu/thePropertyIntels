@@ -24,8 +24,8 @@ function ContactsComponent() {
                     Visit Our Office at:
                   </h3>
                   <h4 className="text-sub_heading  text-[0.875rem] md:text-[1.125rem] md:leading-[2rem] tracking-[-0.0225rem]">
-                    23 Ojulari Crescent, Lekki, Lagos
-                  </h4>{" "}
+                    Safecourt building, Ojulari Crescent,Lekki Pennisula II, Lagos 106014, Lagos
+                  </h4>
                 </div>
               </div>
               <div className="flex mb-[2.5rem] gap-[.31rem] md:gap-[.94rem] items-center">
@@ -35,7 +35,7 @@ function ContactsComponent() {
                     Send us a mail
                   </h3>
                   <h4 className="text-sub_heading  text-[0.875rem] md:text-[1.125rem] md:leading-[2rem] tracking-[-0.0225rem]">
-                    via support@thepropertyintel.com
+                    via support@thepropertyintels.com
                   </h4>{" "}
                 </div>
               </div>
@@ -46,7 +46,7 @@ function ContactsComponent() {
                     Call us
                   </h3>
                   <h4 className="text-sub_heading text-[0.875rem] md:text-[1.125rem] md:leading-[2rem] tracking-[-0.0225rem]">
-                    via +234 8099415237
+                    via +234 7066040602
                   </h4>{" "}
                 </div>
               </div>

@@ -94,8 +94,8 @@ export const registerFormField = [
 
   {
     type: "text",
-    name: "country",
-    placeholder: "Country",
+    name: "Country of residence",
+    placeholder: "Country of residence",
   },
   {
     type: "text",

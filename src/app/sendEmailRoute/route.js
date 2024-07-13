@@ -6,7 +6,8 @@ export async function POST(request) {
   if (request.method === "POST") {
     try {
       const data = await request.json();
-      console.log("this is receiving", data);
+      console.log("this is receiving in send email", data);
+      console.log("this is receiving in send email", data?.email);
       const transporter = nodemailer.createTransport({
         service: "Gmail",
         auth: {
@@ -18,6 +19,7 @@ export async function POST(request) {
 
 
 const infoKeys = Object.keys(data);
+// console.log("infor keysss", infoKeys)
 
 let tableContent = '';
 infoKeys.forEach(key => {
@@ -47,6 +49,26 @@ infoKeys.forEach(key => {
       });
 
       console.log("Message sent: %s", info.messageId);
+
+
+   // Sending confirmation email
+   if (data?.email) {
+    const confirmationInfo = await transporter.sendMail({
+      from: "greatdev2023@gmail.com",
+      to: data.email,
+      subject: "Confirmation of Your Submission",
+      html: `
+        <p>Hello ${data?.fullName || "Customer"},</p>
+        <p>Thank you for reaching out to The Property Intels. We have received your submission and will get back to you shortly.</p>
+        <p>Best regards,<br>The Property Intels Team</p>
+      `
+    });
+
+    console.log("Confirmation email sent: %s", confirmationInfo.messageId);
+  }
+
+
+
       return Response.json({ message: "Data sent successfully" });
 
       // res.status(200).json({ message: "Data sent successfully" });

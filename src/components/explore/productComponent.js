@@ -15,27 +15,30 @@ function ProductsComponent() {
         </p> */}
         {/* <div className="flex justify-center"> */}
         <div className=" overflow-x-auto ">
-          <div className="productContainer mt-[3.94rem] w-[81.36rem] mx-auto ">
+          <div className="flex flex-row md:flex-row  gap-5 mt-[3.94rem] w-[81.36rem] mx-auto ">
             {productGrid.map(([name, img, link], index) => (
+              <div> 
               <Link
                 href={`?image=${link}`}
                 key={name + index}
                 className={` whitespace-nowrap relative ${name} bg-red-500`}
               >
-                <Image
+                <img
                   style={{ objectFit: "cover" }}
+                  className={`w-full h-[450px] ${name} `}
                   src={img}
                   fill
                   alt={"Homes"}
                 />
-                <h3 className="text-[1.25rem] text-white font-medium tracking-[-0.05rem] absolute top-[1.87rem] left-[2.13rem]">
+                {/* <h3 className="text-[1.25rem] text-white font-medium tracking-[-0.05rem] absolute top-[1.87rem] left-[2.13rem]">
                   Homes in Ikoyi
-                </h3>
-                <button className="flex items-center shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] border-[1px_solid_rgba(255,255,255,0.11)] text-[0.875rem] tracking-[-0.0175rem] font-bold gap-[0.25rem] text-primary rounded-[6.25rem] bg-[rgba(255,255,255,0.55)] absolute left-[2.13rem] bottom-[1.88rem] p-[0.625rem_0.3125rem_0.625rem_0.875rem]">
+                </h3> */}
+                <button className="flex items-center mr-[0.5rem] shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] border-[1px_solid_rgba(255,255,255,0.11)] text-[0.875rem] tracking-[-0.0175rem] font-bold gap-[0.25rem] text-primary rounded-[6.25rem] bg-[rgba(255,255,255,0.55)] absolute left-[2.13rem] bottom-[1.88rem] p-[0.625rem_0.3125rem_0.625rem_0.875rem]">
                   <span>View homes</span>{" "}
                   <FaAngleRight className="inline-block" />
                 </button>
               </Link>
+              </div>
             ))}
 
             {/* <div className="first bg-red-500"></div>

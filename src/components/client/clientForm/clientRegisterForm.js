@@ -230,7 +230,7 @@ function ClientRegisterForm({ submitStatus }) {
         >
           Continue
         </button>
-      </form>{" "}
+      </form>
     </div>
   );
 }

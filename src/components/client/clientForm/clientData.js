@@ -398,7 +398,7 @@ export const selectServiceData = [
         </defs>
       </svg>
     ),
-    desc: "Property Inspections & Reports",
+    desc: "Get a property ",
     title: "Inspections",
   },
   {
@@ -475,8 +475,8 @@ export const typeOfproperties = [
   },
   {
     type: "checkbox",
-    name: "realEstate",
-    placeholder: "Real Estate",
+    name: "officeBuilding",
+    placeholder: "Office Building",
   },
   {
     type: "checkbox",
@@ -490,7 +490,7 @@ export const typeOfproperties = [
   },
   {
     type: "checkbox",
-    name: "officeBuilding",
-    placeholder: "Office Building",
+    name: "Others",
+    placeholder: "Others",
   },
 ];

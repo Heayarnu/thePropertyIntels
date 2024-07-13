@@ -28,8 +28,8 @@ export default function Home() {
         <HeroComponent />
 
         <div className=" xl:px-[6.3rem] max-xl:w-[90%] mx-auto">
-          <ProductsComponent />
-          <ServicesComponent />
+        <ServicesComponent />
+        <ProductsComponent />
           <AboutComponent />
           <TeamsComponent/>
           <ContactsComponent />

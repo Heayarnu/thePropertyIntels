@@ -58,7 +58,7 @@ function AboutComponent() {
             Learn more
           </div>
         </div>
-        <div className="mt-[3.44rem] relative h-[35.375rem] w-full basis-[35%]">
+        {/* <div className="mt-[3.44rem] relative h-[35.375rem] w-full basis-[35%]">
           <Image
             className=""
             // width={3840}
@@ -67,7 +67,10 @@ function AboutComponent() {
             src={"/assets/images/hero/about.jpg"}
             alt="hero"
           />
-        </div>
+        </div> */}
+        <div className="mt-[3.44rem] relative h-[35.375rem] w-full basis-[35%]">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3O22xPlb3CQ?start=16" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
       </div>
     </section>
   );

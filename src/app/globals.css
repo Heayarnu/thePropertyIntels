@@ -22,14 +22,21 @@ input:-webkit-autofill:active {
   grid-template-rows: 240px 240px;
   gap: 24.96px 24.96px;
   grid-auto-flow: row;
-  grid-template-areas:
+  /* grid-template-areas:
     "first third forth second"
-    "first fifth sixth second";
+    "first fifth sixth second"; */
+    grid-template-areas:
+    "first second third forth"
+    "first second third forth";
 }
 
+
 .first {
-  grid-area: first;
+  width: 450px !important;
 }
+/* .first {
+  grid-area: first;
+} */
 
 .second {
   grid-area: second;

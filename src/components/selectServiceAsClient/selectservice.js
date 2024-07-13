@@ -442,7 +442,7 @@ function Selectservices() {
           </defs>
         </svg>
       ),
-      desc: "Property Inspections & Reports",
+      desc: "Get a property",
       title: "Inspections",
     },
     {
@@ -496,7 +496,7 @@ function Selectservices() {
           </defs>
         </svg>
       ),
-      desc: "Build a Property",
+      desc: "Buy / Build a Property",
       title: "Investment",
     },
   ];
