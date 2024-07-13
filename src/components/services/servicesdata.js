@@ -15,7 +15,8 @@ export const servicesArray = [
   },
   {
     icon: "/assets/s-6.jpg",
-    title: "Request for a facility management Service            ",
+    title: `Request for a facility  
+              management Service`,
     subtile:
       "Welcome to The Property Intel  , your trusted partner in facility management solutions. From maintenance to operations, our team is dedicated to ensuring your facilities run smoothly and efficiently. Request our comprehensive facility management service today and experience the difference of professional care and attention to detail",
   },

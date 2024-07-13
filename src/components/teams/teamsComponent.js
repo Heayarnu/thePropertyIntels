@@ -22,9 +22,9 @@ const images = [
         </div>
         <div> 
        <div className="flex justify-center">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  lg:grid-cols-2 xl:grid-cols-2  gap-x-7 gap-y-9 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  lg:grid-cols-4 xl:grid-cols-4  gap-x-7 gap-y-9 max-w-7xl mx-auto">
         {images.map((image, index) => (
-          <div key={index} className="rounded-3xl h-[350px] lg:h-[440px] overflow-hidden relative">
+          <div key={index} className="rounded-3xl h-[350px]  overflow-hidden relative">
             <img src={image.src} alt={image.alt} className="w-full  rounded-3xl" />
             <div className="absolute bottom-0 left-0 right-0 p-3 bg-gray-200">
               <p className="text-sm font-light">{image.name}</p>

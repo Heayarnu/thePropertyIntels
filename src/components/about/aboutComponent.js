@@ -7,7 +7,7 @@ function AboutComponent() {
   return (
     <section id="about" className="py-[6.44rem]">
       <div className="lg:flex items-center gap-[3.31rem]">
-        <div className="basis-[45%]">
+        <div className="basis-[55%]">
           <h2 className="text-[0.875rem] leading-[1.8125rem] tracking-[-0.0175rem] text-sub_heading">
             WONDERING WHO WE ARE ?
           </h2>
@@ -68,7 +68,7 @@ function AboutComponent() {
             alt="hero"
           />
         </div> */}
-        <div className="mt-[3.44rem] relative h-[35.375rem] w-full basis-[65%]">
+        <div className="mt-[3.44rem] relative h-[35.375rem] w-full basis-[45%]">
   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3O22xPlb3CQ?start=16" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
       </div>
