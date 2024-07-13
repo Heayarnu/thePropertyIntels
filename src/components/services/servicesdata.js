@@ -1,22 +1,22 @@
 export const servicesArray = [
   {
     icon: "/assets/s-1.jpg",
-    title: "Register your property for site visitations and reports",
+    title: "Get a property Manager",
     // title: "Register your property with us",
     subtile:
       "Welcome to The Property Intel   - your premier destination for property management solutions. Register your property with the Property Intel today and gain access to our quarterly onsite property assessments, visitations and reports; providing you with valuable insights and updates on your property conditions and performance. Trust us to handle your property with professionalism and care, ensuring your peace of mind every step of the way.",
   },
   {
     icon: "/assets/s-2.jpg",
-    title: "Request for a property investment advice and Intelligence",
+    title: "Get a property advice and solution",
     // title: "Request for a property investment advice",
     subtile:
       "Welcome to The Property Intel  , where your property investment goals become our top priority. Whether you're a seasoned property investor or just starting out, our team is here to provide expert advice and intelligence tailored to your real estate needs. Request a consultation today and unlock the investment insights you need to make informed decisions and maximize your property returns and potentials",
   },
   {
     icon: "/assets/s-6.jpg",
-    title: `Request for a facility  
-              management Service`,
+    title: `Get a facility  
+              manager`,
     subtile:
       "Welcome to The Property Intel  , your trusted partner in facility management solutions. From maintenance to operations, our team is dedicated to ensuring your facilities run smoothly and efficiently. Request our comprehensive facility management service today and experience the difference of professional care and attention to detail",
   },
