@@ -15,10 +15,10 @@ function ServicesComponent() {
         <div className="mt-[3.76rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[2.25rem] md:gap-[1.87rem]">
           {servicesArray.map(({ icon, title, subtile }) => (
             <div key={title} className="">
-               <div className="mb-[.62rem] md:mb-[.87rem]"> {/*{icon} */}
-                 <img src={icon}/> 
+               <div className="mb-[.62rem] md:mb-[.87rem] flex flex-row justify-center"> {/*{icon} */}
+                 <img src={icon} className="h-[200px]"/> 
               </div>
-              <h3 className="text-primary text-[1.25rem] tracking-[-0.05rem] font-medium ">
+              <h3 className="text-primary text-[1.25rem] tracking-[-0.05rem] text-center font-medium uppercase">
                 {title}
               </h3>
               <div className="my-[1.56rem] h-[0.0625rem] bg-[rgba(191,191,191,0.35)]"></div>

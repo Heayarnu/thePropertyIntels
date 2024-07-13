@@ -3,6 +3,7 @@ import { productGrid } from "./productsdata";
 import { FaAngleRight } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
+
 function ProductsComponent() {
   return (
     <section id="properties" className="w-full mt-[6.5rem]">
@@ -19,7 +20,8 @@ function ProductsComponent() {
             {productGrid.map(([name, img, link], index) => (
               <div key={name + index}> 
               <Link
-                href={`?image=${link}`}
+                // href={`?image=${link}`}
+                href={link}
                 className={` whitespace-nowrap relative ${name} bg-red-500`}
               >
                 <img
@@ -33,7 +35,7 @@ function ProductsComponent() {
                   Homes in Ikoyi
                 </h3> */}
                 <button className="flex items-center mr-[0.5rem] shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] border-[1px_solid_rgba(255,255,255,0.11)] text-[0.875rem] tracking-[-0.0175rem] font-bold gap-[0.25rem] text-primary rounded-[6.25rem] bg-[rgba(255,255,255,0.55)] absolute left-[2.13rem] bottom-[1.88rem] p-[0.625rem_0.3125rem_0.625rem_0.875rem]">
-                  <span>View homes</span>{" "}
+                  <span>View homes</span>
                   <FaAngleRight className="inline-block" />
                 </button>
               </Link>
