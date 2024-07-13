@@ -14,7 +14,7 @@ function ServicesComponent() {
   return (
     <section id="services" className="w-full pt-[7.19rem]">
       <div className=" font-normal track-[-0.025rem] ">
-        <h1 className=" text-center text-[1.5rem] md:text-[2.375rem] text-main_heading">
+        <h1 className=" text-center text-[1.5rem] md:text-[2.375rem] text-main_heading font-bold">
           {/* See How ThePropertyIntels Helps */}
           Our Services
         </h1>

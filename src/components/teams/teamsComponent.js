@@ -16,7 +16,7 @@ const images = [
   return (
     <section id="teams" className="pb-[6.44rem]">
         <div className="pb-[3rem]"> 
-         <h1 className=" text-center text-[1.5rem] md:text-[2.375rem] text-main_heading">
+         <h1 className=" text-center text-[1.5rem] md:text-[2.375rem] text-main_heading font-bold">
           Our Teams
         </h1>
         </div>
