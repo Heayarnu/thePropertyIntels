@@ -3,10 +3,13 @@ import React,{useState} from "react";
 import { servicesArray } from "./servicesdata";
 
 function ServicesComponent() {
-  const [showFullText, setShowFullText] = useState(false);
 
-  const handleLearnMoreClick = () => {
-    setShowFullText(true);
+  const [showFullText, setShowFullText] = useState(servicesArray.map(() => false));
+
+  const handleLearnMoreClick = (index) => {
+    const updatedShowFullText = [...showFullText];
+    updatedShowFullText[index] = true;
+    setShowFullText(updatedShowFullText);
   };
   return (
     <section id="services" className="w-full pt-[7.19rem]">
@@ -19,7 +22,7 @@ function ServicesComponent() {
           Elit nulla vel tempus congue ac ultricies sed in ornare
         </p> */}
         <div className="mt-[3.76rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[2.25rem] md:gap-[1.87rem]">
-          {servicesArray.map(({ icon, title, subtile }) => (
+          {servicesArray.map(({ icon, title, subtile }, index) => (
             <div key={title} className="">
                <div className="mb-[.62rem] md:mb-[.87rem] flex flex-row justify-center"> {/*{icon} */}
                  <img src={icon} className="h-[200px]"/> 
@@ -28,9 +31,17 @@ function ServicesComponent() {
                 {title}
               </h3>
               <div className="my-[1.56rem] h-[0.0625rem] bg-[rgba(191,191,191,0.35)]"></div>
-              <p className=" text-sub_heading text-base leading-[1.8125rem] tracking-[-0.02rem]">
-                {subtile}
-              </p>
+              <p className="text-sub_heading text-base leading-[1.8125rem] tracking-[-0.02rem]">
+            {showFullText[index] ? subtile : `${subtile.substring(0, 100)}...`}
+          </p>
+          {!showFullText[index] && (
+            <div
+              className="w-[11.3125rem] block text-center rounded-[6.25rem] p-[0.625rem] border-[rgba(255,255,255,0.91)] text-base md:text-[1.125rem] tracking-[-0.0225rem] mt-[2.5rem] text-white font-semibold bg-primary border border-solid cursor-pointer"
+              onClick={() => handleLearnMoreClick(index)}
+            >
+              Learn more
+            </div>
+          )}
             </div>
           ))}
         </div>

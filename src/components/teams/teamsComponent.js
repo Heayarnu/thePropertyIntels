@@ -25,7 +25,7 @@ const images = [
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  lg:grid-cols-4 xl:grid-cols-4  gap-x-7 gap-y-9 max-w-7xl mx-auto">
         {images.map((image, index) => (
           <div key={index} className="rounded-3xl h-[350px]  overflow-hidden relative">
-            <img src={image.src} alt={image.alt} className="w-full  rounded-3xl" />
+            <img src={image.src} alt={image.alt} className="w-full h-full rounded-3xl" />
             <div className="absolute bottom-0 left-0 right-0 p-3 bg-gray-200">
               <p className="text-sm font-light">{image.name}</p>
               <p className="text-xs font-light text-gray-500">{image.role}</p>
