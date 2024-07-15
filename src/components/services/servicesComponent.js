@@ -32,19 +32,9 @@ function ServicesComponent() {
               </h3>
               <div className="my-[1.56rem] h-[0.0625rem] bg-[rgba(191,191,191,0.35)]"></div>
               <p className="text-sub_heading text-base leading-[1.8125rem] tracking-[-0.02rem]">
-            {showFullText[index] ? subtile : `${subtile.substring(0, 100)}...`}
+                {subtile}
           </p>
-          <div className="flex flex-row justify-center"> 
-          {!showFullText[index] && (
-
-            <div
-              className="w-[11.3125rem] block text-center rounded-[6.25rem] p-[0.625rem] border-[rgba(255,255,255,0.91)] text-base md:text-[1.125rem] tracking-[-0.0225rem] mt-[2.5rem] text-white font-semibold bg-primary border border-solid cursor-pointer"
-              onClick={() => handleLearnMoreClick(index)}
-            >
-              Learn more
-            </div>
-          )}
-          </div>
+          
             </div>
           ))}
         </div>
