@@ -53,6 +53,8 @@ function TeamsComponent() {
 									src={image.src}
 									alt={image.alt}
 									className="w-full h-full rounded-3xl"
+									width={1000}
+									height={1000}
 								/>
 								<div className="absolute bottom-0 left-0 right-0 p-3 bg-gray-200">
 									<p className="text-sm font-light">{image.name}</p>

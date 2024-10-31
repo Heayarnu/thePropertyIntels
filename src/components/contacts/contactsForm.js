@@ -83,7 +83,7 @@ function ContactsForm() {
 	return (
 		<form
 			onSubmit={formik.handleSubmit}
-			className="p-[1.88rem] shadow-[0px_0px_13px_0px_rgba(163,163,163,0.20)] md:flex flex-wrap gap-[.91rem] w-full max-w-[34.625rem] text-black"
+			className="p-[1.88rem] shadow-[0px_0px_13px_0px_rgba(163,163,163,0.20)] md:flex flex-wrap gap-[.91rem] w-full max-w-[34.625rem] text-default"
 		>
 			{contactFormField.map((item, index) => (
 				<div
@@ -110,7 +110,7 @@ function ContactsForm() {
 									type="tel"
 									name={item.name}
 									//   international
-									className="basis-[100%] focus:outline-0 pl-[5px] ml-[0.19rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem] leading-[1.41713rem] text-secondary placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem] "
+									className="basis-[100%] focus:outline-0 pl-[5px] ml-[0.19rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem] leading-[1.41713rem] text-default placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem] "
 									// className="w-full"import PhoneInput from "react-phone-number-input";
 									placeholder="+234 901 xxx xxxx"
 									value={formik?.values[item.name]}
@@ -137,7 +137,7 @@ function ContactsForm() {
 						//   </select> */}
 						//   <Input
 						//     //   international
-						//     className="focus:outline-0 pl-[.39rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem] leading-[1.41713rem] text-secondary placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem]"
+						//     className="focus:outline-0 pl-[.39rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem] leading-[1.41713rem] text-default placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem]"
 						//     // className="w-full"import PhoneInput from "react-phone-number-input";
 						//     placeholder="Enter phone number"
 						//     value={item.name}
@@ -160,7 +160,7 @@ function ContactsForm() {
 								value={formik?.values[item.name]}
 								placeholder={item.placeholder}
 								onChange={handleChange}
-								className={` h-[10.375rem] focus:outline-0 ml-[0.19rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem] leading-[1.41713rem] text-secondary  placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem]`}
+								className={` h-[10.375rem] focus:outline-0 ml-[0.19rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem] leading-[1.41713rem] text-default  placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem] `}
 							/>
 						) : (
 							<input
@@ -173,7 +173,7 @@ function ContactsForm() {
 								value={formik?.values[item.name]}
 								placeholder={item.placeholder}
 								onChange={handleChange}
-								className={`  focus:outline-0 ml-[0.19rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem]   leading-[1.41713rem] text-secondary placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem]`}
+								className={`  focus:outline-0 ml-[0.19rem] bg-transparent block w-full font-normal placeholder:tracking-[0.01744rem] tracking-[0.01744rem] placeholder:leading-[1.41713rem]   leading-[1.41713rem] text-default placeholder:text-[0.87206rem] text-[0.87206rem] lg:text-[1.125rem]`}
 							/>
 						)}
 					</div>

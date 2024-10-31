@@ -78,6 +78,8 @@ function FooterComponent() {
 								src="/assets/images/footer/pe.jpg"
 								alt="phillip-edge"
 								className=" h-[35px]"
+								width={100}
+								height={100}
 							/>
 						</div>
 					</div>
