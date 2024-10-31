@@ -29,7 +29,13 @@ function ServicesComponent() {
 							<div className="mb-[.62rem] md:mb-[.87rem] flex flex-row justify-center">
 								{' '}
 								{/*{icon} */}
-								<Image src={icon} alt="" className="h-[200px]" />
+								<Image
+									src={icon}
+									alt=""
+									className="h-[200px]"
+									height={400}
+									width={250}
+								/>
 							</div>
 							<h3 className="text-primary text-[1.25rem] tracking-[-0.05rem] text-center font-medium uppercase">
 								{title}
