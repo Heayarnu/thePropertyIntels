@@ -31,7 +31,7 @@ export const SECOND_CONTENT = (
 			professionals who oversee everything—from routine maintenance to tenant
 			relations and legal documentation. We ensure your properties are
 			well-maintained, and all tasks are handled promptly and professionally,
-			whether you're buying, building, or managing an investment.
+			whether you&#39;re buying, building, or managing an investment.
 		</p>
 	</div>
 );
@@ -59,7 +59,7 @@ export const FOURTH_CONTENT = (
 		<p>
 			At The Property Intel, we connect you with a network of vetted building
 			contractors and architects who bring your property vision to life. Whether
-			you're building from the ground up or making improvements, our trusted
+			you&#39;re building from the ground up or making improvements, our trusted
 			professionals ensure your project is handled with expertise and integrity.
 		</p>
 
