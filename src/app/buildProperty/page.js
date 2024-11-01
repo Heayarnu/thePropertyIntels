@@ -10,7 +10,7 @@ const page = () => {
 	return (
 		<Suspense>
 			<div className="relative ">
-				<div className="bg-primary h-[6.5rem] w-full flex items-center justify-center">
+				<div className="bg-primary h-[5.65rem] md:h-[6.5rem] w-full flex items-center justify-center">
 					<NavMain />
 					<NavbarSmallScreen />
 				</div>

@@ -41,12 +41,12 @@ export default function MembershipPlans() {
 
 				{membershipData.map((plan) => (
 					<TabsContent key={plan.value} value={plan.value}>
-						<Card className="mt-5 h-full w-[95vw] sm:w-[80vw] lg:w-[60vw] border-none">
+						<Card className="mt-5 h-full w-[95vw] sm:w-[80vw] border-none">
 							<CardContent className="gap-2 px-1 sm:p-0">
 								{plan.details?.map((detail, index) => (
 									<div
 										key={index}
-										className={`flex justify-between text-stone-600  ${
+										className={`flex justify-between lg:text-lg text-stone-600  ${
 											index !== plan.details.length - 1 &&
 											'border-b border-stone-400'
 										} py-3`}
