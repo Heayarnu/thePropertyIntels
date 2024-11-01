@@ -2,7 +2,7 @@ export const productGrid = [
 	['first', '/assets/home.jpg'],
 	[
 		'second',
-		'/assets/images/mookimg/ikoyi3.png',
+		'/assets/images/mookimg/ikoyi4.png',
 		'Build a Property',
 		'/buildProperty',
 	],
