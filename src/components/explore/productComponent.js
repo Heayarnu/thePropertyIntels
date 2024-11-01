@@ -25,7 +25,8 @@ function ProductsComponent() {
 						{productGrid.map(([name, img, title, route], index) => (
 							<div
 								key={name + index}
-								className={` whitespace-nowrap relative ${name}`}
+								className={` whitespace-nowrap relative  cursor-pointer ${name}`}
+								onClick={() => handleClick(route)}
 							>
 								<Image
 									width={450}
