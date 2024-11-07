@@ -3,23 +3,28 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 function AboutComponent() {
-	const [show, setShow] = useState(false);
+	// const [show, setShow] = useState(false);
 	return (
-		<section id="about" className="py-[6.44rem]">
-			<div className="items-center gap-[3.31rem] justify-center xl:px-20">
-				<div className="basis-[55%] space-y-3">
-					<h2 className="text-[0.875rem]  md:text-lg leading-[1.8125rem] tracking-[-0.0175rem] text-sub_heading">
+		<section id="about">
+			<h2 className="mt-[.94rem] mb-[.62rem] text-[1.5rem] md:text-[2.375rem] tracking-[-0.0475rem] font-bold text-main_heading">
 						WONDERING WHO WE ARE ?
-					</h2>
-					<h3 className="mt-[.94rem] mb-[.62rem] text-[1.5rem] md:text-[2.375rem] tracking-[-0.0475rem] font-bold text-main_heading">
-						Welcome to The Property Intel
-					</h3>
-					<p className="text-[0.875rem] md:text-[1.125rem] tracking-[-0.0225rem] leading-[1.75rem] md:leading-[2rem] font-normal text-sub_heading">
-						At The Property Intel, we make real estate dreams come true with
+			</h2>
+			
+			<div className="items-center flex flex-col xl:grid xl:grid-cols-[1fr_1.5fr] space-y-6 md:space-y-0 gap-5 md:pt-10">
+				<Image	
+					alt='about'
+					src='/assets/images/mookimg/Picture1.png'
+					height={300}
+					width={500}
+				className='h-[97%] w-full mt-5 xl:mt-0 rounded-sm'/>
+				
+				<div className="w-full xl:border xl:shadow-sm sm:pt-5 xl:p-5 h-[97%] text-[0.875rem] sm:text-[1rem] xl:text-[1.125rem] tracking-[-0.0225rem] leading-[1.75rem] md:leading-[2rem] font-normal text-sub_heading xl:rounded-md space-y-1 xl:space-y-2">
+					<p >
+						At The Property Intels, we make real estate dreams come true with
 						passion and expertise.
 					</p>
 
-					<p className="text-[0.875rem] md:text-[1.125rem] tracking-[-0.0225rem] leading-[1.75rem] md:leading-[2rem] font-normal text-sub_heading">
+					<p >
 						For Nigerians abroad wanting to invest at home, our yearly
 						subscription includes access to top property lawyers, expert
 						investment management, and professional support for buying or
@@ -27,19 +32,19 @@ function AboutComponent() {
 						assign a dedicated property manager to each client.
 					</p>
 
-					<p className="text-[0.875rem] md:text-[1.125rem] tracking-[-0.0225rem] leading-[1.75rem] md:leading-[2rem] font-normal text-sub_heading">
+					<p >
 						You&#39;ll receive quarterly updates with videos and recommendations
 						to keep you informed about your property&#39;s status.
 					</p>
 
-					<p className="text-[0.875rem] md:text-[1.125rem] tracking-[-0.0225rem] leading-[1.75rem] md:leading-[2rem] font-normal text-sub_heading">
+					<p >
 						With a personalized approach and advanced technology, The Property
-						Intel ensures a seamless real estate experience, whether you&#39;re
+						Intels ensures a seamless real estate experience, whether you&#39;re
 						buying, investing, or selling.
 					</p>
 
-					<p className="text-[0.875rem] md:text-[1.125rem] tracking-[-0.0225rem] leading-[1.75rem] md:leading-[2rem] font-normal text-sub_heading">
-						Welcome to The Property Intel – where dreams become reality.
+					<p >
+						Welcome to The Property Intels – where dreams become reality.
 					</p>
 
 					{/* {show && (

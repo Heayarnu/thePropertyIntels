@@ -1,44 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { images } from './teamsData';
 
 function TeamsComponent() {
-	const images = [
-		{
-			src: '/assets/images/teams/t-1.jpg',
-			alt: 'Team 1',
-			name: 'Yomi Shokan',
-			role: 'Ceo & Founder',
-		},
-		{
-			src: '/assets/images/teams/t-4.jpg',
-			alt: 'Team 2',
-			name: 'Benedicta Kodjo',
-			role: 'Executive Director',
-			DesRole: 'Assets Management and Client Relations',
-		},
-		{
-			src: '/assets/images/teams/t-3.jpg',
-			alt: 'Team 3',
-			name: 'Egnr Toba Adeyemi',
-			role: 'Executive Director',
-			DesRole: 'Project and Acquisition',
-		},
-		{
-			src: '/assets/images/teams/t-2.jpg',
-			alt: 'Team 4',
-			name: 'Folake Ashiru',
-			role: 'Chief Compliance Director',
-		},
-		// { src: "/assets/images/teams/teams.png", alt: "Team 5", name: "Jayden Lee", role: "Frontend Developer" },
-		// { src: "/assets/images/teams/teams.png", alt: "Team 6", name: "Graphics OJ", role: "Graphic Designer" }
-	];
-
 	return (
-		<section id="teams" className="pb-[6.44rem]">
+		<section id="teams" >
 			<div className="pb-[3rem]">
 				<h1 className=" text-center text-[1.5rem] md:text-[2.375rem] text-main_heading font-bold">
-					Our Teams
+					Our Team
 				</h1>
 			</div>
 			<div>
