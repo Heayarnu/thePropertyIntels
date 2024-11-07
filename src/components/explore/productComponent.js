@@ -11,17 +11,17 @@ function ProductsComponent() {
 	};
 
 	return (
-		<section id="properties" className="w-full mt-[6.5rem]">
+		<section id="properties" className="w-full">
 			<div className="text-center font-normal track-[-0.025rem] ">
 				<h1 className="text-[1.5rem] md:text-[2.375rem] max-md:leading-[1.6875rem] tracking-[-0.03rem] font-bold text-main_heading">
-					Explore with US {/* Explore Homes On ThePropertyIntels */}
+					Time to choose a Home {/* Explore Homes On ThePropertyIntels */}
 				</h1>
 				{/* <p className="text-[0.875rem] md:text-[1.25rem] text-sub_heading">
           Elit nulla vel tempus congue ac ultricies sed in ornare
         </p> */}
 				{/* <div className="flex justify-center"> */}
-				<div className=" overflow-x-auto ">
-					<div className="flex flex-row md:flex-row gap-5 mt-[3.94rem] w-[70rem] sm:w-[81.36rem] mx-auto ">
+				<div className="overflow-x-auto ">
+					<div className="flex flex-row md:flex-row gap-5 mt-[2.5rem] w-[70rem] sm:w-[90rem] mx-auto ">
 						{productGrid.map(([name, img, title, route], index) => (
 							<div
 								key={name + index}
@@ -29,7 +29,7 @@ function ProductsComponent() {
 								onClick={() => handleClick(route)}
 							>
 								<Image
-									width={450}
+									width={550}
 									height={750}
 									className={`w-full h-[25rem] sm:h-[28rem] ${name} object-fill/`}
 									src={img}
@@ -47,13 +47,13 @@ function ProductsComponent() {
 									</div>
 								)}
 
-								<button
+								 <button
 									onClick={() => handleClick(route)}
 									className="flex items-center mr-[0.5rem] shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] hover:bg-white hover:border-primary hover:border-2 border-[1px_solid_rgba(255,255,255,0.11)] text-[0.875rem] tracking-[-0.0175rem] font-bold gap-[0.25rem] text-primary rounded-[6.25rem] bg-[rgba(249,249,250,0.91)] absolute right-2 bottom-5 p-[0.625rem_0.3125rem_0.625rem_0.875rem]"
 								>
-									<span>View homes</span>
+									<span>see more</span>
 									<FaAngleRight className="inline-block" />
-								</button>
+								</button> 
 							</div>
 						))}
 

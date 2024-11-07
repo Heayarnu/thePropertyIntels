@@ -26,7 +26,6 @@ export const membershipData = [
 				title: 'HNIs Conferences',
 				content: '❌',
 			},
-			,
 		],
 	},
 	{

@@ -21,20 +21,20 @@ export default function Home() {
 		// remove relative before production
 		<Suspense>
 			<ToastContainer />
-			<main className=" relative">
+			<main className="relative">
 				{/* <SocialMediaPopup /> */}
 				<AgentSelectPopCom />
 				<SocialMediaPopup />
 				<HeroComponent />
 
-				<div className=" xl:px-[6.3rem] max-xl:w-[90%] mx-auto">
-					<ServicesComponent />
-					<ProductsComponent />
+				<div className=" xl:px-[6.3rem] max-xl:w-[90%] mx-auto space-y-[7.44rem] md:space-y-[8.44rem] mt-10 md:mt-20">
+					{/* <ServicesComponent /> */}
 					<GetStartedComponent />
-					<AboutComponent />
+					<ProductsComponent />
 					<MembershipComponent />
+					<AboutComponent />
 					<TeamsComponent />
-					<ContactsComponent />
+					{/* <ContactsComponent /> */}
 					<FooterComponent />
 				</div>
 			</main>

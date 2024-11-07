@@ -9,6 +9,7 @@ import { customEncodeURIComponent } from "@/hooks/customencoder";
 import ClientRegisterForm from "../client/clientForm/clientRegisterForm";
 import Selectservices from "../selectServiceAsClient/selectservice";
 import PropertyRegisterForm from "../client/property/propertyForm";
+import TalkToConsultantForm from "../talkToConsultantForm/talkToConsultantForm";
 function AgentSelectPopCom() {
   const [submitStatus, setSubmitStatus] = useState(false);
   const {
@@ -30,6 +31,7 @@ function AgentSelectPopCom() {
     "Select Service type",
     "Enter property details",
   ];
+  const registerConsultant = ["Enter your details"];
 
   const agencyType = [
     {
@@ -137,7 +139,11 @@ function AgentSelectPopCom() {
               />
               <h3 className=" text-[1.25rem] font-bold tracking-[-0.0225rem] mb-[.9rem] text-main_heading">
                
-                {registrationType === "agent" ? "Become an agent" : "Register your property"}
+                {registrationType === "agent"
+                  ? "Become an agent"
+                  : registrationType === "client"
+                  ? "Register your property"
+                  : "Talk to a Consultant"}
               </h3>
 
               {registrationType == "agent" ? (
@@ -172,6 +178,38 @@ function AgentSelectPopCom() {
                       <span
                         className={`  ${
                           picked == item
+                            ? "bg-primary text-white"
+                            : "bg-[#FFF] text-[#414356] "
+                        }  rounded-full grid place-items-center text-center w-[1.125rem] h-[1.125rem] mr-[.38rem]`}
+                      >
+                        {index + 1}
+                      </span>
+                      {item}
+                    </button>
+                  ))}
+                </div>
+              ) : registrationType === "consultant" ? (
+                <div className=" mb-[.9rem] flex w-fit items-center flex-wrap bg-[#F8F9F9] divide-x rounded-[0rem_0rem_0.625rem_0.625rem] border-[#E9E9E9] border-[1px] border-solid">
+                  {registerConsultant.map((item, index) => (
+                    <button
+                      type="button"
+                      key={index}
+                      onClick={() =>
+                        router.push(
+                          `?registrationType=consultant&consultant=${customEncodeURIComponent(
+                            item
+                          )}`
+                        )
+                      }
+                      className={` ${
+                        ClientSelection == item
+                          ? "text-primary bg-white"
+                          : "text-[#414356] bg-[#F8F9F9]"
+                      } text-[0.75rem] max-md:basis-[49%] max-md:last:basis-[100%] font-medium py-[.94rem] px-[.81rem] flex items-center tracking-[-0.03rem] border-r-[#E9E9E9] border-r`}
+                    >
+                      <span
+                        className={`  ${
+                          ClientSelection == item
                             ? "bg-primary text-white"
                             : "bg-[#FFF] text-[#414356] "
                         }  rounded-full grid place-items-center text-center w-[1.125rem] h-[1.125rem] mr-[.38rem]`}
@@ -310,6 +348,9 @@ function AgentSelectPopCom() {
                 client == "Enter property details" && (
                   <PropertyRegisterForm submitStatus={setSubmitStatus} />
                 )}
+              {registrationType === "consultant" && (
+                <TalkToConsultantForm submitStatus={setSubmitStatus} />
+              )}
             </div>
           )}
           {submitStatus === true && (
