@@ -6,8 +6,8 @@ function AboutComponent() {
 	// const [show, setShow] = useState(false);
 	return (
 		<section id="about">
-			<h2 className="mt-[.94rem] mb-[.62rem] text-[1.5rem] md:text-[2.375rem] tracking-[-0.0475rem] font-bold text-main_heading">
-						WONDERING WHO WE ARE ?
+			<h2 className="mt-[.94rem] text-center mb-[.62rem] text-[1.5rem] md:text-[2.375rem] tracking-[-0.0475rem] font-bold text-main_heading">
+						About Us
 			</h2>
 			
 			<div className="items-center flex flex-col xl:grid xl:grid-cols-[1fr_1.5fr] space-y-6 md:space-y-0 gap-5 md:pt-10">

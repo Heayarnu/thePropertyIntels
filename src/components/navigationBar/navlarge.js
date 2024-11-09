@@ -18,7 +18,7 @@ function NavLarge() {
 					Contact Us
 				</Link>
 			</div>
-			<Link href="/" className="">
+			<Link href="/" className=" scale-125 -mt-2">
 				{LogoLG}
 			</Link>
 			<div className="flex gap-[3.5rem] items-center">

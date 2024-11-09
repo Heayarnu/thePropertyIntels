@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Popup from '../policyPopUps/policies';
 import { images } from './teamsData';
 
 function TeamsComponent() {
+	const [popupContent, setPopupContent] = useState(null);
+
+	const openPopup = (name, description) => {
+		setPopupContent({ name, description });
+	};
+
+	const closePopup = () => {
+		setPopupContent(null);
+	};
+
 	return (
-		<section id="teams" >
+		<section id="teams">
 			<div className="pb-[3rem]">
 				<h1 className=" text-center text-[1.5rem] md:text-[2.375rem] text-main_heading font-bold">
 					Our Team
@@ -13,11 +24,12 @@ function TeamsComponent() {
 			</div>
 			<div>
 				<div className="flex justify-center">
-					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  lg:grid-cols-4 xl:grid-cols-4  gap-x-7 gap-y-9 max-w-7xl mx-auto">
+					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-x-7 gap-y-9 max-w-7xl mx-auto">
 						{images.map((image, index) => (
 							<div
 								key={index}
-								className="rounded-3xl h-[350px]  overflow-hidden relative"
+								className="rounded-3xl h-[350px] overflow-hidden relative cursor-pointer"
+								onClick={() => openPopup(image.name, image.description)}
 							>
 								<Image
 									src={image.src}
@@ -40,6 +52,14 @@ function TeamsComponent() {
 					</div>
 				</div>
 			</div>
+
+			{popupContent && (
+				<Popup
+					title={popupContent.name}
+					content={popupContent.description}
+					onClose={closePopup}
+				/>
+			)}
 		</section>
 	);
 }

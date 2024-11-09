@@ -34,7 +34,7 @@ export default function Home() {
 					<MembershipComponent />
 					<AboutComponent />
 					<TeamsComponent />
-					{/* <ContactsComponent /> */}
+					<ContactsComponent />
 					<FooterComponent />
 				</div>
 			</main>
