@@ -12,7 +12,7 @@ function NavbarSmallScreen() {
 
 	return (
 		<nav className="md:hidden absolute z-50 top-0 w-full bg-transparent justify-between px-[1rem] md:px-[2.31rem] pt-[1.25rem] pb-[1.13rem] flex items-center font-inter leading-[normal] text-[red]">
-			<Link href="/" className={`${bgSpacing}`}>
+			<Link href="/" className={`${bgSpacing} scale-105 -mt-0.5`}>
 				{LogoLG}
 			</Link>
 			<div

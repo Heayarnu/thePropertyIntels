@@ -1,5 +1,5 @@
 export const productGrid = [
-	['first', '/assets/home.jpg', '', '/buyProperty'],
+	// ['first', '/assets/home.jpg', '', '/buyProperty'],
 	[
 		'second',
 		'/assets/images/mookimg/ikoyi4.png',

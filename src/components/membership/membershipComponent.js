@@ -26,7 +26,7 @@ export default function MembershipPlans() {
 			<h1
 				className='text-center mb-7 md:mb-10 font-bold text-2xl md:text-4xl'
 			>
-				Membership Plan
+				Annual Membership Plan
 			</h1>
 
 			<Tabs
