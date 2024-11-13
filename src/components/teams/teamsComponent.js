@@ -5,7 +5,7 @@ import Link from "next/link";
 function TeamsComponent() {
 
 const images = [
-        { src: "/assets/images/teams/t-1.jpg", alt: "Team 1", name: "Yomi Shokan", role: "Ceo & Founder" },
+        { src: "/assets/yomi.jpg", alt: "Team 1", name: "Yomi Shokan", role: "Ceo & Founder" },
         { src: "/assets/images/teams/t-4.jpg", alt: "Team 2", name: "Benedicta Kodjo", role: "Executive Director", DesRole: "Assets Management and Client Relations" },
         { src: "/assets/images/teams/t-3.jpg", alt: "Team 3", name: "Egnr Toba Adeyemi", role: "Executive Director", DesRole: "Project and Acquisition" },
         { src: "/assets/images/teams/t-2.jpg", alt: "Team 4", name: "Folake Ashiru", role: "Chief Compliance Director" },
@@ -17,7 +17,7 @@ const images = [
     <section id="teams" className="pb-[6.44rem]">
         <div className="pb-[3rem]"> 
          <h1 className=" text-center text-[1.5rem] md:text-[2.375rem] text-main_heading font-bold">
-          Our Teams
+          OUR TEAMS
         </h1>
         </div>
         <div> 
@@ -26,7 +26,7 @@ const images = [
         {images.map((image, index) => (
           <div key={index} className="rounded-3xl h-[350px]  overflow-hidden relative">
             <img src={image.src} alt={image.alt} className="w-full h-full rounded-3xl" />
-            <div className="absolute bottom-0 left-0 right-0 p-3 bg-gray-200">
+            <div className="absolute bottom-0 left-0 right-0 p-3 bg-gray-200 h-[90px]">
               <p className="text-sm font-light">{image.name}</p>
               <p className="text-xs font-light text-gray-500">{image.role}</p>
               <p className="text-xs font-light text-gray-500">{image.DesRole}</p>
