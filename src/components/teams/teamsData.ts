@@ -1,6 +1,6 @@
 export const images = [
 		{
-			src: '/assets/images/teams/t-1.jpg',
+			src: '/assets/yomi.jpg',
 			alt: 'Team 1',
 			name: 'Yomi Shokan',
 			role: 'Ceo & Founder',

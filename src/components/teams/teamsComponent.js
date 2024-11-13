@@ -19,7 +19,7 @@ function TeamsComponent() {
 		<section id="teams">
 			<div className="pb-[3rem]">
 				<h1 className=" text-center text-[1.5rem] md:text-[2.375rem] text-main_heading font-bold">
-					Our Team
+				OUR TEAM
 				</h1>
 			</div>
 			<div>
@@ -38,7 +38,7 @@ function TeamsComponent() {
 									width={1000}
 									height={1000}
 								/>
-								<div className="absolute bottom-0 left-0 right-0 p-3 bg-gray-200">
+								<div className="absolute bottom-0 left-0 right-0 p-3 h-[90px] bg-gray-200">
 									<p className="text-sm font-light">{image.name}</p>
 									<p className="text-xs font-light text-gray-500">
 										{image.role}
