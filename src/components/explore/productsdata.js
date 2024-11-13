@@ -1,8 +1,8 @@
 export const productGrid = [
-	['first', '/assets/home.jpg'],
+	// ['first', '/assets/home.jpg', '', '/buyProperty'],
 	[
 		'second',
-		'/assets/images/mookimg/3d model.png',
+		'/assets/images/mookimg/ikoyi4.png',
 		'Build a Property',
 		'/buildProperty',
 	],
@@ -12,7 +12,7 @@ export const productGrid = [
 		'Buy a Property',
 		'/buyProperty',
 	],
-	['forth', '/assets/images/mookimg/land.jpg', 'Buy a Land', '/buyLand'],
+	['forth', '/assets/images/mookimg/land.jpg', 'Own a Land', '/buyLand'],
 	// ["fifth", "/assets/images/mookimg/ikoyi5.png", "ikoyi5"],
 	// ["sixth", "/assets/images/mookimg/ikoyi1.png", "ikoyi1"],
 ];

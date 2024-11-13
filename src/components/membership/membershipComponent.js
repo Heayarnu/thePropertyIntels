@@ -7,11 +7,26 @@ import { useState } from 'react';
 export default function MembershipPlans() {
 	const [clickedCard, setClickedCard] = useState(membershipData[0].value);
 
+	const getTitleColor = (planValue) => {
+		switch (planValue) {
+			case 'classic':
+				return 'bg-blue-600';
+			case 'gold':
+				return 'bg-[#d4af37]';
+			case 'platinum':
+				return 'bg-[#E5E4E2]';
+			default:
+				return '';
+		}
+	};
+
 	return (
-		<div className="flex w-full flex-col items-center justify-center mb-20 sm:mb-24 mt-10">
+		<div className="flex w-full flex-col items-center justify-center">
 			{/* Tabs layout for screens smaller than xl */}
-			<h1 className="text-center mb-7 md:mb-10 font-bold text-2xl md:text-4xl">
-				Membership & features
+			<h1
+				className='text-center mb-7 md:mb-10 font-bold text-2xl md:text-4xl'
+			>
+				Annual Membership Plan
 			</h1>
 
 			<Tabs
@@ -24,11 +39,13 @@ export default function MembershipPlans() {
 							key={plan.value}
 							value={plan.value}
 							onClick={() => setClickedCard(plan.value)}
-							className={`flex h-32 items-start justify-start rounded-xl border  from-[rgb(22,107,191)] via-[#3410d4] via-30% to-[#189dd1]  data-[state=active]:bg-gradient-to-br bg-gradient-to-br data-[state=active]:text-white data-[state=active]:via-indigo-600 data-[state=active]:to-red-600 text-white border-stone-300 px-1 py-3  `}
+							className={`flex h-32 items-start justify-start rounded-xl border ${getTitleColor(
+								plan.value
+							)} data-[state=active]:font-bold data-[state=active]:text-xl data-[state=active]:border-t-8 data-[state=active]:border-red-600 text-black data-[state=active]:${getTitleColor(plan.value)} font-medium border-stone-300 px-1 py-3`}
 						>
-							<p className="relative h-full w-full text-left font-medium text-xl p-1 md:p-2">
+							<p className="relative h-full w-full text-left  text-xl p-1 md:p-2">
 								{plan.title} <br />
-								<span className="text-base font-medium">{plan.subtitle}</span>
+								<span className="text-base">{plan.subtitle}</span>
 								<CheckCircle2
 									className={`absolute bottom-0 right-0 ${
 										clickedCard === plan.value ? 'block' : 'hidden'
@@ -41,12 +58,12 @@ export default function MembershipPlans() {
 
 				{membershipData.map((plan) => (
 					<TabsContent key={plan.value} value={plan.value}>
-						<Card className="mt-5 h-full w-[95vw] sm:w-[80vw] lg:w-[60vw] border-none">
+						<Card className="mt-5 h-full w-[95vw] sm:w-[80vw] border-none">
 							<CardContent className="gap-2 px-1 sm:p-0">
 								{plan.details?.map((detail, index) => (
 									<div
 										key={index}
-										className={`flex justify-between text-stone-600  ${
+										className={`flex justify-between lg:text-lg text-stone-600 ${
 											index !== plan.details.length - 1 &&
 											'border-b border-stone-400'
 										} py-3`}
@@ -68,16 +85,19 @@ export default function MembershipPlans() {
 				{membershipData.map((plan) => (
 					<Card key={plan.value} className="w-[30%] border rounded-2xl">
 						<CardHeader
-							className={`from-[#166BBF] via-[#3410d4] via-30% text-white to-[#189dd1] bg-gradient-to-br rounded-xl m-2 flex-row justify-between items-center`}
+							className={`rounded-xl m-2 ${getTitleColor(
+								plan.value
+							)}`}
 						>
-							<CardTitle className="text-2xl font-bold">{plan.title}</CardTitle>
-							<p className="text-3xl font-semibold mt-2">{plan.subtitle}</p>
+							<CardTitle className=" flex-row flex justify-between items-center "><p className='text-2xl font-bold'>{plan.title}</p>
+								<p className="text-3xl font-semibold">{plan.subtitle}</p>
+							</CardTitle>
 						</CardHeader>
 						<CardContent>
 							{plan.details?.map((detail, index) => (
 								<div
 									key={index}
-									className={`grid grid-cols-2 h-20 text-stone-600  ${
+									className={`grid grid-cols-2 h-20 text-stone-600 ${
 										index !== plan.details.length - 1 &&
 										'border-b border-stone-400'
 									} py-1.5 items-center justify-center`}

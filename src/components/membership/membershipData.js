@@ -4,13 +4,13 @@ export const membershipData = [
 		title: 'Classic',
 		subtitle: '$799',
 		details: [
-			{ title: 'Property Limit', content: '1 Property Only' },
 			{
 				title: 'Property Management',
 				content: '12 months Onsite & Offsite support',
 			},
 			{ title: 'Rental Fees Collection', content: 'Direct Remita support' },
 			{ title: 'Maintenance', content: 'Maintenance and Repairs support' },
+			{ title: 'Property Limit', content: '1 Property Only' },
 			{
 				title: 'Onboarding Inspection',
 				content: '50% Discount on Documentation Checks',
@@ -26,7 +26,6 @@ export const membershipData = [
 				title: 'HNIs Conferences',
 				content: '❌',
 			},
-			,
 		],
 	},
 	{
@@ -34,13 +33,13 @@ export const membershipData = [
 		title: 'Gold',
 		subtitle: '$1,399',
 		details: [
-			{ title: 'Property Limit', content: 'Up to 2 Properties' },
 			{
 				title: 'Property Management',
 				content: '12 months Onsite & Offsite support',
 			},
 			{ title: 'Rental Fees Collection', content: 'Direct Remita support' },
 			{ title: 'Maintenance', content: 'Maintenance and Repairs support' },
+			{ title: 'Property Limit', content: 'Up to 2 Properties' },
 			{ title: 'Onboarding Inspection', content: 'Free Documentation Checks' },
 			{ title: 'Reports', content: 'Quarterly Property status reports' },
 			{ title: 'Investment Sessions', content: 'Quarterly' },
@@ -57,13 +56,13 @@ export const membershipData = [
 		title: 'Platinum',
 		subtitle: '$2,999',
 		details: [
-			{ title: 'Property Limit', content: 'Up to 4 Properties' },
 			{
 				title: 'Property Management',
 				content: '12 months Onsite & Offsite support',
 			},
 			{ title: 'Rental Fees Collection', content: 'Direct Remita support' },
 			{ title: 'Maintenance', content: 'Maintenance and Repairs support' },
+			{ title: 'Property Limit', content: 'Up to 4 Properties' },
 			{ title: 'Onboarding Inspection', content: 'Free Documentation Checks' },
 			{ title: 'Reports', content: 'Quarterly Property status reports' },
 			{ title: 'Investment Sessions', content: 'Quarterly' },

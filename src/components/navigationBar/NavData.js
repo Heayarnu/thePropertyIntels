@@ -2,7 +2,7 @@ export const NavMenuList = [
   // ["Home", "/"],
   ["About Us", "#about"],
   ["Contact Us", "#contact"],
-  ["Our Services", "#services"],
+  // ["Our Services", "#services"],
   // ["Sign in", "/auth/login"],
   ["Register your Property", "&registrationType=client"],
 ];

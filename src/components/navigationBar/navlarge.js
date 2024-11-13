@@ -18,16 +18,16 @@ function NavLarge() {
 					Contact Us
 				</Link>
 			</div>
-			<Link href="/" className="">
+			<Link href="/" className=" scale-125 -mt-2">
 				{LogoLG}
 			</Link>
 			<div className="flex gap-[3.5rem] items-center">
-				<Link
+				{/* <Link
 					href={'/#services'}
 					className="text-white block whitespace-nowrap"
 				>
 					Our Services
-				</Link>
+				</Link> */}
 				<Link
 					href={'/?registrationType=client'}
 					className="text-white w -[9.25rem] text-center py-[0.625rem] px-[0.925rem] font-semibold font-base  tracking-[-0.02rem] rounded-[6.25rem] bg-[rgba(255,255,255,0.25)] shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] whitespace-nowrap"

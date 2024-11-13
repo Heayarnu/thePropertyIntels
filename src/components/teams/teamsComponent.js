@@ -1,43 +1,67 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import Popup from '../policyPopUps/policies';
+import { images } from './teamsData';
 
 function TeamsComponent() {
+	const [popupContent, setPopupContent] = useState(null);
 
-const images = [
-        { src: "/assets/yomi.jpg", alt: "Team 1", name: "Yomi Shokan", role: "Ceo & Founder" },
-        { src: "/assets/images/teams/t-4.jpg", alt: "Team 2", name: "Benedicta Kodjo", role: "Executive Director", DesRole: "Assets Management and Client Relations" },
-        { src: "/assets/images/teams/t-3.jpg", alt: "Team 3", name: "Egnr Toba Adeyemi", role: "Executive Director", DesRole: "Project and Acquisition" },
-        { src: "/assets/images/teams/t-2.jpg", alt: "Team 4", name: "Folake Ashiru", role: "Chief Compliance Director" },
-        // { src: "/assets/images/teams/teams.png", alt: "Team 5", name: "Jayden Lee", role: "Frontend Developer" },
-        // { src: "/assets/images/teams/teams.png", alt: "Team 6", name: "Graphics OJ", role: "Graphic Designer" }
-      ];
+	const openPopup = (name, description) => {
+		setPopupContent({ name, description });
+	};
 
-  return (
-    <section id="teams" className="pb-[6.44rem]">
-        <div className="pb-[3rem]"> 
-         <h1 className=" text-center text-[1.5rem] md:text-[2.375rem] text-main_heading font-bold">
-          OUR TEAMS
-        </h1>
-        </div>
-        <div> 
-       <div className="flex justify-center">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  lg:grid-cols-4 xl:grid-cols-4  gap-x-7 gap-y-9 max-w-7xl mx-auto">
-        {images.map((image, index) => (
-          <div key={index} className="rounded-3xl h-[350px]  overflow-hidden relative">
-            <img src={image.src} alt={image.alt} className="w-full h-full rounded-3xl" />
-            <div className="absolute bottom-0 left-0 right-0 p-3 bg-gray-200 h-[90px]">
-              <p className="text-sm font-light">{image.name}</p>
-              <p className="text-xs font-light text-gray-500">{image.role}</p>
-              <p className="text-xs font-light text-gray-500">{image.DesRole}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-       </div>
-    </section>
-  );
+	const closePopup = () => {
+		setPopupContent(null);
+	};
+
+	return (
+		<section id="teams">
+			<div className="pb-[3rem]">
+				<h1 className=" text-center text-[1.5rem] md:text-[2.375rem] text-main_heading font-bold">
+				OUR TEAM
+				</h1>
+			</div>
+			<div>
+				<div className="flex justify-center">
+					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-x-7 gap-y-9 max-w-7xl mx-auto">
+						{images.map((image, index) => (
+							<div
+								key={index}
+								className="rounded-3xl h-[350px] overflow-hidden relative cursor-pointer"
+								onClick={() => openPopup(image.name, image.description)}
+							>
+								<Image
+									src={image.src}
+									alt={image.alt}
+									className="w-full h-full rounded-3xl"
+									width={1000}
+									height={1000}
+								/>
+								<div className="absolute bottom-0 left-0 right-0 p-3 h-[90px] bg-gray-200">
+									<p className="text-sm font-light">{image.name}</p>
+									<p className="text-xs font-light text-gray-500">
+										{image.role}
+									</p>
+									<p className="text-xs font-light text-gray-500">
+										{image.DesRole}
+									</p>
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+
+			{popupContent && (
+				<Popup
+					title={popupContent.name}
+					content={popupContent.description}
+					onClose={closePopup}
+				/>
+			)}
+		</section>
+	);
 }
 
 export default TeamsComponent;
