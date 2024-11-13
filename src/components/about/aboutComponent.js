@@ -7,13 +7,13 @@ function AboutComponent() {
 	return (
 		<section id="about">
 			<h2 className="mt-[.94rem] text-center mb-[.62rem] text-[1.5rem] md:text-[2.375rem] tracking-[-0.0475rem] font-bold text-main_heading">
-						About Us
+						ABOUT US
 			</h2>
 			
 			<div className="items-center flex flex-col xl:grid xl:grid-cols-[1fr_1.5fr] space-y-6 md:space-y-0 gap-5 md:pt-10">
 				<Image	
 					alt='about'
-					src='/assets/images/mookimg/Picture1.png'
+					src='/assets/map-d.png'
 					height={300}
 					width={500}
 				className='h-[97%] w-full mt-5 xl:mt-0 rounded-sm'/>

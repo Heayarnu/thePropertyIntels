@@ -10,11 +10,11 @@ export default function MembershipPlans() {
 	const getTitleColor = (planValue) => {
 		switch (planValue) {
 			case 'classic':
-				return 'bg-blue-600';
+				return 'bg-[#f4f4f4]';
 			case 'gold':
-				return 'bg-[#d4af37]';
+				return 'bg-[#f4f4f4]';
 			case 'platinum':
-				return 'bg-[#E5E4E2]';
+				return 'bg-[#f4f4f4]';
 			default:
 				return '';
 		}
@@ -24,10 +24,13 @@ export default function MembershipPlans() {
 		<div className="flex w-full flex-col items-center justify-center">
 			{/* Tabs layout for screens smaller than xl */}
 			<h1
-				className='text-center mb-7 md:mb-10 font-bold text-2xl md:text-4xl'
+				className='text-center mb-2 font-bold text-2xl md:text-4xl'
 			>
-				Annual Membership Plan
+				ANNUAL MEMEBERSHIP PLAN
 			</h1>
+			  <h2  className='text-center mb-7 md:mb-10 font-bold text-base'> 
+			  (Africans in the Diasporians)
+			  </h2>
 
 			<Tabs
 				defaultValue="classic"
