@@ -19,16 +19,12 @@ const GetStartedComponent = () => {
 	};
 
 	const MenuList = [
+		// [
+		// 	'Managing your property',
+		// 	// () => openPopup('Avoid Property Scam and Fraud', FIRST_CONTENT),
+		// ],
 		[
-			'Managing your property',
-			// () => openPopup('Avoid Property Scam and Fraud', FIRST_CONTENT),
-		],
-		[
-			'Avoid Property Scam and Fraud',
-			() => openPopup('Avoid Property Scam and Fraud', FIRST_CONTENT),
-		],
-		[
-			'Work with professional Property Managers',
+			'We are professional Property Managers',
 			() =>
 				openPopup('Work with professional Property Managers', SECOND_CONTENT),
 		],
@@ -48,6 +44,12 @@ const GetStartedComponent = () => {
 					FOURTH_CONTENT,
 				),
 		],
+		[
+			'Avoid Property Scam and Fraud',
+			() => openPopup('Avoid Property Scam and Fraud', FIRST_CONTENT),
+		],
+	
+	
 	];
 
 	const handleButtonClick = (e, fc) => {
