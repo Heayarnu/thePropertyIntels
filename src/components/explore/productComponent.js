@@ -66,7 +66,7 @@ function ProductsComponent() {
 				{/* </div> */}
 			</div>
 
-			 <SwiperCarousel/>
+			 {/* <SwiperCarousel/> */}
 		</section>
 	);
 }
