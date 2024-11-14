@@ -11,12 +11,7 @@ function AboutComponent() {
 			</h2>
 			
 			<div className="items-center flex flex-col xl:grid xl:grid-cols-[1fr_1.5fr] space-y-6 md:space-y-0 gap-5 md:pt-10">
-				<Image	
-					alt='about'
-					src='/assets/map-d.png'
-					height={300}
-					width={500}
-				className='h-[97%] w-full mt-5 xl:mt-0 rounded-sm'/>
+				
 				
 				<div className="w-full xl:border xl:shadow-sm sm:pt-5 xl:p-5 h-[97%] text-[0.875rem] sm:text-[1rem] xl:text-[1.125rem] tracking-[-0.0225rem] leading-[1.75rem] md:leading-[2rem] font-normal text-sub_heading xl:rounded-md space-y-1 xl:space-y-2">
 					<p >
@@ -29,13 +24,13 @@ function AboutComponent() {
 						subscription includes access to top property lawyers, expert
 						investment management, and professional support for buying or
 						building properties. We provide personalized real estate advice and
-						assign a dedicated property manager to each client.
+						assign a dedicated property manager to each client.	You&#39;ll receive quarterly updates with videos and recommendations
+						to keep you informed about your property&#39;s status.
+					
 					</p>
 
-					<p >
-						You&#39;ll receive quarterly updates with videos and recommendations
-						to keep you informed about your property&#39;s status.
-					</p>
+					
+					
 
 					<p >
 						With a personalized approach and advanced technology, The Property
@@ -78,6 +73,14 @@ function AboutComponent() {
 						Learn more
 					</div> */}
 				</div>
+
+				<Image	
+					alt='about'
+					src='/assets/map-d.png'
+					height={300}
+					width={500}
+				className='h-[97%] w-full mt-5 xl:mt-0 rounded-sm'/>
+
 				{/* <div className="mt-[3.44rem] relative h-[35.375rem] w-full basis-[35%]">
           <Image
             className=""
