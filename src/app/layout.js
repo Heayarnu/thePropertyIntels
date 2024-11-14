@@ -1,5 +1,7 @@
 import './globals.css';
-
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import { Inter, Hind, Poppins, Lato } from 'next/font/google';
 
 const inter = Inter({

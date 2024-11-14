@@ -3,6 +3,7 @@ import { productGrid } from './productsdata';
 import { FaAngleRight } from 'react-icons/fa6';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import SwiperCarousel from '../SwiperCarousel';
 
 function ProductsComponent() {
 	const router = useRouter();
@@ -64,6 +65,8 @@ function ProductsComponent() {
 				</div>
 				{/* </div> */}
 			</div>
+
+			 <SwiperCarousel/>
 		</section>
 	);
 }

@@ -29,7 +29,7 @@ export default function MembershipPlans() {
 				ANNUAL MEMEBERSHIP PLAN
 			</h1>
 			  <h2  className='text-center mb-7 md:mb-10 font-bold text-base'> 
-			  (Africans in the Diasporians)
+			  (Africans in the Diasporia)
 			  </h2>
 
 			<Tabs
