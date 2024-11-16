@@ -12,7 +12,7 @@ function ProductsComponent() {
 	};
 
 	return (
-		<section id="properties" className="w-full">
+		<section id="properties" className="w-full justify-items-center max-w-screen-2xl mx-auto">
 			<div className="text-center font-normal track-[-0.025rem]">
 				<h1 className="text-[1.5rem] md:text-[2.375rem] max-md:leading-[1.6875rem] tracking-[-0.03rem] font-bold text-main_heading">
 					FIND YOUR DREAM HOME{/* Explore Homes On ThePropertyIntels */}
