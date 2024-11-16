@@ -19,12 +19,12 @@ const GetStartedComponent = () => {
 	};
 
 	const MenuList = [
+		// [
+		// 	'Managing your property',
+		// 	// () => openPopup('Avoid Property Scam and Fraud', FIRST_CONTENT),
+		// ],
 		[
-			'Avoid Property Scam and Fraud',
-			() => openPopup('Avoid Property Scam and Fraud', FIRST_CONTENT),
-		],
-		[
-			'Work with professional Property Managers',
+			'We are professional Property Managers',
 			() =>
 				openPopup('Work with professional Property Managers', SECOND_CONTENT),
 		],
@@ -44,6 +44,12 @@ const GetStartedComponent = () => {
 					FOURTH_CONTENT,
 				),
 		],
+		[
+			'Avoid Property Scam and Fraud',
+			() => openPopup('Avoid Property Scam and Fraud', FIRST_CONTENT),
+		],
+	
+	
 	];
 
 	const handleButtonClick = (e, fc) => {
@@ -71,7 +77,7 @@ const GetStartedComponent = () => {
 				</div>			
 			</div>
 
-			<div className="xl:mt-[3.44rem] relative h-[20.375rem] xl:h-[27.375rem] w-full basis-[45%] sm:border-l-2 sm:pl-5 xl:pl-10 border-gray-400 flex items-center justify-center mt-10 sm:mt-[8rem] md:mt-[5rem]">
+			<div className="xl:mt-[3.44rem] relative h-[22.375rem] xl:h-[29.375rem] w-full basis-[45%] sm:border-l-2 sm:pl-5 xl:pl-10 border-gray-400 flex items-center justify-center mt-10 sm:mt-[8rem] md:mt-[5rem]">
 				<iframe
 					className="w-full h-full"
 					src="https://www.youtube.com/embed/3O22xPlb3CQ?start=16"

@@ -3,6 +3,7 @@ import { productGrid } from './productsdata';
 import { FaAngleRight } from 'react-icons/fa6';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import SwiperCarousel from '../SwiperCarousel';
 
 function ProductsComponent() {
 	const router = useRouter();
@@ -14,7 +15,7 @@ function ProductsComponent() {
 		<section id="properties" className="w-full">
 			<div className="text-center font-normal track-[-0.025rem]">
 				<h1 className="text-[1.5rem] md:text-[2.375rem] max-md:leading-[1.6875rem] tracking-[-0.03rem] font-bold text-main_heading">
-					Time to choose a Home {/* Explore Homes On ThePropertyIntels */}
+					FIND YOUR DREAM HOME{/* Explore Homes On ThePropertyIntels */}
 				</h1>
 				{/* <p className="text-[0.875rem] md:text-[1.25rem] text-sub_heading">
           Elit nulla vel tempus congue ac ultricies sed in ornare
@@ -44,13 +45,15 @@ function ProductsComponent() {
 									</div>
 								)}
 
-								 <button
-									onClick={() => handleClick(route)}
-									className="flex items-center mr-[0.5rem] shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] hover:bg-white hover:border-primary hover:border-2 border-[1px_solid_rgba(255,255,255,0.11)] text-[0.875rem] tracking-[-0.0175rem] font-bold gap-[0.25rem] text-primary rounded-[6.25rem] bg-[rgba(249,249,250,0.91)] absolute right-2 bottom-5 p-[0.625rem_0.3125rem_0.625rem_0.875rem]"
-								>
-									<span>see more</span>
-									<FaAngleRight className="inline-block" />
-								</button> 
+{index !== 0 && (
+      <button
+        onClick={() => handleClick(route)}
+        className="flex items-center see-more mr-[0.5rem] shadow-[0px_0px_10px_0px_rgba(163,163,163,0.25)] hover:bg-white hover:border-primary hover:border-2 border-[1px_solid_rgba(255,255,255,0.11)] text-[0.875rem] tracking-[-0.0175rem] font-bold gap-[0.25rem] text-primary rounded-[6.25rem] bg-[rgba(249,249,250,0.91)] absolute right-2 bottom-5 p-[0.625rem_0.3125rem_0.625rem_0.875rem]"
+      >
+        <span>see more</span>
+        <FaAngleRight className="inline-block" />
+      </button>
+    )}
 							</div>
 						))}
 
@@ -64,6 +67,8 @@ function ProductsComponent() {
 				</div>
 				{/* </div> */}
 			</div>
+
+			 {/* <SwiperCarousel/> */}
 		</section>
 	);
 }

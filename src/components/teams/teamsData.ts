@@ -1,6 +1,6 @@
 export const images = [
 		{
-			src: '/assets/images/teams/t-1.jpg',
+			src: '/assets/yomi.jpg',
 			alt: 'Team 1',
 			name: 'Yomi Shokan',
 			role: 'Ceo & Founder',
@@ -10,8 +10,7 @@ export const images = [
 			src: '/assets/images/teams/t-4.jpg',
 			alt: 'Team 2',
 			name: 'Benedicta Kodjo',
-			role: 'Executive Director',
-			DesRole: 'Assets Management and Client Relations',
+			role: 'Executive Director',  
 			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 		},
 		{
